@@ -1,0 +1,32 @@
+<RCC>
+  <qresource prefix="newPrefix">
+    <file>icons/share.png</file>
+    <file>icons/noun_add collection_3244737.png</file>
+    <file>icons/noun_add collection_3244737_white.png</file>
+    <file>icons/share.png</file>
+    <file>icons/share_white.png</file>
+    <file>icons/folder.png</file>
+    <file>icons/folder_white.png</file>
+    <file>icons/icons8-xbox-menu-100.png</file>
+    <file>icons/icons8-xbox-menu-100_white.png</file>
+    <file>icons/icons8-macos-minimize-90_yellow.png</file>
+    <file>icons/icons8-macos-maximize-90_green.png</file>
+    <file>icons/icons8-macos-close-90_red.png</file>
+    <file>icons/icons8-macos-minimize-90_white.png</file>
+    <file>icons/icons8-macos-maximize-90_white.png</file>
+    <file>icons/icons8-macos-close-90_white.png</file>
+    <file>icons/icons8-macos-minimize-90.png</file>
+    <file>icons/icons8-macos-maximize-90.png</file>
+    <file>icons/icons8-macos-close-90.png</file>
+    <file>icons/cil-menu.png</file>
+    <file>icons/cil-x_blk.png</file>
+    <file>icons/cil-window-restore_blk.png</file>
+    <file>icons/cil-window-minimize_blk.png</file>
+    <file>icons/cil-window-minimize.png</file>
+    <file>icons/cil-window-restore.png</file>
+    <file>icons/cil-x.png</file>
+    <file>musicnotes2.png</file>
+    <file>poweredby_2.png</file>
+    <file>vs_white.png</file>
+  </qresource>
+</RCC>

@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SplashScreen</class>
+ <widget class="QMainWindow" name="SplashScreen">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>379</width>
+    <height>357</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgba(255, 255, 255,0);</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QFrame" name="mainFrame">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>361</width>
+      <height>341</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>MS Serif</family>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QFrame{
+	background-color: qlineargradient(spread:pad, x1:0, y1:0.506, x2:1, y2:0.517, stop:0 rgba(170, 0, 255, 255), stop:1 rgba(0, 170, 255, 255));
+	color: rgb(220, 220, 220);
+	border-radius: 10px;
+}</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QFrame" name="versionFrame">
+     <property name="geometry">
+      <rect>
+       <x>290</x>
+       <y>310</y>
+       <width>75</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgba(255, 255, 255, 0);</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QLabel" name="versionLabel">
+        <property name="font">
+         <font>
+          <family>Humnst777 BlkCn BT</family>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgba(255, 255, 255, 0);</string>
+        </property>
+        <property name="text">
+         <string>v1.0_02_21</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QFrame" name="logoFrame">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>80</y>
+       <width>321</width>
+       <height>80</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+background-color: rgba(255, 255, 255, 0);</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <widget class="QLabel" name="logoLabel">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>0</y>
+        <width>291</width>
+        <height>111</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">image: url(:/images/Media/vs_white.png);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QFrame" name="musicNoteFrame">
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>9</y>
+       <width>191</width>
+       <height>121</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgba(255, 255, 255, 0);</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <widget class="QLabel" name="musicNoteLabel">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>181</width>
+        <height>101</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255, 0);
+image: url(:/images/Media/musicnotes2.png);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QFrame" name="spotifyFrame">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>240</y>
+       <width>161</width>
+       <height>80</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgba(255, 255, 255, 0);</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <widget class="QLabel" name="spotifyLabel">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>20</y>
+        <width>131</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">image: url(:/images/Media/poweredby_2.png);
+background-color: rgba(255, 255, 255, 0);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QFrame" name="descFrame">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>160</y>
+       <width>261</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgba(255, 255, 255, 0);</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <widget class="QLabel" name="descLabel">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>0</y>
+        <width>231</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Humanst521 BT</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255, 0);</string>
+      </property>
+      <property name="text">
+       <string>Finding New Music Made Easy</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QFrame" name="progbarFrame">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>190</y>
+       <width>311</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgba(255, 255, 255, 0);</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <widget class="QProgressBar" name="progressBar">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>20</y>
+        <width>231</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QProgressBar{
+	/*background-color: rgb(0, 135, 202);*/
+	background-color: rgba(0, 0, 0, 0.2);
+	color: rgb(255, 255, 255);
+	border-style: none;
+	border-radius: 10px;
+	text-align: center;
+}
+
+QProgressBar::chunk{
+	background-color: qlineargradient(spread:pad, x1:0, y1:0.506, x2:1, y2:0.517, stop:0 rgba(170, 0, 255, 255), stop:1 rgba(0, 170, 255, 255));
+	border-radius: 10px;
+}</string>
+      </property>
+      <property name="value">
+       <number>24</number>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources>
+  <include location="vs_app.qrc"/>
+ </resources>
+ <connections/>
+</ui>
