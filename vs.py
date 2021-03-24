@@ -36,6 +36,9 @@ class MainAppWindow(QMainWindow):
     user_token = tk.prompt_for_user_token(client_id, client_secret, 'http://localhost:4555/', scopes)
     spotify.token = user_token
 
+    finlandia = '3hHWhvw2hjwfngWcFjIzqr'
+spotify.playback_start_tracks([finlandia])
+
     def __init__(self):
         QMainWindow.__init__(self)
         self.ui = Ui_VSMain()
