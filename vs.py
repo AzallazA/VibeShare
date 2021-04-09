@@ -129,7 +129,7 @@ class MainAppWindow(QMainWindow):
         # Add click event/Mouse move event/drag event to the top header to move the window
         # ###############################################
         self.ui.headerFrame.mouseMoveEvent = moveWindow
-        # ###############################################        # ############################################
+        # ###############################################
         # Show window
         self.show()
         # ###############################################
