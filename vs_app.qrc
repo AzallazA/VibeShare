@@ -1,5 +1,8 @@
 <RCC>
   <qresource prefix="icons">
+    <file>Media/icons/createArtist.png</file>
+    <file>Media/icons/createGenre.png</file>
+    <file>Media/icons/mood.png</file>
     <file>Media/icons/add-file.png</file>
     <file>Media/icons/cil-3d.png</file>
     <file>Media/icons/cil-4k.png</file>

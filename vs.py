@@ -72,12 +72,10 @@ class MainAppWindow(QMainWindow):
         self.ui.stackedWidget.setCurrentWidget(self.ui.homePage)
 
         #Stacked Widget buttons (Navigation)
+        #HOME PAGE
         #Create Button
         self.ui.createButton.clicked.connect(lambda: self.ui.stackedWidget.
             setCurrentWidget(self.ui.createPage))
-        #Share Button
-        self.ui.shareButton.clicked.connect(lambda: self.ui.stackedWidget.
-            setCurrentWidget(self.ui.sharePage))
         #Profile Button
         self.ui.profileButton.clicked.connect(lambda: self.ui.stackedWidget.
             setCurrentWidget(self.ui.profilePage))
@@ -85,15 +83,27 @@ class MainAppWindow(QMainWindow):
         self.ui.settingsButton.clicked.connect(lambda: self.ui.stackedWidget.
             setCurrentWidget(self.ui.settingsPage))
 
+        #CREATE PAGE
+        self.ui.createArtistButton.clicked.connect(lambda: self.ui.stackedWidget.
+            setCurrentWidget(self.ui.createArtistPage))
+        self.ui.createGenreButton.clicked.connect(lambda: self.ui.stackedWidget.
+            setCurrentWidget(self.ui.createGenrePage))
+        self.ui.createMoodButton.clicked.connect(lambda: self.ui.stackedWidget.
+            setCurrentWidget(self.ui.createMoodPage))
+
         #Home buttons
-        self.ui.homeButton.clicked.connect(lambda: self.ui.stackedWidget.
+        self.ui.homeButton_create.clicked.connect(lambda: self.ui.stackedWidget.
             setCurrentWidget(self.ui.homePage))
-        self.ui.homeButton_2.clicked.connect(lambda: self.ui.stackedWidget.
+        self.ui.homeButton_profile.clicked.connect(lambda: self.ui.stackedWidget.
             setCurrentWidget(self.ui.homePage))
-        self.ui.homeButton_3.clicked.connect(lambda: self.ui.stackedWidget.
+        self.ui.homeButton_settings.clicked.connect(lambda: self.ui.stackedWidget.
             setCurrentWidget(self.ui.homePage))
-        self.ui.homeButton_4.clicked.connect(lambda: self.ui.stackedWidget.
-            setCurrentWidget(self.ui.homePage))
+        self.ui.homeButton_boa.clicked.connect(lambda: self.ui.stackedWidget.
+            setCurrentWidget(self.ui.createPage))
+        self.ui.homeButton_bog.clicked.connect(lambda: self.ui.stackedWidget.
+            setCurrentWidget(self.ui.createPage))
+        self.ui.homeButton_bom.clicked.connect(lambda: self.ui.stackedWidget.
+            setCurrentWidget(self.ui.createPage))
 
         # ###############################################
         # Move window on mouse drag event on the tittle bar
@@ -113,7 +123,7 @@ class MainAppWindow(QMainWindow):
             # ###############################################
 
         #Window Size Grip
-        QSizeGrip(self.ui.sizeGrip)
+        #QSizeGrip(self.ui.sizeGrip)
 
         # ###############################################
         # Add click event/Mouse move event/drag event to the top header to move the window

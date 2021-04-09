@@ -346,7 +346,7 @@ QPushButton:hover{
     <widget class="QLabel" name="spotifyLabel">
      <property name="geometry">
       <rect>
-       <x>560</x>
+       <x>550</x>
        <y>0</y>
        <width>121</width>
        <height>41</height>
@@ -370,37 +370,6 @@ QPushButton:hover{
      </property>
      <property name="scaledContents">
       <bool>true</bool>
-     </property>
-    </widget>
-    <widget class="QFrame" name="sizeGrip">
-     <property name="geometry">
-      <rect>
-       <x>1190</x>
-       <y>40</y>
-       <width>20</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="minimumSize">
-      <size>
-       <width>20</width>
-       <height>20</height>
-      </size>
-     </property>
-     <property name="maximumSize">
-      <size>
-       <width>20</width>
-       <height>20</height>
-      </size>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background-color: rgba(255, 255, 255, 0);</string>
-     </property>
-     <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
-     </property>
-     <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
      </property>
     </widget>
    </widget>
@@ -435,7 +404,7 @@ QPushButton:hover{
      <enum>QFrame::Raised</enum>
     </property>
     <layout class="QGridLayout" name="gridLayout_3">
-     <item row="0" column="0">
+     <item row="1" column="0">
       <widget class="QStackedWidget" name="stackedWidget">
        <property name="minimumSize">
         <size>
@@ -453,15 +422,15 @@ QPushButton:hover{
         <string notr="true">background-color: rgba(255, 255, 255, 0);</string>
        </property>
        <property name="currentIndex">
-        <number>0</number>
+        <number>4</number>
        </property>
        <widget class="QWidget" name="homePage">
         <widget class="QFrame" name="buttonFrame">
          <property name="geometry">
           <rect>
-           <x>60</x>
-           <y>150</y>
-           <width>1061</width>
+           <x>130</x>
+           <y>110</y>
+           <width>921</width>
            <height>170</height>
           </rect>
          </property>
@@ -512,42 +481,6 @@ QPushButton:hover{
 	border-style: none;
 	border-radius: 40px;
 }</string>
-            </property>
-            <property name="text">
-             <string/>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QPushButton" name="shareButton">
-            <property name="minimumSize">
-             <size>
-              <width>150</width>
-              <height>150</height>
-             </size>
-            </property>
-            <property name="maximumSize">
-             <size>
-              <width>150</width>
-              <height>150</height>
-             </size>
-            </property>
-            <property name="cursor">
-             <cursorShape>PointingHandCursor</cursorShape>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">QPushButton{
-	image: url(:/icons/Media/icons/share.png);
-	background-color: rgba(255, 255, 255, 0);
-}
-
-QPushButton:hover{
-	image: url(:/icons/Media/icons/share.png);
-	background-color: rgba(255, 255, 255, 0.4);
-	border-style: none;
-	border-radius: 40px;
-}
-</string>
             </property>
             <property name="text">
              <string/>
@@ -631,9 +564,9 @@ QPushButton:hover{
         <widget class="QFrame" name="frame">
          <property name="geometry">
           <rect>
-           <x>100</x>
-           <y>310</y>
-           <width>971</width>
+           <x>180</x>
+           <y>260</y>
+           <width>811</width>
            <height>61</height>
           </rect>
          </property>
@@ -660,28 +593,6 @@ QPushButton:hover{
             </property>
             <property name="text">
              <string>Create+</string>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignCenter</set>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QLabel" name="shareLabel">
-            <property name="font">
-             <font>
-              <family>Humnst777 BlkCn BT</family>
-              <pointsize>12</pointsize>
-             </font>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">QLabel{
-	color: white;
-	background-color: rgba(255, 255, 255, 0);
-}</string>
-            </property>
-            <property name="text">
-             <string>Share</string>
             </property>
             <property name="alignment">
              <set>Qt::AlignCenter</set>
@@ -754,7 +665,7 @@ QPushButton:hover{
          <property name="frameShadow">
           <enum>QFrame::Raised</enum>
          </property>
-         <widget class="QPushButton" name="homeButton">
+         <widget class="QPushButton" name="homeButton_create">
           <property name="geometry">
            <rect>
             <x>10</x>
@@ -784,9 +695,9 @@ QPushButton:hover{
         <widget class="QFrame" name="buttonFrame_2">
          <property name="geometry">
           <rect>
-           <x>300</x>
-           <y>120</y>
-           <width>601</width>
+           <x>130</x>
+           <y>110</y>
+           <width>921</width>
            <height>201</height>
           </rect>
          </property>
@@ -802,30 +713,8 @@ QPushButton:hover{
           <enum>QFrame::Raised</enum>
          </property>
          <layout class="QGridLayout" name="gridLayout_2">
-          <item row="2" column="0">
-           <widget class="QLabel" name="createArtistLabel">
-            <property name="font">
-             <font>
-              <family>Humnst777 BlkCn BT</family>
-              <pointsize>12</pointsize>
-             </font>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">QLabel{
-	color: white;
-	background-color: rgba(255, 255, 255, 0);
-}</string>
-            </property>
-            <property name="text">
-             <string>Based On Artist</string>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignCenter</set>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="0">
-           <widget class="QPushButton" name="createArtistButton">
+          <item row="0" column="1">
+           <widget class="QPushButton" name="createGenreButton">
             <property name="minimumSize">
              <size>
               <width>150</width>
@@ -843,16 +732,17 @@ QPushButton:hover{
             </property>
             <property name="styleSheet">
              <string notr="true">QPushButton{
-	image: url(:/icons/Media/icons/create.png);
+	image: url(:/icons/Media/icons/createGenre.png);
 	background-color: rgba(255, 255, 255, 0);
 }
 
 QPushButton:hover{
-	image: url(:/icons/Media/icons/create.png);
+	image: url(:/icons/Media/icons/createGenre.png);
 	background-color: rgba(255, 255, 255, 0.4);
 	border-style: none;
 	border-radius: 40px;
-}</string>
+}
+</string>
             </property>
             <property name="text">
              <string/>
@@ -881,8 +771,8 @@ QPushButton:hover{
             </property>
            </widget>
           </item>
-          <item row="0" column="1">
-           <widget class="QPushButton" name="createGenreButton">
+          <item row="0" column="0">
+           <widget class="QPushButton" name="createArtistButton">
             <property name="minimumSize">
              <size>
               <width>150</width>
@@ -900,12 +790,69 @@ QPushButton:hover{
             </property>
             <property name="styleSheet">
              <string notr="true">QPushButton{
-	image: url(:/icons/Media/icons/share.png);
+	image: url(:/icons/Media/icons/createArtist.png);
 	background-color: rgba(255, 255, 255, 0);
 }
 
 QPushButton:hover{
-	image: url(:/icons/Media/icons/share.png);
+	image: url(:/icons/Media/icons/createArtist.png);
+	background-color: rgba(255, 255, 255, 0.4);
+	border-style: none;
+	border-radius: 40px;
+}</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="createArtistLabel">
+            <property name="font">
+             <font>
+              <family>Humnst777 BlkCn BT</family>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLabel{
+	color: white;
+	background-color: rgba(255, 255, 255, 0);
+}</string>
+            </property>
+            <property name="text">
+             <string>Based On Artist</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="2">
+           <widget class="QPushButton" name="createMoodButton">
+            <property name="minimumSize">
+             <size>
+              <width>150</width>
+              <height>150</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>150</width>
+              <height>150</height>
+             </size>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton{
+	image: url(:/icons/Media/icons/mood.png);
+	background-color: rgba(255, 255, 255, 0);
+}
+
+QPushButton:hover{
+	image: url(:/icons/Media/icons/mood.png);
 	background-color: rgba(255, 255, 255, 0.4);
 	border-style: none;
 	border-radius: 40px;
@@ -917,10 +864,303 @@ QPushButton:hover{
             </property>
            </widget>
           </item>
+          <item row="2" column="2">
+           <widget class="QLabel" name="createMoodLabel">
+            <property name="font">
+             <font>
+              <family>Humnst777 BlkCn BT</family>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLabel{
+	color: white;
+	background-color: rgba(255, 255, 255, 0);
+}</string>
+            </property>
+            <property name="text">
+             <string>Based on Mood</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
          </layout>
         </widget>
        </widget>
-       <widget class="QWidget" name="sharePage">
+       <widget class="QWidget" name="createArtistPage">
+        <widget class="QFrame" name="buttonFrame_3">
+         <property name="geometry">
+          <rect>
+           <x>480</x>
+           <y>10</y>
+           <width>251</width>
+           <height>131</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QFrame{
+	background-color: rgba(255, 255, 255, 0);
+}</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <widget class="QLabel" name="basedOnArtistLabel2">
+          <property name="geometry">
+           <rect>
+            <x>70</x>
+            <y>80</y>
+            <width>108</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>Humnst777 BlkCn BT</family>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QLabel{
+	color: white;
+	background-color: rgba(255, 255, 255, 0);
+}</string>
+          </property>
+          <property name="text">
+           <string>Based On Artist</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+         <widget class="QLabel" name="basedOnArtistLabel">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>10</y>
+            <width>221</width>
+            <height>71</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">image: url(:/icons/Media/icons/createArtist.png);
+background-color: rgba(255, 255, 255, 0);</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QLabel" name="keyLabel1">
+          <property name="geometry">
+           <rect>
+            <x>30</x>
+            <y>110</y>
+            <width>181</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>Humnst777 BT</family>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(248, 231, 28);</string>
+          </property>
+          <property name="text">
+           <string>*Input at least one artist</string>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QFrame" name="artistTxtBoxes">
+         <property name="geometry">
+          <rect>
+           <x>430</x>
+           <y>140</y>
+           <width>351</width>
+           <height>271</height>
+          </rect>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout">
+          <item>
+           <widget class="QTextEdit" name="artist1">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgba(255, 255, 255, 0.5);
+border-radius: 10px;
+border-style: none;
+color: white;
+font-size: 12pt;</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QTextEdit" name="artist2">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgba(255, 255, 255, 0.5);
+border-radius: 10px;
+border-style: none;
+color: white;
+font-size: 12pt;</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QTextEdit" name="artist3">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgba(255, 255, 255, 0.5);
+border-radius: 10px;
+border-style: none;
+color: white;
+font-size: 12pt;</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QTextEdit" name="artist4">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgba(255, 255, 255, 0.5);
+border-radius: 10px;
+border-style: none;
+color: white;
+font-size: 12pt;</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QTextEdit" name="artist5">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgba(255, 255, 255, 0.5);
+border-radius: 10px;
+border-style: none;
+color: white;
+font-size: 12pt;</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QLabel" name="artist1Label">
+         <property name="geometry">
+          <rect>
+           <x>370</x>
+           <y>150</y>
+           <width>61</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Humnst777 Blk BT</family>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string>Artist 1</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="artist2Label">
+         <property name="geometry">
+          <rect>
+           <x>370</x>
+           <y>200</y>
+           <width>61</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Humnst777 Blk BT</family>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string>Artist 2</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="artist3Label">
+         <property name="geometry">
+          <rect>
+           <x>370</x>
+           <y>250</y>
+           <width>61</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Humnst777 Blk BT</family>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string>Artist 3</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="artist4Label">
+         <property name="geometry">
+          <rect>
+           <x>370</x>
+           <y>300</y>
+           <width>61</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Humnst777 Blk BT</family>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string>Artist 4</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="artist5Label">
+         <property name="geometry">
+          <rect>
+           <x>370</x>
+           <y>350</y>
+           <width>61</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Humnst777 Blk BT</family>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string>Artist 5</string>
+         </property>
+        </widget>
         <widget class="QFrame" name="homeButtonFrame_2">
          <property name="geometry">
           <rect>
@@ -939,7 +1179,7 @@ QPushButton:hover{
          <property name="frameShadow">
           <enum>QFrame::Raised</enum>
          </property>
-         <widget class="QPushButton" name="homeButton_2">
+         <widget class="QPushButton" name="homeButton_boa">
           <property name="geometry">
            <rect>
             <x>10</x>
@@ -965,6 +1205,565 @@ QPushButton:hover{
            <string/>
           </property>
          </widget>
+        </widget>
+        <widget class="QPushButton" name="genArtistButton">
+         <property name="geometry">
+          <rect>
+           <x>530</x>
+           <y>420</y>
+           <width>151</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Humnst777 BT</family>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+	background-color: rgb(255, 255, 255);
+	border-style: none;
+	border-radius: 10px;
+}
+
+QPushButton:hover{
+	background-color: rgba(255, 255, 255, 0.6);
+	border-style: none;
+	border-radius: 10px;
+}</string>
+         </property>
+         <property name="text">
+          <string>Generate</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="createGenrePage">
+        <widget class="QLabel" name="genreLabel5">
+         <property name="geometry">
+          <rect>
+           <x>360</x>
+           <y>350</y>
+           <width>71</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Humnst777 Blk BT</family>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string>Genre 5</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="genreLabel2">
+         <property name="geometry">
+          <rect>
+           <x>360</x>
+           <y>200</y>
+           <width>71</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Humnst777 Blk BT</family>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string>Genre 2</string>
+         </property>
+        </widget>
+        <widget class="QFrame" name="buttonFrame_4">
+         <property name="geometry">
+          <rect>
+           <x>480</x>
+           <y>10</y>
+           <width>251</width>
+           <height>131</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QFrame{
+	background-color: rgba(255, 255, 255, 0);
+}</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <widget class="QLabel" name="basedOnGenreLabel2">
+          <property name="geometry">
+           <rect>
+            <x>70</x>
+            <y>80</y>
+            <width>108</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>Humnst777 BlkCn BT</family>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QLabel{
+	color: white;
+	background-color: rgba(255, 255, 255, 0);
+}</string>
+          </property>
+          <property name="text">
+           <string>Based On Genre</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+         <widget class="QLabel" name="basedOnGenreLabel">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>10</y>
+            <width>221</width>
+            <height>71</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">image: url(:/icons/Media/icons/createGenre.png);
+background-color: rgba(255, 255, 255, 0);</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QLabel" name="keyLabel2">
+          <property name="geometry">
+           <rect>
+            <x>30</x>
+            <y>110</y>
+            <width>181</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>Humnst777 BT</family>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(248, 231, 28);</string>
+          </property>
+          <property name="text">
+           <string>*Input at least one genre</string>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QLabel" name="genreLabel3">
+         <property name="geometry">
+          <rect>
+           <x>360</x>
+           <y>250</y>
+           <width>71</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Humnst777 Blk BT</family>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string>Genre 3</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="genreLabel4">
+         <property name="geometry">
+          <rect>
+           <x>360</x>
+           <y>300</y>
+           <width>71</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Humnst777 Blk BT</family>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string>Genre 4</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="genGenreButton">
+         <property name="geometry">
+          <rect>
+           <x>530</x>
+           <y>420</y>
+           <width>151</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Humnst777 BT</family>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+	background-color: rgb(255, 255, 255);
+	border-style: none;
+	border-radius: 10px;
+}
+
+QPushButton:hover{
+	background-color: rgba(255, 255, 255, 0.6);
+	border-style: none;
+	border-radius: 10px;
+}</string>
+         </property>
+         <property name="text">
+          <string>Generate</string>
+         </property>
+        </widget>
+        <widget class="QFrame" name="artistTxtBoxes_2">
+         <property name="geometry">
+          <rect>
+           <x>430</x>
+           <y>140</y>
+           <width>351</width>
+           <height>271</height>
+          </rect>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <item>
+           <widget class="QTextEdit" name="genre1">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgba(255, 255, 255, 0.5);
+border-radius: 10px;
+border-style: none;
+color: white;
+font-size: 12pt;</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QTextEdit" name="genre2">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgba(255, 255, 255, 0.5);
+border-radius: 10px;
+border-style: none;
+color: white;
+font-size: 12pt;</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QTextEdit" name="genre3">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgba(255, 255, 255, 0.5);
+border-radius: 10px;
+border-style: none;
+color: white;
+font-size: 12pt;</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QTextEdit" name="genre4">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgba(255, 255, 255, 0.5);
+border-radius: 10px;
+border-style: none;
+color: white;
+font-size: 12pt;</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QTextEdit" name="genre5">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgba(255, 255, 255, 0.5);
+border-radius: 10px;
+border-style: none;
+color: white;
+font-size: 12pt;</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QLabel" name="genreLabel1">
+         <property name="geometry">
+          <rect>
+           <x>360</x>
+           <y>150</y>
+           <width>71</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Humnst777 Blk BT</family>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string>Genre 1</string>
+         </property>
+        </widget>
+        <widget class="QFrame" name="homeButtonFrame_5">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>0</y>
+           <width>51</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgba(255, 255, 255, 0);</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <widget class="QPushButton" name="homeButton_bog">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>10</y>
+            <width>31</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+	image: url(:/icons/Media/icons/goback.png);
+	background-color: rgba(255, 255, 255, 0);
+}
+
+QPushButton:hover{
+	image: url(:/icons/Media/icons/goback.png);
+	background-color: rgba(255, 255, 255, 0);
+	border-style: none;
+	border-radius: 40px;
+}</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="createMoodPage">
+        <widget class="QFrame" name="homeButtonFrame_6">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>0</y>
+           <width>51</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgba(255, 255, 255, 0);</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <widget class="QPushButton" name="homeButton_bom">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>10</y>
+            <width>31</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+	image: url(:/icons/Media/icons/goback.png);
+	background-color: rgba(255, 255, 255, 0);
+}
+
+QPushButton:hover{
+	image: url(:/icons/Media/icons/goback.png);
+	background-color: rgba(255, 255, 255, 0);
+	border-style: none;
+	border-radius: 40px;
+}</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QFrame" name="buttonFrame_5">
+         <property name="geometry">
+          <rect>
+           <x>480</x>
+           <y>10</y>
+           <width>251</width>
+           <height>131</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QFrame{
+	background-color: rgba(255, 255, 255, 0);
+}</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <widget class="QLabel" name="basedOnGenreLabel2_2">
+          <property name="geometry">
+           <rect>
+            <x>70</x>
+            <y>80</y>
+            <width>108</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>Humnst777 BlkCn BT</family>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QLabel{
+	color: white;
+	background-color: rgba(255, 255, 255, 0);
+}</string>
+          </property>
+          <property name="text">
+           <string>Based On Mood</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+         <widget class="QLabel" name="basedOnGenreLabel_2">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>10</y>
+            <width>221</width>
+            <height>71</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">image: url(:/icons/Media/icons/mood.png);
+background-color: rgba(255, 255, 255, 0);</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QLabel" name="keyLabel2_2">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>110</y>
+            <width>241</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>Humnst777 BT</family>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(248, 231, 28);</string>
+          </property>
+          <property name="text">
+           <string>*Select a mood to generate from</string>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QPushButton" name="genGenreButton_2">
+         <property name="geometry">
+          <rect>
+           <x>520</x>
+           <y>420</y>
+           <width>151</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Humnst777 BT</family>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+	background-color: rgb(255, 255, 255);
+	border-style: none;
+	border-radius: 10px;
+}
+
+QPushButton:hover{
+	background-color: rgba(255, 255, 255, 0.6);
+	border-style: none;
+	border-radius: 10px;
+}</string>
+         </property>
+         <property name="text">
+          <string>Generate</string>
+         </property>
+        </widget>
+        <widget class="QDial" name="dial">
+         <property name="geometry">
+          <rect>
+           <x>380</x>
+           <y>130</y>
+           <width>431</width>
+           <height>291</height>
+          </rect>
+         </property>
         </widget>
        </widget>
        <widget class="QWidget" name="profilePage">
@@ -986,7 +1785,7 @@ QPushButton:hover{
          <property name="frameShadow">
           <enum>QFrame::Raised</enum>
          </property>
-         <widget class="QPushButton" name="homeButton_3">
+         <widget class="QPushButton" name="homeButton_profile">
           <property name="geometry">
            <rect>
             <x>10</x>
@@ -1013,6 +1812,120 @@ QPushButton:hover{
           </property>
          </widget>
         </widget>
+        <widget class="QFrame" name="infoFrame">
+         <property name="geometry">
+          <rect>
+           <x>440</x>
+           <y>260</y>
+           <width>301</width>
+           <height>141</height>
+          </rect>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <widget class="QLabel" name="nameLabel">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>10</y>
+            <width>51</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>Humanst521 BT</family>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);</string>
+          </property>
+          <property name="text">
+           <string>Name: </string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="nameBox">
+          <property name="geometry">
+           <rect>
+            <x>80</x>
+            <y>20</y>
+            <width>211</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgba(255, 255, 255, 0.5);
+border-style: none;
+border-radius: 10px;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QLabel" name="subscriptLabel">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>70</y>
+            <width>101</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>Humanst521 BT</family>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);</string>
+          </property>
+          <property name="text">
+           <string>Subscription:</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="subscriptBox">
+          <property name="geometry">
+           <rect>
+            <x>120</x>
+            <y>80</y>
+            <width>171</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgba(255, 255, 255, 0.5);
+border-style: none;
+border-radius: 10px;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QLabel" name="profilePicBox">
+         <property name="geometry">
+          <rect>
+           <x>500</x>
+           <y>80</y>
+           <width>181</width>
+           <height>171</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgba(255, 255, 255, 0.5);
+border-style: none;
+border-radius: 10px;</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
        </widget>
        <widget class="QWidget" name="settingsPage">
         <widget class="QFrame" name="homeButtonFrame_4">
@@ -1033,7 +1946,7 @@ QPushButton:hover{
          <property name="frameShadow">
           <enum>QFrame::Raised</enum>
          </property>
-         <widget class="QPushButton" name="homeButton_4">
+         <widget class="QPushButton" name="homeButton_settings">
           <property name="geometry">
            <rect>
             <x>10</x>
