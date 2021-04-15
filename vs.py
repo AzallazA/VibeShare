@@ -18,23 +18,24 @@ import tekore as tk
 WINDOW_SIZE = 0
 counter = 0
 
+client_id = 'f0feb7039cfc44789f7b83631dc79825'
+client_secret = '573953b4699945d0bae0eed31478aa0a'
+app_token = tk.request_client_token(client_id, client_secret)
+spotify = tk.Spotify(app_token)
+scopes = tk.scope.every
+
+#Get's user credentials and adds logs them in
+user_token = tk.prompt_for_user_token(client_id, client_secret, 'http://localhost:4555/', scopes)
+spotify.token = user_token
+
+user = spotify.current_user()
+user_id = user.id
+userName = user.display_name
+
 # Main window class
 class MainAppWindow(QMainWindow):
     def __init__(self):
         # Retreive Spotfy client and make spotify object
-        client_id = 'f0feb7039cfc44789f7b83631dc79825'
-        client_secret = '573953b4699945d0bae0eed31478aa0a'
-        app_token = tk.request_client_token(client_id, client_secret)
-        spotify = tk.Spotify(app_token)
-        scopes = tk.scope.every
-
-        #Get's user credentials and adds logs them in
-        user_token = tk.prompt_for_user_token(client_id, client_secret, 'http://localhost:4555/', scopes)
-        spotify.token = user_token
-
-        user = spotify.current_user()
-        user_id = user.id
-        userName = user.display_name
 
         QMainWindow.__init__(self)
         self.ui = Ui_VSMain()
@@ -148,7 +149,6 @@ class MainAppWindow(QMainWindow):
     # Add mouse events to the window
     # ###############################################
 
-
     #Submit Button For Generating based on Artist
     def getArtistText(self):
         print("button clicked")
@@ -162,7 +162,22 @@ class MainAppWindow(QMainWindow):
             print("This field cannot be blank")
         else:
             print(artist1_out + ", " + artist2_out + ", " +
-             artist3_out + ", " + artist4_out + ", " + artist5_out)
+                artist3_out + ", " + artist4_out + ", " + artist5_out)
+
+        artist_list = [artist1_out, artist2_out, artist3_out, artist4_out, artist5_out]
+        while("" in artist_list):
+            artist_list.remove("")
+
+        playlist = spotify.playlist_create(user_id, name = "VibeShare Playlist",
+            public = True, description = "Made with VibeShare")
+
+        for artist_out in artist_list:
+            artists, = spotify.search(artist_out, types=('artist',), limit = 1)
+            artist = artists.items[0]
+            tracks = spotify.artist_top_tracks(artist.id, market = 'US')
+            uris = [track.uri for track in tracks]
+            spotify.playlist_add(playlist.id, uris = uris)
+            print("Your playlist url is" + playlist.uri)
 
     #Submit Button For Generating based on genre
     def genGenre(self):
@@ -171,8 +186,6 @@ class MainAppWindow(QMainWindow):
     #Submit Button For Generating based on mood
     def genMood(self):
         print("button clicked")
-
-
 
     def mousePressEvent(self, event):
         # ###############################################
@@ -197,7 +210,6 @@ class MainAppWindow(QMainWindow):
             WINDOW_SIZE = 0 #Update value to show that the window has been minimized/set to normal size (which is 800 by 400)
             self.showNormal()
     # /////////////////////////////////////////////////////////////////////////
-
 # Execute app
 #
 if __name__ == "__main__":
