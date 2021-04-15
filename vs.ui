@@ -982,9 +982,9 @@ background-color: rgba(255, 255, 255, 0);</string>
          <property name="geometry">
           <rect>
            <x>430</x>
-           <y>140</y>
+           <y>130</y>
            <width>351</width>
-           <height>271</height>
+           <height>281</height>
           </rect>
          </property>
          <property name="frameShape">
@@ -995,57 +995,62 @@ background-color: rgba(255, 255, 255, 0);</string>
          </property>
          <layout class="QVBoxLayout" name="verticalLayout">
           <item>
-           <widget class="QTextEdit" name="artist1">
+           <widget class="QLineEdit" name="artist1_txtbox">
             <property name="styleSheet">
              <string notr="true">background-color: rgba(255, 255, 255, 0.5);
 border-radius: 10px;
 border-style: none;
 color: white;
-font-size: 12pt;</string>
+font-size: 12pt;
+height: 30px;</string>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QTextEdit" name="artist2">
+           <widget class="QLineEdit" name="artist2_txtbox">
             <property name="styleSheet">
              <string notr="true">background-color: rgba(255, 255, 255, 0.5);
 border-radius: 10px;
 border-style: none;
 color: white;
-font-size: 12pt;</string>
+font-size: 12pt;
+height: 30px;</string>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QTextEdit" name="artist3">
+           <widget class="QLineEdit" name="artist3_txtbox">
             <property name="styleSheet">
              <string notr="true">background-color: rgba(255, 255, 255, 0.5);
 border-radius: 10px;
 border-style: none;
 color: white;
-font-size: 12pt;</string>
+font-size: 12pt;
+height: 30px;</string>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QTextEdit" name="artist4">
+           <widget class="QLineEdit" name="artist4_txtbox">
             <property name="styleSheet">
              <string notr="true">background-color: rgba(255, 255, 255, 0.5);
 border-radius: 10px;
 border-style: none;
 color: white;
-font-size: 12pt;</string>
+font-size: 12pt;
+height: 30px;</string>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QTextEdit" name="artist5">
+           <widget class="QLineEdit" name="artist5_txtbox">
             <property name="styleSheet">
              <string notr="true">background-color: rgba(255, 255, 255, 0.5);
 border-radius: 10px;
 border-style: none;
 color: white;
-font-size: 12pt;</string>
+font-size: 12pt;
+height: 30px;</string>
             </property>
            </widget>
           </item>
@@ -1229,9 +1234,10 @@ QPushButton:hover{
 }
 
 QPushButton:hover{
-	background-color: rgba(255, 255, 255, 0.6);
+	background-color: rgb(248, 231, 28);
 	border-style: none;
 	border-radius: 10px;
+	font-weight: bold;
 }</string>
          </property>
          <property name="text">

@@ -3,18 +3,14 @@ import os
 import platform
 
 from splash_screen import *
-from ui_vs import Ui_VSMain
+from ui_vs import *
 from UserInterfaceFunctions import UserInterfaceFunctions
 
+from PyQt5.QtWidgets import *
 from PySide2 import QtCore, QtGui, QtWidgets
 from PySide2.QtCore import *
 from PySide2.QtGui import *
 from PySide2.QtWidgets import *
-from PySide2.QtCore import (QCoreApplication, QDate, QDateTime, QMetaObject,
-    QObject, QPoint, QRect, QSize, QTime, QUrl, Qt)
-from PySide2.QtGui import (QBrush, QColor, QConicalGradient, QCursor, QFont,
-    QFontDatabase, QIcon, QKeySequence, QLinearGradient, QPalette, QPainter,
-    QPixmap, QRadialGradient)
 
 import tekore as tk
 
@@ -26,7 +22,7 @@ counter = 0
 class MainAppWindow(QMainWindow):
 
     # Retreive Spotfy client and make spotify object
-    client_id = 'f0feb7039cfc44789f7b83631dc79825'
+    '''    client_id = 'f0feb7039cfc44789f7b83631dc79825'
     client_secret = '573953b4699945d0bae0eed31478aa0a'
     app_token = tk.request_client_token(client_id, client_secret)
     spotify = tk.Spotify(app_token)
@@ -38,13 +34,14 @@ class MainAppWindow(QMainWindow):
 
     user = spotify.current_user()
     user_id = user.id
-    userName = user.display_name
+    userName = user.display_name'''
 
     def __init__(self):
         QMainWindow.__init__(self)
         self.ui = Ui_VSMain()
         self.ui.setupUi(self)
 
+        #Dark Mode
         #app.setStyleSheet(qdarkstyle.load_stylesheet_pyside2())
 
         # Remove window tlttle bar
@@ -97,7 +94,9 @@ class MainAppWindow(QMainWindow):
 
 
         #CREATE ARTIST PAGE
-        self.ui.genArtistButton.clicked.connect(self.genArtist)
+        #Generate Artist Playlist
+        self.ui.genArtistButton.clicked.connect(self.getArtistText)
+
         self.ui.genGenreButton.clicked.connect(self.genGenre)
         #self.ui.genMoodButton.clicked.connect(self.genMood)
 
@@ -114,7 +113,6 @@ class MainAppWindow(QMainWindow):
             setCurrentWidget(self.ui.createPage))
         self.ui.homeButton_bom.clicked.connect(lambda: self.ui.stackedWidget.
             setCurrentWidget(self.ui.createPage))
-
 
         # ###############################################
         # Move window on mouse drag event on the tittle bar
@@ -150,8 +148,19 @@ class MainAppWindow(QMainWindow):
 
 
     #Submit Button For Generating based on Artist
-    def genArtist(self):
+    def getArtistText(self):
         print("button clicked")
+        artist1_out = self.ui.artist1_txtbox.text()
+        artist2_out = self.ui.artist2_txtbox.text()
+        artist3_out = self.ui.artist3_txtbox.text()
+        artist4_out = self.ui.artist4_txtbox.text()
+        artist5_out = self.ui.artist5_txtbox.text()
+
+        if artist1_out == "":
+            print("This field cannot be blank")
+        else:
+            print(artist1_out + ", " + artist2_out + ", " +
+             artist3_out + ", " + artist4_out + ", " + artist5_out)
 
     #Submit Button For Generating based on genre
     def genGenre(self):
