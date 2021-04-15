@@ -91,6 +91,12 @@ class MainAppWindow(QMainWindow):
         self.ui.createMoodButton.clicked.connect(lambda: self.ui.stackedWidget.
             setCurrentWidget(self.ui.createMoodPage))
 
+
+        #CREATE ARTIST PAGE
+        self.ui.genArtistButton.clicked.connect(self.genArtist)
+        self.ui.genGenreButton.clicked.connect(self.genGenre)
+        #self.ui.genMoodButton.clicked.connect(self.genMood)
+
         #Home buttons
         self.ui.homeButton_create.clicked.connect(lambda: self.ui.stackedWidget.
             setCurrentWidget(self.ui.homePage))
@@ -136,6 +142,21 @@ class MainAppWindow(QMainWindow):
     # ###############################################
     # Add mouse events to the window
     # ###############################################
+
+
+    #Submit Button For Generating based on Artist
+    def genArtist(self):
+        print("button clicked")
+
+    #Submit Button For Generating based on genre
+    def genGenre(self):
+        print("button clicked")
+
+    #Submit Button For Generating based on mood
+    def genMood(self):
+        print("button clicked")
+
+
 
     def mousePressEvent(self, event):
         # ###############################################

@@ -361,7 +361,7 @@ QPushButton:hover{
      <property name="styleSheet">
       <string notr="true">QLabel{
 	background-color: rgba(255, 255, 255, 0);
-	
+
 	image: url(:/images/Media/poweredby_2.png);
 }</string>
      </property>
@@ -404,7 +404,7 @@ QPushButton:hover{
      <enum>QFrame::Raised</enum>
     </property>
     <layout class="QGridLayout" name="gridLayout_3">
-     <item row="1" column="0">
+     <item row="0" column="0">
       <widget class="QStackedWidget" name="stackedWidget">
        <property name="minimumSize">
         <size>
@@ -1723,7 +1723,7 @@ background-color: rgba(255, 255, 255, 0);</string>
           </property>
          </widget>
         </widget>
-        <widget class="QPushButton" name="genGenreButton_2">
+        <widget class="QPushButton" name="genMoodButton">
          <property name="geometry">
           <rect>
            <x>520</x>
