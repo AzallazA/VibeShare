@@ -36,6 +36,10 @@ class MainAppWindow(QMainWindow):
     user_token = tk.prompt_for_user_token(client_id, client_secret, 'http://localhost:4555/', scopes)
     spotify.token = user_token
 
+    user = spotify.current_user()
+    user_id = user.id
+    userName = user.display_name
+
     def __init__(self):
         QMainWindow.__init__(self)
         self.ui = Ui_VSMain()
@@ -110,6 +114,7 @@ class MainAppWindow(QMainWindow):
             setCurrentWidget(self.ui.createPage))
         self.ui.homeButton_bom.clicked.connect(lambda: self.ui.stackedWidget.
             setCurrentWidget(self.ui.createPage))
+
 
         # ###############################################
         # Move window on mouse drag event on the tittle bar
