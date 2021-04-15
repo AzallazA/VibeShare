@@ -422,7 +422,7 @@ QPushButton:hover{
         <string notr="true">background-color: rgba(255, 255, 255, 0);</string>
        </property>
        <property name="currentIndex">
-        <number>2</number>
+        <number>5</number>
        </property>
        <widget class="QWidget" name="homePage">
         <widget class="QFrame" name="buttonFrame">
@@ -1821,9 +1821,9 @@ QPushButton:hover{
         <widget class="QFrame" name="infoFrame">
          <property name="geometry">
           <rect>
-           <x>440</x>
+           <x>420</x>
            <y>260</y>
-           <width>301</width>
+           <width>331</width>
            <height>141</height>
           </rect>
          </property>
@@ -1855,24 +1855,6 @@ QPushButton:hover{
            <string>Name: </string>
           </property>
          </widget>
-         <widget class="QLabel" name="nameBox">
-          <property name="geometry">
-           <rect>
-            <x>80</x>
-            <y>20</y>
-            <width>211</width>
-            <height>31</height>
-           </rect>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">background-color: rgba(255, 255, 255, 0.5);
-border-style: none;
-border-radius: 10px;</string>
-          </property>
-          <property name="text">
-           <string/>
-          </property>
-         </widget>
          <widget class="QLabel" name="subscriptLabel">
           <property name="geometry">
            <rect>
@@ -1892,25 +1874,43 @@ border-radius: 10px;</string>
            <string notr="true">color: rgb(255, 255, 255);</string>
           </property>
           <property name="text">
-           <string>Subscription:</string>
+           <string>Spotify ID:</string>
           </property>
          </widget>
-         <widget class="QLabel" name="subscriptBox">
+         <widget class="QTextEdit" name="name_txtbox">
           <property name="geometry">
            <rect>
-            <x>120</x>
-            <y>80</y>
-            <width>171</width>
+            <x>80</x>
+            <y>20</y>
+            <width>251</width>
             <height>31</height>
            </rect>
           </property>
           <property name="styleSheet">
            <string notr="true">background-color: rgba(255, 255, 255, 0.5);
+border-radius: 10px;
 border-style: none;
-border-radius: 10px;</string>
+color: white;
+font-size: 12pt;
+height: 30px;</string>
           </property>
-          <property name="text">
-           <string/>
+         </widget>
+         <widget class="QTextEdit" name="sub_txtbox">
+          <property name="geometry">
+           <rect>
+            <x>120</x>
+            <y>80</y>
+            <width>211</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgba(255, 255, 255, 0.5);
+border-radius: 10px;
+border-style: none;
+color: white;
+font-size: 12pt;
+height: 30px;</string>
           </property>
          </widget>
         </widget>

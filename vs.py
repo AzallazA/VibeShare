@@ -20,26 +20,28 @@ counter = 0
 
 # Main window class
 class MainAppWindow(QMainWindow):
-
-    # Retreive Spotfy client and make spotify object
-    '''    client_id = 'f0feb7039cfc44789f7b83631dc79825'
-    client_secret = '573953b4699945d0bae0eed31478aa0a'
-    app_token = tk.request_client_token(client_id, client_secret)
-    spotify = tk.Spotify(app_token)
-    scopes = tk.scope.every
-
-    #Get's user credentials and adds logs them in
-    user_token = tk.prompt_for_user_token(client_id, client_secret, 'http://localhost:4555/', scopes)
-    spotify.token = user_token
-
-    user = spotify.current_user()
-    user_id = user.id
-    userName = user.display_name'''
-
     def __init__(self):
+        # Retreive Spotfy client and make spotify object
+        client_id = 'f0feb7039cfc44789f7b83631dc79825'
+        client_secret = '573953b4699945d0bae0eed31478aa0a'
+        app_token = tk.request_client_token(client_id, client_secret)
+        spotify = tk.Spotify(app_token)
+        scopes = tk.scope.every
+
+        #Get's user credentials and adds logs them in
+        user_token = tk.prompt_for_user_token(client_id, client_secret, 'http://localhost:4555/', scopes)
+        spotify.token = user_token
+
+        user = spotify.current_user()
+        user_id = user.id
+        userName = user.display_name
+
         QMainWindow.__init__(self)
         self.ui = Ui_VSMain()
         self.ui.setupUi(self)
+
+        self.ui.name_txtbox.setText(userName)
+        self.ui.sub_txtbox.setText(user_id)
 
         #Dark Mode
         #app.setStyleSheet(qdarkstyle.load_stylesheet_pyside2())

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'vsJbdpTR.ui'
+## Form generated from reading UI file 'vsQgcUiY.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -845,7 +845,7 @@ class Ui_VSMain(object):
 "}")
         self.infoFrame = QFrame(self.profilePage)
         self.infoFrame.setObjectName(u"infoFrame")
-        self.infoFrame.setGeometry(QRect(440, 260, 301, 141))
+        self.infoFrame.setGeometry(QRect(420, 260, 331, 141))
         self.infoFrame.setFrameShape(QFrame.StyledPanel)
         self.infoFrame.setFrameShadow(QFrame.Raised)
         self.nameLabel = QLabel(self.infoFrame)
@@ -856,23 +856,29 @@ class Ui_VSMain(object):
         font6.setPointSize(14)
         self.nameLabel.setFont(font6)
         self.nameLabel.setStyleSheet(u"color: rgb(255, 255, 255);")
-        self.nameBox = QLabel(self.infoFrame)
-        self.nameBox.setObjectName(u"nameBox")
-        self.nameBox.setGeometry(QRect(80, 20, 211, 31))
-        self.nameBox.setStyleSheet(u"background-color: rgba(255, 255, 255, 0.5);\n"
-"border-style: none;\n"
-"border-radius: 10px;")
         self.subscriptLabel = QLabel(self.infoFrame)
         self.subscriptLabel.setObjectName(u"subscriptLabel")
         self.subscriptLabel.setGeometry(QRect(10, 70, 101, 41))
         self.subscriptLabel.setFont(font6)
         self.subscriptLabel.setStyleSheet(u"color: rgb(255, 255, 255);")
-        self.subscriptBox = QLabel(self.infoFrame)
-        self.subscriptBox.setObjectName(u"subscriptBox")
-        self.subscriptBox.setGeometry(QRect(120, 80, 171, 31))
-        self.subscriptBox.setStyleSheet(u"background-color: rgba(255, 255, 255, 0.5);\n"
+        self.name_txtbox = QTextEdit(self.infoFrame)
+        self.name_txtbox.setObjectName(u"name_txtbox")
+        self.name_txtbox.setGeometry(QRect(80, 20, 251, 31))
+        self.name_txtbox.setStyleSheet(u"background-color: rgba(255, 255, 255, 0.5);\n"
+"border-radius: 10px;\n"
 "border-style: none;\n"
-"border-radius: 10px;")
+"color: white;\n"
+"font-size: 12pt;\n"
+"height: 30px;")
+        self.sub_txtbox = QTextEdit(self.infoFrame)
+        self.sub_txtbox.setObjectName(u"sub_txtbox")
+        self.sub_txtbox.setGeometry(QRect(120, 80, 211, 31))
+        self.sub_txtbox.setStyleSheet(u"background-color: rgba(255, 255, 255, 0.5);\n"
+"border-radius: 10px;\n"
+"border-style: none;\n"
+"color: white;\n"
+"font-size: 12pt;\n"
+"height: 30px;")
         self.profilePicBox = QLabel(self.profilePage)
         self.profilePicBox.setObjectName(u"profilePicBox")
         self.profilePicBox.setGeometry(QRect(500, 80, 181, 171))
@@ -913,7 +919,7 @@ class Ui_VSMain(object):
 
         self.retranslateUi(VSMain)
 
-        self.stackedWidget.setCurrentIndex(2)
+        self.stackedWidget.setCurrentIndex(5)
 
 
         QMetaObject.connectSlotsByName(VSMain)
@@ -967,9 +973,7 @@ class Ui_VSMain(object):
         self.genMoodButton.setText(QCoreApplication.translate("VSMain", u"Generate", None))
         self.homeButton_profile.setText("")
         self.nameLabel.setText(QCoreApplication.translate("VSMain", u"Name: ", None))
-        self.nameBox.setText("")
-        self.subscriptLabel.setText(QCoreApplication.translate("VSMain", u"Subscription:", None))
-        self.subscriptBox.setText("")
+        self.subscriptLabel.setText(QCoreApplication.translate("VSMain", u"Spotify ID:", None))
         self.profilePicBox.setText("")
         self.homeButton_settings.setText("")
     # retranslateUi
