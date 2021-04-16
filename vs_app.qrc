@@ -1,5 +1,6 @@
 <RCC>
   <qresource prefix="icons">
+    <file>Media/icons/home_btn.png</file>
     <file>Media/icons/createArtist.png</file>
     <file>Media/icons/createGenre.png</file>
     <file>Media/icons/mood.png</file>
@@ -201,6 +202,12 @@
     <file>Media/icons/share_white.png</file>
   </qresource>
   <qresource prefix="images">
+    <file>Media/vpLocation_1.png</file>
+    <file>Media/vpLocation_2.png</file>
+    <file>Media/vpLocation_3.png</file>
+    <file>Media/vpLocation_4.png</file>
+    <file>Media/vpLocation_5.png</file>
+    <file>Media/VibeShare_Playlist_Location.gif</file>
     <file>Media/line.png</file>
     <file>Media/background.png</file>
     <file>Media/f3058a293fc7188f678a64ab174bae41.png</file>

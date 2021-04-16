@@ -422,7 +422,7 @@ QPushButton:hover{
         <string notr="true">background-color: rgba(255, 255, 255, 0);</string>
        </property>
        <property name="currentIndex">
-        <number>5</number>
+        <number>0</number>
        </property>
        <widget class="QWidget" name="homePage">
         <widget class="QFrame" name="buttonFrame">
@@ -644,6 +644,27 @@ QPushButton:hover{
            </widget>
           </item>
          </layout>
+        </widget>
+        <widget class="QLineEdit" name="welcome_txtbox">
+         <property name="geometry">
+          <rect>
+           <x>430</x>
+           <y>20</y>
+           <width>331</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgba(255, 255, 255, 0);
+border-radius: 10px;
+border-style: none;
+color: white;
+font-size: 18pt;
+height: 30px;</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
         </widget>
        </widget>
        <widget class="QWidget" name="createPage">
@@ -1243,6 +1264,116 @@ QPushButton:hover{
          <property name="text">
           <string>Generate</string>
          </property>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="createArtistLoadingPage">
+        <widget class="QFrame" name="frame_2">
+         <property name="geometry">
+          <rect>
+           <x>370</x>
+           <y>70</y>
+           <width>441</width>
+           <height>361</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">image: url(:/images/Media/vpLocation_5.png);</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label">
+         <property name="geometry">
+          <rect>
+           <x>460</x>
+           <y>20</y>
+           <width>251</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Humnst777 BT</family>
+           <pointsize>16</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(248, 231, 28);</string>
+         </property>
+         <property name="text">
+          <string>Your new playlist is ready!</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_2">
+         <property name="geometry">
+          <rect>
+           <x>400</x>
+           <y>410</y>
+           <width>381</width>
+           <height>111</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Humnst777 BT</family>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string>Look for the &quot;VibeShare Playlist&quot; on your Spotify app</string>
+         </property>
+        </widget>
+        <widget class="QFrame" name="homeButtonFrame_13">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>0</y>
+           <width>51</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgba(255, 255, 255, 0);</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <widget class="QPushButton" name="homeButton_calp">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>10</y>
+            <width>31</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+	image: url(:/icons/Media/icons/home_btn.png);
+	background-color: rgba(255, 255, 255, 0);
+}
+
+QPushButton:hover{
+	image: url(:/icons/Media/icons/home_btn.png);
+	background-color: rgba(255, 255, 255, 0);
+	border-style: none;
+	border-radius: 40px;
+}</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
         </widget>
        </widget>
        <widget class="QWidget" name="createGenrePage">

@@ -12,6 +12,8 @@ from PySide2.QtCore import *
 from PySide2.QtGui import *
 from PySide2.QtWidgets import *
 
+from PyQt5.QtGui import QMovie
+
 import tekore as tk
 
 #import qdarkstyle
@@ -41,6 +43,8 @@ class MainAppWindow(QMainWindow):
         self.ui = Ui_VSMain()
         self.ui.setupUi(self)
 
+        #Append Profile Information from Spotify to Profile Page
+        self.ui.headerProfileName.setText(userName)
         self.ui.name_txtbox.setText(userName)
         self.ui.sub_txtbox.setText(user_id)
 
@@ -99,6 +103,8 @@ class MainAppWindow(QMainWindow):
         #CREATE ARTIST PAGE
         #Generate Artist Playlist
         self.ui.genArtistButton.clicked.connect(self.getArtistText)
+        self.ui.genArtistButton.clicked.connect(lambda: self.ui.stackedWidget.
+            setCurrentWidget(self.ui.createArtistLoadingPage))
 
         self.ui.genGenreButton.clicked.connect(self.genGenre)
         #self.ui.genMoodButton.clicked.connect(self.genMood)
@@ -116,6 +122,8 @@ class MainAppWindow(QMainWindow):
             setCurrentWidget(self.ui.createPage))
         self.ui.homeButton_bom.clicked.connect(lambda: self.ui.stackedWidget.
             setCurrentWidget(self.ui.createPage))
+        self.ui.homeButton_calp.clicked.connect(lambda: self.ui.stackedWidget.
+            setCurrentWidget(self.ui.homePage))
 
         # ###############################################
         # Move window on mouse drag event on the tittle bar
