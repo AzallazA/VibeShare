@@ -99,6 +99,14 @@ class MainAppWindow(QMainWindow):
         self.ui.createMoodButton.clicked.connect(lambda: self.ui.stackedWidget.
             setCurrentWidget(self.ui.createMoodPage))
 
+        #SETTINGS PAGE
+        #self.ui.darkModeButton.clicked.connect(self.darkMode)
+        self.ui.darkModeButton.setCheckable(True)
+        self.ui.darkModeButton.clicked.connect(self.darkMode)
+
+        #ABOUT PAGE
+        self.ui.aboutButton.clicked.connect(lambda: self.ui.stackedWidget.
+            setCurrentWidget(self.ui.aboutPage))
 
         #CREATE ARTIST PAGE
         #Generate Artist Playlist
@@ -124,6 +132,8 @@ class MainAppWindow(QMainWindow):
             setCurrentWidget(self.ui.createPage))
         self.ui.homeButton_calp.clicked.connect(lambda: self.ui.stackedWidget.
             setCurrentWidget(self.ui.homePage))
+        self.ui.homeButton_about.clicked.connect(lambda: self.ui.stackedWidget.
+            setCurrentWidget(self.ui.settingsPage))
 
         # ###############################################
         # Move window on mouse drag event on the tittle bar
@@ -156,6 +166,41 @@ class MainAppWindow(QMainWindow):
     # ###############################################
     # Add mouse events to the window
     # ###############################################
+
+    #Dark Mode
+    def darkMode(self):
+        if self.ui.darkModeButton.isChecked():
+            self.ui.centralwidget.setStyleSheet("""
+            QWidget {
+                background-color: rgb(57, 57, 57);
+            }""")
+            self.ui.headerFrame.setStyleSheet("""
+            QFrame {
+                background-color: rgb(57, 57, 57);
+            }""")
+            self.ui.footerFrame.setStyleSheet("""
+            QFrame {
+                background-color: rgb(57, 57, 57);
+            }""")
+        else:
+            self.ui.centralwidget.setStyleSheet("""
+            QWidget {
+                background-color: qlineargradient(spread:pad, x1:0,
+                y1:0.506, x2:1, y2:0.517, stop:0 rgba(170, 0, 255, 255),
+                stop:1 rgba(0, 170, 255, 255));
+            }""")
+            self.ui.headerFrame.setStyleSheet("""
+            QFrame {
+                background-color: qlineargradient(spread:pad, x1:0,
+                y1:0.506, x2:1, y2:0.517, stop:0 rgba(170, 0, 255, 255),
+                stop:1 rgba(0, 170, 255, 255));
+            }""")
+            self.ui.footerFrame.setStyleSheet("""
+            QFrame {
+                background-color: qlineargradient(spread:pad, x1:0,
+                y1:0.506, x2:1, y2:0.517, stop:0 rgba(170, 0, 255, 255),
+                stop:1 rgba(0, 170, 255, 255));
+            }""")
 
     #Submit Button For Generating based on Artist
     def getArtistText(self):

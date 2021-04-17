@@ -1,5 +1,8 @@
 <RCC>
   <qresource prefix="icons">
+    <file>Media/icons/darkMode.png</file>
+    <file>Media/icons/about.png</file>
+    <file>Media/icons/settings.png</file>
     <file>Media/icons/home_btn.png</file>
     <file>Media/icons/createArtist.png</file>
     <file>Media/icons/createGenre.png</file>

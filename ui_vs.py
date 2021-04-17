@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'vsXaRXVR.ui'
+## Form generated from reading UI file 'vsRUwPHr.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -223,7 +223,9 @@ class Ui_VSMain(object):
         self.stackedWidget.setObjectName(u"stackedWidget")
         self.stackedWidget.setMinimumSize(QSize(0, 500))
         self.stackedWidget.setMaximumSize(QSize(16777215, 500))
-        self.stackedWidget.setStyleSheet(u"background-color: rgba(255, 255, 255, 0);")
+        self.stackedWidget.setStyleSheet(u"background-color: rgba(255, 255, 255, 0);\n"
+"\n"
+"/*background-color: rgb(43, 43, 43);*/")
         self.homePage = QWidget()
         self.homePage.setObjectName(u"homePage")
         self.buttonFrame = QFrame(self.homePage)
@@ -300,6 +302,7 @@ class Ui_VSMain(object):
         self.frame = QFrame(self.homePage)
         self.frame.setObjectName(u"frame")
         self.frame.setGeometry(QRect(180, 260, 811, 61))
+        self.frame.setStyleSheet(u"background-color: rgba(255, 255, 255, 0);")
         self.frame.setFrameShape(QFrame.StyledPanel)
         self.frame.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_2 = QHBoxLayout(self.frame)
@@ -972,7 +975,189 @@ class Ui_VSMain(object):
 "	border-style: none;\n"
 "	border-radius: 40px;\n"
 "}")
+        self.buttonFrame_6 = QFrame(self.settingsPage)
+        self.buttonFrame_6.setObjectName(u"buttonFrame_6")
+        self.buttonFrame_6.setGeometry(QRect(130, 110, 921, 170))
+        sizePolicy.setHeightForWidth(self.buttonFrame_6.sizePolicy().hasHeightForWidth())
+        self.buttonFrame_6.setSizePolicy(sizePolicy)
+        self.buttonFrame_6.setStyleSheet(u"QFrame{\n"
+"	background-color: rgba(255, 255, 255, 0);\n"
+"}")
+        self.buttonFrame_6.setFrameShape(QFrame.StyledPanel)
+        self.buttonFrame_6.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_4 = QHBoxLayout(self.buttonFrame_6)
+        self.horizontalLayout_4.setObjectName(u"horizontalLayout_4")
+        self.aboutButton = QPushButton(self.buttonFrame_6)
+        self.aboutButton.setObjectName(u"aboutButton")
+        self.aboutButton.setMinimumSize(QSize(150, 150))
+        self.aboutButton.setMaximumSize(QSize(150, 150))
+        self.aboutButton.setCursor(QCursor(Qt.PointingHandCursor))
+        self.aboutButton.setStyleSheet(u"QPushButton{\n"
+"	image: url(:/icons/Media/icons/about.png);\n"
+"	background-color: rgba(255, 255, 255, 0);\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"	image: url(:/icons/Media/icons/about.png);\n"
+"	background-color: rgba(255, 255, 255, 0.4);\n"
+"	border-style: none;\n"
+"	border-radius: 40px;\n"
+"}\n"
+"")
+
+        self.horizontalLayout_4.addWidget(self.aboutButton)
+
+        self.darkModeButton = QPushButton(self.buttonFrame_6)
+        self.darkModeButton.setObjectName(u"darkModeButton")
+        self.darkModeButton.setMinimumSize(QSize(150, 150))
+        self.darkModeButton.setMaximumSize(QSize(150, 150))
+        self.darkModeButton.setCursor(QCursor(Qt.PointingHandCursor))
+        self.darkModeButton.setStyleSheet(u"QPushButton{\n"
+"	image: url(:/icons/Media/icons/darkMode.png);\n"
+"	background-color: rgba(255, 255, 255, 0);\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"	image: url(:/icons/Media/icons/darkMode.png);\n"
+"	background-color: rgba(255, 255, 255, 0.4);\n"
+"	border-style: none;\n"
+"	border-radius: 40px;\n"
+"}\n"
+"")
+
+        self.horizontalLayout_4.addWidget(self.darkModeButton)
+
+        self.frame_3 = QFrame(self.settingsPage)
+        self.frame_3.setObjectName(u"frame_3")
+        self.frame_3.setGeometry(QRect(230, 260, 721, 61))
+        self.frame_3.setStyleSheet(u"background-color: rgba(255, 255, 255, 0);")
+        self.frame_3.setFrameShape(QFrame.StyledPanel)
+        self.frame_3.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_5 = QHBoxLayout(self.frame_3)
+        self.horizontalLayout_5.setObjectName(u"horizontalLayout_5")
+        self.aboutLabel = QLabel(self.frame_3)
+        self.aboutLabel.setObjectName(u"aboutLabel")
+        self.aboutLabel.setFont(font3)
+        self.aboutLabel.setStyleSheet(u"QLabel{\n"
+"	color: white;\n"
+"	background-color: rgba(255, 255, 255, 0);\n"
+"}")
+        self.aboutLabel.setAlignment(Qt.AlignCenter)
+
+        self.horizontalLayout_5.addWidget(self.aboutLabel)
+
+        self.darkModeLabel = QLabel(self.frame_3)
+        self.darkModeLabel.setObjectName(u"darkModeLabel")
+        self.darkModeLabel.setFont(font3)
+        self.darkModeLabel.setStyleSheet(u"QLabel{\n"
+"	color: white;\n"
+"	background-color: rgba(255, 255, 255, 0);\n"
+"}")
+        self.darkModeLabel.setAlignment(Qt.AlignCenter)
+
+        self.horizontalLayout_5.addWidget(self.darkModeLabel)
+
         self.stackedWidget.addWidget(self.settingsPage)
+        self.aboutPage = QWidget()
+        self.aboutPage.setObjectName(u"aboutPage")
+        self.homeButtonFrame_7 = QFrame(self.aboutPage)
+        self.homeButtonFrame_7.setObjectName(u"homeButtonFrame_7")
+        self.homeButtonFrame_7.setGeometry(QRect(10, 0, 51, 51))
+        self.homeButtonFrame_7.setStyleSheet(u"background-color: rgba(255, 255, 255, 0);")
+        self.homeButtonFrame_7.setFrameShape(QFrame.StyledPanel)
+        self.homeButtonFrame_7.setFrameShadow(QFrame.Raised)
+        self.homeButton_about = QPushButton(self.homeButtonFrame_7)
+        self.homeButton_about.setObjectName(u"homeButton_about")
+        self.homeButton_about.setGeometry(QRect(10, 10, 31, 31))
+        self.homeButton_about.setStyleSheet(u"QPushButton{\n"
+"	image: url(:/icons/Media/icons/goback.png);\n"
+"	background-color: rgba(255, 255, 255, 0);\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"	image: url(:/icons/Media/icons/goback.png);\n"
+"	background-color: rgba(255, 255, 255, 0);\n"
+"	border-style: none;\n"
+"	border-radius: 40px;\n"
+"}")
+        self.frame_4 = QFrame(self.aboutPage)
+        self.frame_4.setObjectName(u"frame_4")
+        self.frame_4.setGeometry(QRect(440, 80, 311, 321))
+        self.frame_4.setStyleSheet(u"background-color: rgba(255, 255, 255, 0.5);\n"
+"border-style: none;\n"
+"border-radius: 10px;")
+        self.frame_4.setFrameShape(QFrame.StyledPanel)
+        self.frame_4.setFrameShadow(QFrame.Raised)
+        self.label_3 = QLabel(self.frame_4)
+        self.label_3.setObjectName(u"label_3")
+        self.label_3.setGeometry(QRect(20, 50, 141, 31))
+        self.label_3.setFont(font8)
+        self.label_3.setStyleSheet(u"background-color: rgba(255, 255, 255, 0);")
+        self.label_4 = QLabel(self.frame_4)
+        self.label_4.setObjectName(u"label_4")
+        self.label_4.setGeometry(QRect(20, 80, 181, 31))
+        self.label_4.setFont(font8)
+        self.label_4.setStyleSheet(u"background-color: rgba(255, 255, 255, 0);")
+        self.label_5 = QLabel(self.frame_4)
+        self.label_5.setObjectName(u"label_5")
+        self.label_5.setGeometry(QRect(200, 60, 91, 21))
+        font9 = QFont()
+        font9.setFamily(u"Humanst521 BT")
+        font9.setPointSize(12)
+        self.label_5.setFont(font9)
+        self.label_5.setStyleSheet(u"color: white;\n"
+"background-color: rgb(74, 74, 74);")
+        self.label_6 = QLabel(self.frame_4)
+        self.label_6.setObjectName(u"label_6")
+        self.label_6.setGeometry(QRect(200, 90, 91, 21))
+        self.label_6.setFont(font9)
+        self.label_6.setStyleSheet(u"color: white;\n"
+"background-color: rgb(74, 74, 74);")
+        self.label_7 = QLabel(self.frame_4)
+        self.label_7.setObjectName(u"label_7")
+        self.label_7.setGeometry(QRect(20, 120, 221, 21))
+        self.label_7.setStyleSheet(u"background-color: rgba(255, 255, 255, 0);\n"
+"font-weight: bold;")
+        self.label_8 = QLabel(self.frame_4)
+        self.label_8.setObjectName(u"label_8")
+        self.label_8.setGeometry(QRect(20, 140, 201, 21))
+        self.label_8.setStyleSheet(u"background-color: rgba(255, 255, 255, 0);")
+        self.label_9 = QLabel(self.frame_4)
+        self.label_9.setObjectName(u"label_9")
+        self.label_9.setGeometry(QRect(20, 160, 121, 21))
+        self.label_9.setStyleSheet(u"background-color: rgba(255, 255, 255, 0);")
+        self.label_10 = QLabel(self.frame_4)
+        self.label_10.setObjectName(u"label_10")
+        self.label_10.setGeometry(QRect(40, 10, 211, 41))
+        self.label_10.setStyleSheet(u"image: url(:/images/Media/VS_2tone.png);\n"
+"background-color: rgba(255, 255, 255, 0);")
+        self.label_11 = QLabel(self.frame_4)
+        self.label_11.setObjectName(u"label_11")
+        self.label_11.setGeometry(QRect(20, 180, 271, 16))
+        self.label_11.setStyleSheet(u"border-bottom: 5px dotted black;\n"
+"background-color: rgba(255, 255, 255, 0);")
+        self.label_12 = QLabel(self.frame_4)
+        self.label_12.setObjectName(u"label_12")
+        self.label_12.setGeometry(QRect(20, 210, 271, 16))
+        self.label_12.setStyleSheet(u"background-color: rgba(255, 255, 255, 0);")
+        self.label_13 = QLabel(self.frame_4)
+        self.label_13.setObjectName(u"label_13")
+        self.label_13.setGeometry(QRect(20, 230, 271, 16))
+        self.label_13.setStyleSheet(u"background-color: rgba(255, 255, 255, 0);")
+        self.label_14 = QLabel(self.frame_4)
+        self.label_14.setObjectName(u"label_14")
+        self.label_14.setGeometry(QRect(20, 250, 271, 16))
+        self.label_14.setStyleSheet(u"background-color: rgba(255, 255, 255, 0);")
+        self.label_15 = QLabel(self.frame_4)
+        self.label_15.setObjectName(u"label_15")
+        self.label_15.setGeometry(QRect(20, 270, 271, 16))
+        self.label_15.setStyleSheet(u"background-color: rgba(255, 255, 255, 0);")
+        self.label_16 = QLabel(self.frame_4)
+        self.label_16.setObjectName(u"label_16")
+        self.label_16.setGeometry(QRect(30, 290, 271, 16))
+        self.label_16.setStyleSheet(u"background-color: rgba(255, 255, 255, 0);\n"
+"font-style: italic;")
+        self.stackedWidget.addWidget(self.aboutPage)
 
         self.gridLayout_3.addWidget(self.stackedWidget, 0, 0, 1, 1)
 
@@ -983,7 +1168,7 @@ class Ui_VSMain(object):
 
         self.retranslateUi(VSMain)
 
-        self.stackedWidget.setCurrentIndex(0)
+        self.stackedWidget.setCurrentIndex(8)
 
 
         QMetaObject.connectSlotsByName(VSMain)
@@ -1049,5 +1234,23 @@ class Ui_VSMain(object):
         self.subscriptLabel.setText(QCoreApplication.translate("VSMain", u"Spotify ID:", None))
         self.profilePicBox.setText("")
         self.homeButton_settings.setText("")
+        self.aboutButton.setText("")
+        self.darkModeButton.setText("")
+        self.aboutLabel.setText(QCoreApplication.translate("VSMain", u"About", None))
+        self.darkModeLabel.setText(QCoreApplication.translate("VSMain", u"Dark Mode On/ Off", None))
+        self.homeButton_about.setText("")
+        self.label_3.setText(QCoreApplication.translate("VSMain", u"Software Version: ", None))
+        self.label_4.setText(QCoreApplication.translate("VSMain", u"Software Release Date:", None))
+        self.label_5.setText(QCoreApplication.translate("VSMain", u"  v1.0_04_16", None))
+        self.label_6.setText(QCoreApplication.translate("VSMain", u"  04/16/2021", None))
+        self.label_7.setText(QCoreApplication.translate("VSMain", u"Created by Team Big Pecs:", None))
+        self.label_8.setText(QCoreApplication.translate("VSMain", u"Zach Johnson, Azal Abduh, Gameil Alsaidi,", None))
+        self.label_9.setText(QCoreApplication.translate("VSMain", u"Tin Pham, & Kalia Jeffries", None))
+        self.label_10.setText("")
+        self.label_11.setText("")
+        self.label_12.setText(QCoreApplication.translate("VSMain", u"VibeShare is a standalone application created to make", None))
+        self.label_13.setText(QCoreApplication.translate("VSMain", u"playlist generation easier and more appealing to Spotify", None))
+        self.label_14.setText(QCoreApplication.translate("VSMain", u"users. Users have the ability to generate unique", None))
+        self.label_15.setText(QCoreApplication.translate("VSMain", u"playlists based on specified Artists, Genres, and Moods!", None))
+        self.label_16.setText(QCoreApplication.translate("VSMain", u"(Functionality made possible through Spotify API)", None))
     # retranslateUi
-
