@@ -1,6 +1,7 @@
 import sys
 import os
 import platform
+import requests
 
 from splash_screen import *
 from ui_vs import *
@@ -32,7 +33,6 @@ spotify.token = user_token
 
 user = spotify.current_user()
 user_id = user.id
-userName = user.display_name
 
 # Main window class
 class MainAppWindow(QMainWindow):
@@ -44,9 +44,16 @@ class MainAppWindow(QMainWindow):
         self.ui.setupUi(self)
 
         #Append Profile Information from Spotify to Profile Page
-        self.ui.headerProfileName.setText(userName)
-        self.ui.name_txtbox.setText(userName)
-        self.ui.sub_txtbox.setText(user_id)
+        self.ui.headerProfileName.setText(user.display_name)
+        self.ui.name_txtbox.setText(user.display_name)
+        self.ui.sub_txtbox.setText(user.id)
+
+        #Set Profile Picture on Profile Page
+        image = QImage()
+        image.loadFromData(requests.get(user.images[0].url).content)
+        pixmap = QPixmap(image)
+        pixmap = pixmap.scaled(QSize(181, 171))
+        self.ui.profilePicBox.setPixmap(pixmap)
 
         #Dark Mode
         #app.setStyleSheet(qdarkstyle.load_stylesheet_pyside2())
