@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'vsRUwPHr.ui'
+## Form generated from reading UI file 'vsmejwVD.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -165,7 +165,7 @@ class Ui_VSMain(object):
 
         self.headerProfileName = QTextEdit(self.headerFrame)
         self.headerProfileName.setObjectName(u"headerProfileName")
-        self.headerProfileName.setGeometry(QRect(50, 10, 241, 31))
+        self.headerProfileName.setGeometry(QRect(50, 10, 241, 21))
         font2 = QFont()
         font2.setFamily(u"Humanst521 BT")
         font2.setPointSize(12)
@@ -185,6 +185,23 @@ class Ui_VSMain(object):
         self.headerProfileIcon.setGeometry(QRect(10, 10, 31, 31))
         self.headerProfileIcon.setStyleSheet(u"background-color: rgba(255, 255, 255, 0);\n"
 "image: url(:/icons/Media/icons/cil-user.png);")
+        self.headerSignoutButton = QPushButton(self.headerFrame)
+        self.headerSignoutButton.setObjectName(u"headerSignoutButton")
+        self.headerSignoutButton.setGeometry(QRect(50, 30, 51, 20))
+        self.headerSignoutButton.setStyleSheet(u"QPushButton {\n"
+"	color: white;\n"
+"	background-color: rgba(255, 255, 255, 0);\n"
+"	text-decoration: underline;\n"
+"	font-style: italic;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"	color: rgb(248, 231, 28);\n"
+"	background-color: rgba(255, 255, 255, 0);\n"
+"	text-decoration: underline;\n"
+"	font-style: italic;\n"
+"	font-weight: bold;\n"
+"}")
         self.footerFrame = QFrame(self.centralwidget)
         self.footerFrame.setObjectName(u"footerFrame")
         self.footerFrame.setGeometry(QRect(0, 599, 1200, 50))
@@ -744,55 +761,60 @@ class Ui_VSMain(object):
         self.artistTxtBoxes_2.setFrameShadow(QFrame.Raised)
         self.verticalLayout_2 = QVBoxLayout(self.artistTxtBoxes_2)
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
-        self.genre1 = QTextEdit(self.artistTxtBoxes_2)
-        self.genre1.setObjectName(u"genre1")
-        self.genre1.setStyleSheet(u"background-color: rgba(255, 255, 255, 0.5);\n"
+        self.genre1_txtbox = QLineEdit(self.artistTxtBoxes_2)
+        self.genre1_txtbox.setObjectName(u"genre1_txtbox")
+        self.genre1_txtbox.setStyleSheet(u"background-color: rgba(255, 255, 255, 0.5);\n"
 "border-radius: 10px;\n"
 "border-style: none;\n"
 "color: white;\n"
-"font-size: 12pt;")
+"font-size: 12pt;\n"
+"height: 30px;")
 
-        self.verticalLayout_2.addWidget(self.genre1)
+        self.verticalLayout_2.addWidget(self.genre1_txtbox)
 
-        self.genre2 = QTextEdit(self.artistTxtBoxes_2)
-        self.genre2.setObjectName(u"genre2")
-        self.genre2.setStyleSheet(u"background-color: rgba(255, 255, 255, 0.5);\n"
+        self.genre2_txtbox = QLineEdit(self.artistTxtBoxes_2)
+        self.genre2_txtbox.setObjectName(u"genre2_txtbox")
+        self.genre2_txtbox.setStyleSheet(u"background-color: rgba(255, 255, 255, 0.5);\n"
 "border-radius: 10px;\n"
 "border-style: none;\n"
 "color: white;\n"
-"font-size: 12pt;")
+"font-size: 12pt;\n"
+"height: 30px;")
 
-        self.verticalLayout_2.addWidget(self.genre2)
+        self.verticalLayout_2.addWidget(self.genre2_txtbox)
 
-        self.genre3 = QTextEdit(self.artistTxtBoxes_2)
-        self.genre3.setObjectName(u"genre3")
-        self.genre3.setStyleSheet(u"background-color: rgba(255, 255, 255, 0.5);\n"
+        self.genre3_txtbox = QLineEdit(self.artistTxtBoxes_2)
+        self.genre3_txtbox.setObjectName(u"genre3_txtbox")
+        self.genre3_txtbox.setStyleSheet(u"background-color: rgba(255, 255, 255, 0.5);\n"
 "border-radius: 10px;\n"
 "border-style: none;\n"
 "color: white;\n"
-"font-size: 12pt;")
+"font-size: 12pt;\n"
+"height: 30px;")
 
-        self.verticalLayout_2.addWidget(self.genre3)
+        self.verticalLayout_2.addWidget(self.genre3_txtbox)
 
-        self.genre4 = QTextEdit(self.artistTxtBoxes_2)
-        self.genre4.setObjectName(u"genre4")
-        self.genre4.setStyleSheet(u"background-color: rgba(255, 255, 255, 0.5);\n"
+        self.genre4_txtbox = QLineEdit(self.artistTxtBoxes_2)
+        self.genre4_txtbox.setObjectName(u"genre4_txtbox")
+        self.genre4_txtbox.setStyleSheet(u"background-color: rgba(255, 255, 255, 0.5);\n"
 "border-radius: 10px;\n"
 "border-style: none;\n"
 "color: white;\n"
-"font-size: 12pt;")
+"font-size: 12pt;\n"
+"height: 30px;")
 
-        self.verticalLayout_2.addWidget(self.genre4)
+        self.verticalLayout_2.addWidget(self.genre4_txtbox)
 
-        self.genre5 = QTextEdit(self.artistTxtBoxes_2)
-        self.genre5.setObjectName(u"genre5")
-        self.genre5.setStyleSheet(u"background-color: rgba(255, 255, 255, 0.5);\n"
+        self.genre5_txtbox = QLineEdit(self.artistTxtBoxes_2)
+        self.genre5_txtbox.setObjectName(u"genre5_txtbox")
+        self.genre5_txtbox.setStyleSheet(u"background-color: rgba(255, 255, 255, 0.5);\n"
 "border-radius: 10px;\n"
 "border-style: none;\n"
 "color: white;\n"
-"font-size: 12pt;")
+"font-size: 12pt;\n"
+"height: 30px;")
 
-        self.verticalLayout_2.addWidget(self.genre5)
+        self.verticalLayout_2.addWidget(self.genre5_txtbox)
 
         self.genreLabel1 = QLabel(self.createGenrePage)
         self.genreLabel1.setObjectName(u"genreLabel1")
@@ -910,48 +932,75 @@ class Ui_VSMain(object):
 "	border-style: none;\n"
 "	border-radius: 40px;\n"
 "}")
-        self.infoFrame = QFrame(self.profilePage)
+        self.mainProfileFrame = QFrame(self.profilePage)
+        self.mainProfileFrame.setObjectName(u"mainProfileFrame")
+        self.mainProfileFrame.setGeometry(QRect(300, 90, 581, 211))
+        self.mainProfileFrame.setStyleSheet(u"background-color: rgba(255, 255, 255, 0.5);\n"
+"border-style: none;\n"
+"border-radius: 10px;")
+        self.mainProfileFrame.setFrameShape(QFrame.StyledPanel)
+        self.mainProfileFrame.setFrameShadow(QFrame.Raised)
+        self.profilePicBox = QLabel(self.mainProfileFrame)
+        self.profilePicBox.setObjectName(u"profilePicBox")
+        self.profilePicBox.setGeometry(QRect(20, 20, 171, 171))
+        self.profilePicBox.setStyleSheet(u"background-color: rgba(0, 0, 0, 0.5);\n"
+"border-style: none;\n"
+"border-radius: 10px;")
+        self.infoFrame = QFrame(self.mainProfileFrame)
         self.infoFrame.setObjectName(u"infoFrame")
-        self.infoFrame.setGeometry(QRect(420, 260, 331, 141))
+        self.infoFrame.setGeometry(QRect(210, 20, 351, 171))
+        self.infoFrame.setStyleSheet(u"background-color: rgba(0, 0, 0, 0.5);")
         self.infoFrame.setFrameShape(QFrame.StyledPanel)
         self.infoFrame.setFrameShadow(QFrame.Raised)
         self.nameLabel = QLabel(self.infoFrame)
         self.nameLabel.setObjectName(u"nameLabel")
-        self.nameLabel.setGeometry(QRect(10, 10, 51, 41))
+        self.nameLabel.setGeometry(QRect(20, 20, 51, 41))
         font8 = QFont()
         font8.setFamily(u"Humanst521 BT")
         font8.setPointSize(14)
         self.nameLabel.setFont(font8)
-        self.nameLabel.setStyleSheet(u"color: rgb(255, 255, 255);")
+        self.nameLabel.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"background-color: rgba(255, 255, 255, 0);")
         self.subscriptLabel = QLabel(self.infoFrame)
         self.subscriptLabel.setObjectName(u"subscriptLabel")
-        self.subscriptLabel.setGeometry(QRect(10, 70, 101, 41))
+        self.subscriptLabel.setGeometry(QRect(20, 90, 81, 41))
         self.subscriptLabel.setFont(font8)
-        self.subscriptLabel.setStyleSheet(u"color: rgb(255, 255, 255);")
+        self.subscriptLabel.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"background-color: rgba(255, 255, 255, 0);")
         self.name_txtbox = QTextEdit(self.infoFrame)
         self.name_txtbox.setObjectName(u"name_txtbox")
-        self.name_txtbox.setGeometry(QRect(80, 20, 251, 31))
+        self.name_txtbox.setGeometry(QRect(80, 30, 251, 31))
         self.name_txtbox.setStyleSheet(u"background-color: rgba(255, 255, 255, 0.5);\n"
 "border-radius: 10px;\n"
 "border-style: none;\n"
-"color: white;\n"
+"color: black;\n"
 "font-size: 12pt;\n"
 "height: 30px;")
         self.sub_txtbox = QTextEdit(self.infoFrame)
         self.sub_txtbox.setObjectName(u"sub_txtbox")
-        self.sub_txtbox.setGeometry(QRect(120, 80, 211, 31))
+        self.sub_txtbox.setGeometry(QRect(120, 100, 211, 41))
         self.sub_txtbox.setStyleSheet(u"background-color: rgba(255, 255, 255, 0.5);\n"
 "border-radius: 10px;\n"
 "border-style: none;\n"
-"color: white;\n"
+"color: black;\n"
 "font-size: 12pt;\n"
 "height: 30px;")
-        self.profilePicBox = QLabel(self.profilePage)
-        self.profilePicBox.setObjectName(u"profilePicBox")
-        self.profilePicBox.setGeometry(QRect(500, 80, 181, 171))
-        self.profilePicBox.setStyleSheet(u"background-color: rgba(255, 255, 255, 0.5);\n"
-"border-style: none;\n"
-"border-radius: 10px;")
+        self.signoutButton = QPushButton(self.profilePage)
+        self.signoutButton.setObjectName(u"signoutButton")
+        self.signoutButton.setGeometry(QRect(520, 340, 151, 31))
+        self.signoutButton.setFont(font6)
+        self.signoutButton.setStyleSheet(u"QPushButton{\n"
+"	background-color: rgb(255, 255, 255);\n"
+"	border-style: none;\n"
+"	border-radius: 10px;\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"	background-color: rgb(248, 231, 28);\n"
+"	border-style: none;\n"
+"	border-radius: 10px;\n"
+"	font-weight: bold;\n"
+"}")
         self.stackedWidget.addWidget(self.profilePage)
         self.settingsPage = QWidget()
         self.settingsPage.setObjectName(u"settingsPage")
@@ -1168,7 +1217,7 @@ class Ui_VSMain(object):
 
         self.retranslateUi(VSMain)
 
-        self.stackedWidget.setCurrentIndex(8)
+        self.stackedWidget.setCurrentIndex(4)
 
 
         QMetaObject.connectSlotsByName(VSMain)
@@ -1185,8 +1234,9 @@ class Ui_VSMain(object):
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Humanst521 BT'; font-size:12pt; font-weight:600; font-style:normal;\">\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>", None))
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Hoopty</p></body></html>", None))
         self.headerProfileIcon.setText("")
+        self.headerSignoutButton.setText(QCoreApplication.translate("VSMain", u"Sign Out", None))
         self.spotifyLabel.setText("")
         self.createButton.setText("")
         self.profileButton.setText("")
@@ -1230,9 +1280,10 @@ class Ui_VSMain(object):
         self.keyLabel2_2.setText(QCoreApplication.translate("VSMain", u"*Select a mood to generate from", None))
         self.genMoodButton.setText(QCoreApplication.translate("VSMain", u"Generate", None))
         self.homeButton_profile.setText("")
+        self.profilePicBox.setText("")
         self.nameLabel.setText(QCoreApplication.translate("VSMain", u"Name: ", None))
         self.subscriptLabel.setText(QCoreApplication.translate("VSMain", u"Spotify ID:", None))
-        self.profilePicBox.setText("")
+        self.signoutButton.setText(QCoreApplication.translate("VSMain", u"Sign Out", None))
         self.homeButton_settings.setText("")
         self.aboutButton.setText("")
         self.darkModeButton.setText("")
@@ -1254,3 +1305,4 @@ class Ui_VSMain(object):
         self.label_15.setText(QCoreApplication.translate("VSMain", u"playlists based on specified Artists, Genres, and Moods!", None))
         self.label_16.setText(QCoreApplication.translate("VSMain", u"(Functionality made possible through Spotify API)", None))
     # retranslateUi
+

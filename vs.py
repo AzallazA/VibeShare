@@ -17,10 +17,11 @@ from PyQt5.QtGui import QMovie
 
 import tekore as tk
 
-#import qdarkstyle
+#Globals
 WINDOW_SIZE = 0
 counter = 0
 
+#Spotify credentials
 client_id = 'f0feb7039cfc44789f7b83631dc79825'
 client_secret = '573953b4699945d0bae0eed31478aa0a'
 app_token = tk.request_client_token(client_id, client_secret)
@@ -31,6 +32,7 @@ scopes = tk.scope.every
 user_token = tk.prompt_for_user_token(client_id, client_secret, 'http://localhost:4555/', scopes)
 spotify.token = user_token
 
+#Current spotify user
 user = spotify.current_user()
 user_id = user.id
 
@@ -50,13 +52,13 @@ class MainAppWindow(QMainWindow):
 
         #Set Profile Picture on Profile Page
         image = QImage()
-        image.loadFromData(requests.get(user.images[0].url).content)
-        pixmap = QPixmap(image)
-        pixmap = pixmap.scaled(QSize(181, 171))
-        self.ui.profilePicBox.setPixmap(pixmap)
-
-        #Dark Mode
-        #app.setStyleSheet(qdarkstyle.load_stylesheet_pyside2())
+        if image:
+            image.loadFromData(requests.get(user.images[0].url).content)
+            pixmap = QPixmap(image)
+            pixmap = pixmap.scaled(QSize(181, 171))
+            self.ui.profilePicBox.setPixmap(pixmap)
+        else:
+            self.ui.profilePicBox.setPixmap("Media/icons/profileDefault_borderless.png")
 
         # Remove window tlttle bar
         self.setWindowFlags(QtCore.Qt.FramelessWindowHint)
@@ -79,8 +81,11 @@ class MainAppWindow(QMainWindow):
         self.ui.minimizeButton.clicked.connect(lambda: self.showMinimized())
         #Close window
         self.ui.closeButton.clicked.connect(lambda: self.close())
+        #Sign out Buttons
+        self.ui.headerSignoutButton.clicked.connect(lambda: self.close())
+        self.ui.signoutButton.clicked.connect(lambda: self.close())
         #Restore/Maximize window
-        self.ui.restoreButton.clicked.connect(lambda: self.restore_or_maximize_window())
+        #self.ui.restoreButton.clicked.connect(lambda: self.restore_or_maximize_window())
         # ###############################################
         self.show()
         #Stacked QtWidgets
