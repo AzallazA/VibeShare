@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'vsmejwVD.ui'
+## Form generated from reading UI file 'vsiYevHy.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -393,6 +393,26 @@ class Ui_VSMain(object):
         self.buttonFrame_2.setFrameShadow(QFrame.Raised)
         self.gridLayout_2 = QGridLayout(self.buttonFrame_2)
         self.gridLayout_2.setObjectName(u"gridLayout_2")
+        self.createMoodButton = QPushButton(self.buttonFrame_2)
+        self.createMoodButton.setObjectName(u"createMoodButton")
+        self.createMoodButton.setMinimumSize(QSize(150, 150))
+        self.createMoodButton.setMaximumSize(QSize(150, 150))
+        self.createMoodButton.setCursor(QCursor(Qt.PointingHandCursor))
+        self.createMoodButton.setStyleSheet(u"QPushButton{\n"
+"	image: url(:/icons/Media/icons/mood.png);\n"
+"	background-color: rgba(255, 255, 255, 0);\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"	image: url(:/icons/Media/icons/mood.png);\n"
+"	background-color: rgba(255, 255, 255, 0.4);\n"
+"	border-style: none;\n"
+"	border-radius: 40px;\n"
+"}\n"
+"")
+
+        self.gridLayout_2.addWidget(self.createMoodButton, 0, 2, 1, 1)
+
         self.createGenreButton = QPushButton(self.buttonFrame_2)
         self.createGenreButton.setObjectName(u"createGenreButton")
         self.createGenreButton.setMinimumSize(QSize(150, 150))
@@ -412,17 +432,6 @@ class Ui_VSMain(object):
 "")
 
         self.gridLayout_2.addWidget(self.createGenreButton, 0, 1, 1, 1)
-
-        self.createGenreLabel = QLabel(self.buttonFrame_2)
-        self.createGenreLabel.setObjectName(u"createGenreLabel")
-        self.createGenreLabel.setFont(font3)
-        self.createGenreLabel.setStyleSheet(u"QLabel{\n"
-"	color: white;\n"
-"	background-color: rgba(255, 255, 255, 0);\n"
-"}")
-        self.createGenreLabel.setAlignment(Qt.AlignCenter)
-
-        self.gridLayout_2.addWidget(self.createGenreLabel, 2, 1, 1, 1)
 
         self.createArtistButton = QPushButton(self.buttonFrame_2)
         self.createArtistButton.setObjectName(u"createArtistButton")
@@ -454,26 +463,6 @@ class Ui_VSMain(object):
 
         self.gridLayout_2.addWidget(self.createArtistLabel, 2, 0, 1, 1)
 
-        self.createMoodButton = QPushButton(self.buttonFrame_2)
-        self.createMoodButton.setObjectName(u"createMoodButton")
-        self.createMoodButton.setMinimumSize(QSize(150, 150))
-        self.createMoodButton.setMaximumSize(QSize(150, 150))
-        self.createMoodButton.setCursor(QCursor(Qt.PointingHandCursor))
-        self.createMoodButton.setStyleSheet(u"QPushButton{\n"
-"	image: url(:/icons/Media/icons/mood.png);\n"
-"	background-color: rgba(255, 255, 255, 0);\n"
-"}\n"
-"\n"
-"QPushButton:hover{\n"
-"	image: url(:/icons/Media/icons/mood.png);\n"
-"	background-color: rgba(255, 255, 255, 0.4);\n"
-"	border-style: none;\n"
-"	border-radius: 40px;\n"
-"}\n"
-"")
-
-        self.gridLayout_2.addWidget(self.createMoodButton, 0, 2, 1, 1)
-
         self.createMoodLabel = QLabel(self.buttonFrame_2)
         self.createMoodLabel.setObjectName(u"createMoodLabel")
         self.createMoodLabel.setFont(font3)
@@ -484,6 +473,47 @@ class Ui_VSMain(object):
         self.createMoodLabel.setAlignment(Qt.AlignCenter)
 
         self.gridLayout_2.addWidget(self.createMoodLabel, 2, 2, 1, 1)
+
+        self.createGenreLabel = QLabel(self.buttonFrame_2)
+        self.createGenreLabel.setObjectName(u"createGenreLabel")
+        self.createGenreLabel.setFont(font3)
+        self.createGenreLabel.setStyleSheet(u"QLabel{\n"
+"	color: white;\n"
+"	background-color: rgba(255, 255, 255, 0);\n"
+"}")
+        self.createGenreLabel.setAlignment(Qt.AlignCenter)
+
+        self.gridLayout_2.addWidget(self.createGenreLabel, 2, 1, 1, 1)
+
+        self.recommendButton = QPushButton(self.buttonFrame_2)
+        self.recommendButton.setObjectName(u"recommendButton")
+        self.recommendButton.setMinimumSize(QSize(150, 150))
+        self.recommendButton.setMaximumSize(QSize(150, 150))
+        self.recommendButton.setCursor(QCursor(Qt.PointingHandCursor))
+        self.recommendButton.setStyleSheet(u"QPushButton{\n"
+"	image: url(:/icons/Media/icons/recommend.png);\n"
+"	background-color: rgba(255, 255, 255, 0);\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"	image: url(:/icons/Media/icons/recommend.png);\n"
+"	background-color: rgba(255, 255, 255, 0.4);\n"
+"	border-style: none;\n"
+"	border-radius: 40px;\n"
+"}")
+
+        self.gridLayout_2.addWidget(self.recommendButton, 0, 3, 1, 1)
+
+        self.recommendLabel = QLabel(self.buttonFrame_2)
+        self.recommendLabel.setObjectName(u"recommendLabel")
+        self.recommendLabel.setFont(font3)
+        self.recommendLabel.setStyleSheet(u"QLabel{\n"
+"	color: white;\n"
+"	background-color: rgba(255, 255, 255, 0);\n"
+"}")
+        self.recommendLabel.setAlignment(Qt.AlignCenter)
+
+        self.gridLayout_2.addWidget(self.recommendLabel, 2, 3, 1, 1)
 
         self.stackedWidget.addWidget(self.createPage)
         self.createArtistPage = QWidget()
@@ -1217,7 +1247,7 @@ class Ui_VSMain(object):
 
         self.retranslateUi(VSMain)
 
-        self.stackedWidget.setCurrentIndex(4)
+        self.stackedWidget.setCurrentIndex(1)
 
 
         QMetaObject.connectSlotsByName(VSMain)
@@ -1234,7 +1264,7 @@ class Ui_VSMain(object):
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Humanst521 BT'; font-size:12pt; font-weight:600; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Hoopty</p></body></html>", None))
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>", None))
         self.headerProfileIcon.setText("")
         self.headerSignoutButton.setText(QCoreApplication.translate("VSMain", u"Sign Out", None))
         self.spotifyLabel.setText("")
@@ -1245,12 +1275,14 @@ class Ui_VSMain(object):
         self.profileLabel.setText(QCoreApplication.translate("VSMain", u"Profile", None))
         self.settingsLabel.setText(QCoreApplication.translate("VSMain", u"Settings", None))
         self.homeButton_create.setText("")
+        self.createMoodButton.setText("")
         self.createGenreButton.setText("")
-        self.createGenreLabel.setText(QCoreApplication.translate("VSMain", u"Based on Genre", None))
         self.createArtistButton.setText("")
         self.createArtistLabel.setText(QCoreApplication.translate("VSMain", u"Based On Artist", None))
-        self.createMoodButton.setText("")
         self.createMoodLabel.setText(QCoreApplication.translate("VSMain", u"Based on Mood", None))
+        self.createGenreLabel.setText(QCoreApplication.translate("VSMain", u"Based on Genre", None))
+        self.recommendButton.setText("")
+        self.recommendLabel.setText(QCoreApplication.translate("VSMain", u"Recommendations", None))
         self.basedOnArtistLabel2.setText(QCoreApplication.translate("VSMain", u"Based On Artist", None))
         self.basedOnArtistLabel.setText("")
         self.keyLabel1.setText(QCoreApplication.translate("VSMain", u"*Input at least one artist", None))

@@ -16,12 +16,15 @@ from PySide2.QtWidgets import *
 from PyQt5.QtGui import QMovie
 
 import tekore as tk
-
+from spotipy.oauth2 import SpotifyClientCredentials
+from flask import Flask
+"""https://accounts.spotify.com/en/authorize?client_id=f0feb7039cfc44789f7b83631dc79825&redirect_uri=http:%2F%2Flocalhost:4555%2F&response_type=code
+&scope=playlist-modify-private%20playlist-modify-public%20playlist-read-collaborative%20playlist-read-private%20ugc-image-upload%20user-follow-modify%20user-follow-read%20user-library-modify%20user-library-read%20user-modify-playback-state%20user-read-currently-playing%20user-read-email%20user-read-playback-position%20user-read-playback-state%20user-read-private%20user-read-recently-played%20user-top-read&state=dc9DNnpSuyUYtmBrBX-ZMuBhYt3G6UPoErA81JebNBM&show_dialog=true"""
 #Globals
 WINDOW_SIZE = 0
 counter = 0
 
-#Spotify credentials
+#Spotify
 client_id = 'f0feb7039cfc44789f7b83631dc79825'
 client_secret = '573953b4699945d0bae0eed31478aa0a'
 app_token = tk.request_client_token(client_id, client_secret)
@@ -32,9 +35,10 @@ scopes = tk.scope.every
 user_token = tk.prompt_for_user_token(client_id, client_secret, 'http://localhost:4555/', scopes)
 spotify.token = user_token
 
-#Current spotify user
+#Current user stuff
 user = spotify.current_user()
 user_id = user.id
+userName = user.display_name
 
 # Main window class
 class MainAppWindow(QMainWindow):
@@ -123,7 +127,11 @@ class MainAppWindow(QMainWindow):
         #CREATE ARTIST PAGE
         #Generate Artist Playlist
         self.ui.genArtistButton.clicked.connect(self.getArtistText)
+
+        #CREATE LOADING PAGE
         self.ui.genArtistButton.clicked.connect(lambda: self.ui.stackedWidget.
+            setCurrentWidget(self.ui.createArtistLoadingPage))
+        self.ui.recommendButton.clicked.connect(lambda: self.ui.stackedWidget.
             setCurrentWidget(self.ui.createArtistLoadingPage))
 
         self.ui.genGenreButton.clicked.connect(self.genGenre)

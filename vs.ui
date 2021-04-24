@@ -338,7 +338,7 @@ height: 30px;</string>
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Humanst521 BT'; font-size:12pt; font-weight:600; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Hoopty&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
     </widget>
     <widget class="QLabel" name="headerProfileIcon">
@@ -505,7 +505,7 @@ QPushButton:hover {
 /*background-color: rgb(43, 43, 43);*/</string>
        </property>
        <property name="currentIndex">
-        <number>4</number>
+        <number>1</number>
        </property>
        <widget class="QWidget" name="homePage">
         <widget class="QFrame" name="buttonFrame">
@@ -799,6 +799,42 @@ QPushButton:hover{
           <enum>QFrame::Raised</enum>
          </property>
          <layout class="QGridLayout" name="gridLayout_2">
+          <item row="0" column="2">
+           <widget class="QPushButton" name="createMoodButton">
+            <property name="minimumSize">
+             <size>
+              <width>150</width>
+              <height>150</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>150</width>
+              <height>150</height>
+             </size>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton{
+	image: url(:/icons/Media/icons/mood.png);
+	background-color: rgba(255, 255, 255, 0);
+}
+
+QPushButton:hover{
+	image: url(:/icons/Media/icons/mood.png);
+	background-color: rgba(255, 255, 255, 0.4);
+	border-style: none;
+	border-radius: 40px;
+}
+</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
           <item row="0" column="1">
            <widget class="QPushButton" name="createGenreButton">
             <property name="minimumSize">
@@ -832,28 +868,6 @@ QPushButton:hover{
             </property>
             <property name="text">
              <string/>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="1">
-           <widget class="QLabel" name="createGenreLabel">
-            <property name="font">
-             <font>
-              <family>Humnst777 BlkCn BT</family>
-              <pointsize>12</pointsize>
-             </font>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">QLabel{
-	color: white;
-	background-color: rgba(255, 255, 255, 0);
-}</string>
-            </property>
-            <property name="text">
-             <string>Based on Genre</string>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignCenter</set>
             </property>
            </widget>
           </item>
@@ -914,8 +928,52 @@ QPushButton:hover{
             </property>
            </widget>
           </item>
-          <item row="0" column="2">
-           <widget class="QPushButton" name="createMoodButton">
+          <item row="2" column="2">
+           <widget class="QLabel" name="createMoodLabel">
+            <property name="font">
+             <font>
+              <family>Humnst777 BlkCn BT</family>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLabel{
+	color: white;
+	background-color: rgba(255, 255, 255, 0);
+}</string>
+            </property>
+            <property name="text">
+             <string>Based on Mood</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QLabel" name="createGenreLabel">
+            <property name="font">
+             <font>
+              <family>Humnst777 BlkCn BT</family>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLabel{
+	color: white;
+	background-color: rgba(255, 255, 255, 0);
+}</string>
+            </property>
+            <property name="text">
+             <string>Based on Genre</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="3">
+           <widget class="QPushButton" name="recommendButton">
             <property name="minimumSize">
              <size>
               <width>150</width>
@@ -933,25 +991,24 @@ QPushButton:hover{
             </property>
             <property name="styleSheet">
              <string notr="true">QPushButton{
-	image: url(:/icons/Media/icons/mood.png);
+	image: url(:/icons/Media/icons/recommend.png);
 	background-color: rgba(255, 255, 255, 0);
 }
 
 QPushButton:hover{
-	image: url(:/icons/Media/icons/mood.png);
+	image: url(:/icons/Media/icons/recommend.png);
 	background-color: rgba(255, 255, 255, 0.4);
 	border-style: none;
 	border-radius: 40px;
-}
-</string>
+}</string>
             </property>
             <property name="text">
              <string/>
             </property>
            </widget>
           </item>
-          <item row="2" column="2">
-           <widget class="QLabel" name="createMoodLabel">
+          <item row="2" column="3">
+           <widget class="QLabel" name="recommendLabel">
             <property name="font">
              <font>
               <family>Humnst777 BlkCn BT</family>
@@ -965,7 +1022,7 @@ QPushButton:hover{
 }</string>
             </property>
             <property name="text">
-             <string>Based on Mood</string>
+             <string>Recommendations</string>
             </property>
             <property name="alignment">
              <set>Qt::AlignCenter</set>

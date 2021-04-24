@@ -1,5 +1,7 @@
 <RCC>
   <qresource prefix="icons">
+    <file>Media/icons/iconfinder_ic_account_box_48px_352000.png</file>
+    <file>Media/icons/recommend.png</file>
     <file>Media/icons/darkMode.png</file>
     <file>Media/icons/about.png</file>
     <file>Media/icons/settings.png</file>
