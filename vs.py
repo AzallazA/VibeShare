@@ -131,14 +131,19 @@ class MainAppWindow(QMainWindow):
         #Generate Artist Playlist
         self.ui.genArtistButton.clicked.connect(self.getArtistText)
 
+        #Generate Reccomendations Button Clicked
+        self.ui.recommendButton.clicked.connect(self.genRecommendations)
+
+        self.ui.genGenreButton.clicked.connect(self.genGenre)
+        #self.ui.genMoodButton.clicked.connect(self.genMood)
+
         #CREATE LOADING PAGE
         self.ui.genArtistButton.clicked.connect(lambda: self.ui.stackedWidget.
             setCurrentWidget(self.ui.createArtistLoadingPage))
         self.ui.recommendButton.clicked.connect(lambda: self.ui.stackedWidget.
             setCurrentWidget(self.ui.createArtistLoadingPage))
 
-        self.ui.genGenreButton.clicked.connect(self.genGenre)
-        #self.ui.genMoodButton.clicked.connect(self.genMood)
+
 
         #Home buttons
         self.ui.homeButton_create.clicked.connect(lambda: self.ui.stackedWidget.
@@ -262,6 +267,20 @@ class MainAppWindow(QMainWindow):
     #Submit Button For Generating based on mood
     def genMood(self):
         print("button clicked")
+
+    def genRecommendations(self):
+        top_tracks = spotify.current_user_top_tracks(limit=5).items
+        top_track_ids = [t.id for t in top_tracks]
+        recommendations = spotify.recommendations(track_ids=top_track_ids).tracks
+
+        playlist = spotify.playlist_create(
+            user.id,
+            'VibeShare Recommendations',
+            public=False,
+            description='Recommendations based on your top tracks <3'
+        )
+        uris = [t.uri for t in recommendations]
+        spotify.playlist_add(playlist.id, uris=uris)
 
     def mousePressEvent(self, event):
         # ###############################################
