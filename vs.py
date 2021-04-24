@@ -25,14 +25,17 @@ WINDOW_SIZE = 0
 counter = 0
 
 #Spotify
-client_id = 'f0feb7039cfc44789f7b83631dc79825'
-client_secret = '573953b4699945d0bae0eed31478aa0a'
+#client_id = 'f0feb7039cfc44789f7b83631dc79825'
+#client_secret = '573953b4699945d0bae0eed31478aa0a'
+client_id = 'b74cf8069d564daaa6bcc7eb21e80c52'
+client_secret = '217c6d35964545128c1efc70908ebfbc'
+redirect_uri = 'https://vibeshareapp.com/thankyou.html'
 app_token = tk.request_client_token(client_id, client_secret)
 spotify = tk.Spotify(app_token)
 scopes = tk.scope.every
 
 #Get's user credentials and adds logs them in
-user_token = tk.prompt_for_user_token(client_id, client_secret, 'http://localhost:4555/', scopes)
+user_token = tk.prompt_for_user_token(client_id, client_secret, redirect_uri, scopes)
 spotify.token = user_token
 
 #Current user stuff
