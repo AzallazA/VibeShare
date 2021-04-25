@@ -207,6 +207,7 @@
     <file>Media/icons/share_white.png</file>
   </qresource>
   <qresource prefix="images">
+    <file>Media/vrpLocation.png</file>
     <file>Media/vpLocation_1.png</file>
     <file>Media/vpLocation_2.png</file>
     <file>Media/vpLocation_3.png</file>

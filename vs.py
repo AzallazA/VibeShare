@@ -1,7 +1,7 @@
-import sys
-import os
-import platform
-import requests
+import sys, os, platform, requests, datetime, base64
+import json
+from urllib.parse import urlencode
+import spotify as Spotify
 
 from splash_screen import *
 from ui_vs import *
@@ -18,8 +18,7 @@ from PyQt5.QtGui import QMovie
 import tekore as tk
 from spotipy.oauth2 import SpotifyClientCredentials
 from flask import Flask
-"""https://accounts.spotify.com/en/authorize?client_id=f0feb7039cfc44789f7b83631dc79825&redirect_uri=http:%2F%2Flocalhost:4555%2F&response_type=code
-&scope=playlist-modify-private%20playlist-modify-public%20playlist-read-collaborative%20playlist-read-private%20ugc-image-upload%20user-follow-modify%20user-follow-read%20user-library-modify%20user-library-read%20user-modify-playback-state%20user-read-currently-playing%20user-read-email%20user-read-playback-position%20user-read-playback-state%20user-read-private%20user-read-recently-played%20user-top-read&state=dc9DNnpSuyUYtmBrBX-ZMuBhYt3G6UPoErA81JebNBM&show_dialog=true"""
+
 #Globals
 WINDOW_SIZE = 0
 counter = 0
@@ -29,19 +28,53 @@ counter = 0
 #client_secret = '573953b4699945d0bae0eed31478aa0a'
 client_id = 'b74cf8069d564daaa6bcc7eb21e80c52'
 client_secret = '217c6d35964545128c1efc70908ebfbc'
-redirect_uri = 'https://vibeshareapp.com/thankyou.html'
-app_token = tk.request_client_token(client_id, client_secret)
-spotify = tk.Spotify(app_token)
+redirect = 'https:%2F%2Fvibeshareapp.com%2Fthankyou.html'
+response_type = 'code'
+scope = 'playlist-modify-private%20playlist-modify-public%20playlist-read-collaborative%20playlist-read-private%20ugc-image-upload%20user-follow-modify%20user-follow-read%20user-library-modify%20user-library-read%20user-modify-playback-state%20user-read-currently-playing%20user-read-email%20user-read-playback-position%20user-read-playback-state%20user-read-private%20user-read-recently-played%20user-top-read'
+state = 'ZA_2buN-j5U4W37boUkV7a9OW1oyojBt8kY9rSNZBps'
+show_dialog = 'true'
+auth_url = "https://accounts.spotify.com/api/token"
+redirect_uri = ('https://accounts.spotify.com/authorize?' +
+'client_id=' + client_id + '&redirect_uri=' + redirect
++ '&response_type=' + response_type + ('&scope=' + scope) +
+'&state=' + state + '&show_dialog=' + show_dialog)
+
+authHeader = {}
+authData = {}
+
+def getAccessToken(client_id, client):
+    message = f"{client_id}:{client_secret}"
+    message_bytes = message.encode('ascii')
+    base64_bytes = base64.b64encode(message_bytes)
+    base64_message = base64_bytes.decode('ascii')
+
+    authHeader['Authorization'] = "Basic " + base64_message
+    authData['grant_type'] = "client_credentials"
+    res = requests.post(auth_url, headers=authHeader, data=authData)
+
+    responseObject = res.json()
+    #print(json.dumps(responseObject, indent=2))
+    accessToken = responseObject['access_token']
+    return accessToken
+
+display_token = getAccessToken(client_id, client_secret)
+print(display_token)
+
+#app_token = tk.request_client_token(client_id, client_secret)
+spotify = tk.Spotify(display_token)
 scopes = tk.scope.every
 
 #Get's user credentials and adds logs them in
-user_token = tk.prompt_for_user_token(client_id, client_secret, redirect_uri, scopes)
-spotify.token = user_token
+#user_token = tk.prompt_for_user_token(client_id, client_secret, redirect_uri, scopes)
+spotify.token = display_token
+
+GET_USER_PROFILE_ENDPOINT = 'https://api.spotify.com/v1/users/{user_id}'
+GET_USER_PLAYLISTS_ENDPOINT = 'https://api.spotify.com/v1/users/{user_id}/playlists'
 
 #Current user stuff
-user = spotify.current_user()
+"""user = spotify.current_user(user_id)
 user_id = user.id
-userName = user.display_name
+userName = user.display_name"""
 
 # Main window class
 class MainAppWindow(QMainWindow):
@@ -53,7 +86,7 @@ class MainAppWindow(QMainWindow):
         self.ui.setupUi(self)
 
         #Append Profile Information from Spotify to Profile Page
-        self.ui.headerProfileName.setText(user.display_name)
+        """        self.ui.headerProfileName.setText(user.display_name)
         self.ui.name_txtbox.setText(user.display_name)
         self.ui.sub_txtbox.setText(user.id)
 
@@ -65,7 +98,7 @@ class MainAppWindow(QMainWindow):
             pixmap = pixmap.scaled(QSize(181, 171))
             self.ui.profilePicBox.setPixmap(pixmap)
         else:
-            self.ui.profilePicBox.setPixmap("Media/icons/profileDefault_borderless.png")
+            self.ui.profilePicBox.setPixmap("Media/icons/profileDefault_borderless.png")"""
 
         # Remove window tlttle bar
         self.setWindowFlags(QtCore.Qt.FramelessWindowHint)
@@ -141,9 +174,7 @@ class MainAppWindow(QMainWindow):
         self.ui.genArtistButton.clicked.connect(lambda: self.ui.stackedWidget.
             setCurrentWidget(self.ui.createArtistLoadingPage))
         self.ui.recommendButton.clicked.connect(lambda: self.ui.stackedWidget.
-            setCurrentWidget(self.ui.createArtistLoadingPage))
-
-
+            setCurrentWidget(self.ui.recommendLoadingPage))
 
         #Home buttons
         self.ui.homeButton_create.clicked.connect(lambda: self.ui.stackedWidget.
@@ -160,6 +191,11 @@ class MainAppWindow(QMainWindow):
             setCurrentWidget(self.ui.createPage))
         self.ui.homeButton_calp.clicked.connect(lambda: self.ui.stackedWidget.
             setCurrentWidget(self.ui.homePage))
+        self.ui.homeButton_rlp.clicked.connect(lambda: self.ui.stackedWidget.
+            setCurrentWidget(self.ui.homePage))
+
+        self.ui.homeButton_about.clicked.connect(lambda: self.ui.stackedWidget.
+            setCurrentWidget(self.ui.settingsPage))
         self.ui.homeButton_about.clicked.connect(lambda: self.ui.stackedWidget.
             setCurrentWidget(self.ui.settingsPage))
 
@@ -230,7 +266,7 @@ class MainAppWindow(QMainWindow):
                 stop:1 rgba(0, 170, 255, 255));
             }""")
 
-    #Submit Button For Generating based on Artist
+    #Generating based on Artist
     def getArtistText(self):
         print("button clicked")
         artist1_out = self.ui.artist1_txtbox.text()
@@ -260,14 +296,15 @@ class MainAppWindow(QMainWindow):
             spotify.playlist_add(playlist.id, uris = uris)
             print("Your playlist url is" + playlist.uri)
 
-    #Submit Button For Generating based on genre
+    #Generating based on genre
     def genGenre(self):
         print("button clicked")
 
-    #Submit Button For Generating based on mood
+    #Generating based on mood
     def genMood(self):
         print("button clicked")
 
+    #Generating based on recommendations
     def genRecommendations(self):
         top_tracks = spotify.current_user_top_tracks(limit=5).items
         top_track_ids = [t.id for t in top_tracks]
@@ -306,7 +343,6 @@ class MainAppWindow(QMainWindow):
             self.showNormal()
     # /////////////////////////////////////////////////////////////////////////
 # Execute app
-#
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     window = MainAppWindow()

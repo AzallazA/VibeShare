@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'vsiYevHy.ui'
+## Form generated from reading UI file 'vsTTQmKK.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -720,6 +720,50 @@ class Ui_VSMain(object):
 "	border-radius: 40px;\n"
 "}")
         self.stackedWidget.addWidget(self.createArtistLoadingPage)
+        self.recommendLoadingPage = QWidget()
+        self.recommendLoadingPage.setObjectName(u"recommendLoadingPage")
+        self.homeButtonFrame_14 = QFrame(self.recommendLoadingPage)
+        self.homeButtonFrame_14.setObjectName(u"homeButtonFrame_14")
+        self.homeButtonFrame_14.setGeometry(QRect(10, 0, 51, 51))
+        self.homeButtonFrame_14.setStyleSheet(u"background-color: rgba(255, 255, 255, 0);")
+        self.homeButtonFrame_14.setFrameShape(QFrame.StyledPanel)
+        self.homeButtonFrame_14.setFrameShadow(QFrame.Raised)
+        self.homeButton_rlp = QPushButton(self.homeButtonFrame_14)
+        self.homeButton_rlp.setObjectName(u"homeButton_rlp")
+        self.homeButton_rlp.setGeometry(QRect(10, 10, 31, 31))
+        self.homeButton_rlp.setStyleSheet(u"QPushButton{\n"
+"	image: url(:/icons/Media/icons/home_btn.png);\n"
+"	background-color: rgba(255, 255, 255, 0);\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"	image: url(:/icons/Media/icons/home_btn.png);\n"
+"	background-color: rgba(255, 255, 255, 0);\n"
+"	border-style: none;\n"
+"	border-radius: 40px;\n"
+"}")
+        self.label_17 = QLabel(self.recommendLoadingPage)
+        self.label_17.setObjectName(u"label_17")
+        self.label_17.setGeometry(QRect(460, 20, 251, 31))
+        self.label_17.setFont(font7)
+        self.label_17.setStyleSheet(u"color: rgb(248, 231, 28);")
+        self.frame_5 = QFrame(self.recommendLoadingPage)
+        self.frame_5.setObjectName(u"frame_5")
+        self.frame_5.setGeometry(QRect(360, 70, 451, 361))
+        self.frame_5.setStyleSheet(u"image: url(:/images/Media/vrpLocation.png);")
+        self.frame_5.setFrameShape(QFrame.StyledPanel)
+        self.frame_5.setFrameShadow(QFrame.Raised)
+        self.label_18 = QLabel(self.recommendLoadingPage)
+        self.label_18.setObjectName(u"label_18")
+        self.label_18.setGeometry(QRect(500, 450, 381, 111))
+        self.label_18.setFont(font4)
+        self.label_18.setStyleSheet(u"color: rgb(255, 255, 255);")
+        self.label_19 = QLabel(self.recommendLoadingPage)
+        self.label_19.setObjectName(u"label_19")
+        self.label_19.setGeometry(QRect(360, 410, 461, 111))
+        self.label_19.setFont(font4)
+        self.label_19.setStyleSheet(u"color: rgb(255, 255, 255);")
+        self.stackedWidget.addWidget(self.recommendLoadingPage)
         self.createGenrePage = QWidget()
         self.createGenrePage.setObjectName(u"createGenrePage")
         self.genreLabel5 = QLabel(self.createGenrePage)
@@ -1247,7 +1291,7 @@ class Ui_VSMain(object):
 
         self.retranslateUi(VSMain)
 
-        self.stackedWidget.setCurrentIndex(1)
+        self.stackedWidget.setCurrentIndex(4)
 
 
         QMetaObject.connectSlotsByName(VSMain)
@@ -1282,7 +1326,7 @@ class Ui_VSMain(object):
         self.createMoodLabel.setText(QCoreApplication.translate("VSMain", u"Based on Mood", None))
         self.createGenreLabel.setText(QCoreApplication.translate("VSMain", u"Based on Genre", None))
         self.recommendButton.setText("")
-        self.recommendLabel.setText(QCoreApplication.translate("VSMain", u"Recommendations", None))
+        self.recommendLabel.setText(QCoreApplication.translate("VSMain", u"Random Recommend", None))
         self.basedOnArtistLabel2.setText(QCoreApplication.translate("VSMain", u"Based On Artist", None))
         self.basedOnArtistLabel.setText("")
         self.keyLabel1.setText(QCoreApplication.translate("VSMain", u"*Input at least one artist", None))
@@ -1296,6 +1340,10 @@ class Ui_VSMain(object):
         self.label.setText(QCoreApplication.translate("VSMain", u"Your new playlist is ready!", None))
         self.label_2.setText(QCoreApplication.translate("VSMain", u"Look for the \"VibeShare Playlist\" on your Spotify app", None))
         self.homeButton_calp.setText("")
+        self.homeButton_rlp.setText("")
+        self.label_17.setText(QCoreApplication.translate("VSMain", u"Your new playlist is ready!", None))
+        self.label_18.setText(QCoreApplication.translate("VSMain", u"Look for the \"VibeShare Playlist\" on your Spotify app", None))
+        self.label_19.setText(QCoreApplication.translate("VSMain", u"Look for the \"VibeShare Recommendations\" on your Spotify app", None))
         self.genreLabel5.setText(QCoreApplication.translate("VSMain", u"Genre 5", None))
         self.genreLabel2.setText(QCoreApplication.translate("VSMain", u"Genre 2", None))
         self.basedOnGenreLabel2.setText(QCoreApplication.translate("VSMain", u"Based On Genre", None))
@@ -1337,4 +1385,3 @@ class Ui_VSMain(object):
         self.label_15.setText(QCoreApplication.translate("VSMain", u"playlists based on specified Artists, Genres, and Moods!", None))
         self.label_16.setText(QCoreApplication.translate("VSMain", u"(Functionality made possible through Spotify API)", None))
     # retranslateUi
-
