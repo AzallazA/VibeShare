@@ -28,16 +28,18 @@ from flask import Flask
 WINDOW_SIZE = 0
 counter = 0
 
+client_id = 'f0feb7039cfc44789f7b83631dc79825'
+client_secret = '573953b4699945d0bae0eed31478aa0a'
+redirect_uri = 'https://vibeshareapp.com/login.html'
+scopes = tk.scope.every
+
+cred = RefreshingCredentials(client_id, client_secret, redirect_uri)
+auth = UserAuth(cred, scope=scopes)
+
+
 class authWindow(QMainWindow):
     def __init__(self):
         QMainWindow.__init__(self)
-        client_id = 'f0feb7039cfc44789f7b83631dc79825'
-        client_secret = '573953b4699945d0bae0eed31478aa0a'
-        redirect_uri = 'https://vibeshareapp.com/login.html'
-        scopes = tk.scope.every
-
-        cred = RefreshingCredentials(client_id, client_secret, redirect_uri)
-        auth = UserAuth(cred, scope=scopes)
 
         self.web = QWebEngineView()
         self.web.resize(800, 700)
@@ -56,7 +58,6 @@ class MainAppWindow(QMainWindow):
     def __init__(self):
         # Retreive Spotfy client and make spotify object
         """        spotify = tk.Spotify(app_token)
-
         #Get's user credentials and adds logs them in
         user_token = tk.prompt_for_user_token(client_id, client_secret, redirect_uri, scopes)
         spotify.token = user_token
@@ -211,7 +212,8 @@ class MainAppWindow(QMainWindow):
 
     def getAccessCode(self):
         redirected = self.ui.accessCodeTxtBox.toPlainText().strip()
-        print(redirected)
+        user_token = auth.request_token(url = redirected)
+        print(user_token)
 
     #Dark Mode
     def darkMode(self):
