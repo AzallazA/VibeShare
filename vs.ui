@@ -568,7 +568,23 @@ QPushButton:hover{
           <string>Login</string>
          </property>
         </widget>
-        <widget class="QPlainTextEdit" name="accessCodeTxtBox">
+        <widget class="QPushButton" name="spotifyLoginButton">
+         <property name="geometry">
+          <rect>
+           <x>550</x>
+           <y>60</y>
+           <width>121</width>
+           <height>23</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string>Login With Spotify</string>
+         </property>
+        </widget>
+        <widget class="QTextEdit" name="accessCodeTxtBox">
          <property name="geometry">
           <rect>
            <x>290</x>
@@ -588,22 +604,6 @@ resize: none;
 outline: none;
 overflow: auto;
 word-wrap: break-word;</string>
-         </property>
-        </widget>
-        <widget class="QPushButton" name="spotifyLoginButton">
-         <property name="geometry">
-          <rect>
-           <x>550</x>
-           <y>60</y>
-           <width>121</width>
-           <height>23</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">background-color: rgb(255, 255, 255);</string>
-         </property>
-         <property name="text">
-          <string>Login With Spotify</string>
          </property>
         </widget>
        </widget>

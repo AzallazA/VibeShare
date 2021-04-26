@@ -52,7 +52,8 @@ class authWindow(QMainWindow):
 class MainAppWindow(QMainWindow):
     def __init__(self):
         # Retreive Spotfy client and make spotify object
-        """spotify = tk.Spotify(app_token)
+
+        """        spotify = tk.Spotify(app_token)
 
         #Get's user credentials and adds logs them in
         user_token = tk.prompt_for_user_token(client_id, client_secret, redirect_uri, scopes)
@@ -101,6 +102,8 @@ class MainAppWindow(QMainWindow):
         self.ui.stackedWidget.setCurrentWidget(self.ui.loginPage)
 
         self.ui.spotifyLoginButton.clicked.connect(self.authWindow)
+
+        self.ui.accessCodeButton.clicked.connect(self.getAccessCode)
         self.ui.accessCodeButton.clicked.connect(lambda: self.ui.stackedWidget.
             setCurrentWidget(self.ui.homePage))
 
@@ -203,6 +206,10 @@ class MainAppWindow(QMainWindow):
     # ###############################################
     # Add mouse events to the window
     # ###############################################
+
+    def getAccessCode(self):
+        daCode = self.ui.accessCodeTxtBox.toPlainText()
+        print(daCode)
 
     #Dark Mode
     def darkMode(self):

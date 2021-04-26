@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'vslmbrjj.ui'
+## Form generated from reading UI file 'vsbAufvs.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -275,7 +275,11 @@ class Ui_VSMain(object):
 "	border-radius: 10px;\n"
 "	font-weight: bold;\n"
 "}")
-        self.accessCodeTxtBox = QPlainTextEdit(self.loginPage)
+        self.spotifyLoginButton = QPushButton(self.loginPage)
+        self.spotifyLoginButton.setObjectName(u"spotifyLoginButton")
+        self.spotifyLoginButton.setGeometry(QRect(550, 60, 121, 23))
+        self.spotifyLoginButton.setStyleSheet(u"background-color: rgb(255, 255, 255);")
+        self.accessCodeTxtBox = QTextEdit(self.loginPage)
         self.accessCodeTxtBox.setObjectName(u"accessCodeTxtBox")
         self.accessCodeTxtBox.setGeometry(QRect(290, 150, 621, 221))
         self.accessCodeTxtBox.setStyleSheet(u"background-color: rgba(255, 255, 255, 0.5);\n"
@@ -288,10 +292,6 @@ class Ui_VSMain(object):
 "outline: none;\n"
 "overflow: auto;\n"
 "word-wrap: break-word;")
-        self.spotifyLoginButton = QPushButton(self.loginPage)
-        self.spotifyLoginButton.setObjectName(u"spotifyLoginButton")
-        self.spotifyLoginButton.setGeometry(QRect(550, 60, 121, 23))
-        self.spotifyLoginButton.setStyleSheet(u"background-color: rgb(255, 255, 255);")
         self.stackedWidget.addWidget(self.loginPage)
         self.homePage = QWidget()
         self.homePage.setObjectName(u"homePage")
@@ -1432,3 +1432,4 @@ class Ui_VSMain(object):
         self.label_15.setText(QCoreApplication.translate("VSMain", u"playlists based on specified Artists, Genres, and Moods!", None))
         self.label_16.setText(QCoreApplication.translate("VSMain", u"(Functionality made possible through Spotify API)", None))
     # retranslateUi
+
