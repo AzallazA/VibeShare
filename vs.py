@@ -31,7 +31,6 @@ from flask import Flask
 #Globals
 WINDOW_SIZE = 0
 counter = 0
-loadingBarValue = 0
 
 #client_id = 'f0feb7039cfc44789f7b83631dc79825'
 #client_secret = '573953b4699945d0bae0eed31478aa0a'
@@ -52,17 +51,6 @@ user_token = auth.request_token(url = redirected) #gets the token from the URL
 
 #user_token = tk.prompt_for_user_token(client_id, client_secret, 'http://localhost:4555/', scopes)
 
-#creates the spotify object
-spotify = tk.Spotify(user_token)
-
-#Get's user credentials and adds logs them in
-user = spotify.current_user()
-user_id = user.id
-userName = user.display_name
-
-
-#print(userName)
-
 # Main window class
 class MainAppWindow(QMainWindow):
     def __init__(self):
@@ -75,6 +63,16 @@ class MainAppWindow(QMainWindow):
 
         # Set main background to transparent
         self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
+
+        #SPOTIFY
+        #creates the spotify object
+        spotify = tk.Spotify(user_token)
+
+        #Get's user credentials and adds logs them in
+        user = spotify.current_user()
+        user_id = user.id
+        userName = user.display_name
+        #print(userName)
 
         # Apply shadow effect
         self.shadow = QGraphicsDropShadowEffect(self)
@@ -151,10 +149,13 @@ class MainAppWindow(QMainWindow):
 
         #GENERATE
         #Generate Artist Playlist
+        self.ui.genArtistButton.clicked.connect(lambda: self.ui.stackedWidget.
+            setCurrentWidget(self.ui.createArtistLoadingPage))
         self.ui.genArtistButton.clicked.connect(self.getArtistText)
 
+
         #Generate Reccomendations Button Clicked
-        self.ui.genArtistButton.clicked.connect(lambda: self.ui.stackedWidget.
+        self.ui.recommendButton.clicked.connect(lambda: self.ui.stackedWidget.
             setCurrentWidget(self.ui.recommendLoadingPage))
         self.ui.recommendButton.clicked.connect(self.genRecommendations)
 
@@ -212,11 +213,11 @@ class MainAppWindow(QMainWindow):
         # ###############################################
         # Show window
         self.show()
-        if self:
+        """if self:
             if spotify == spotify:
                 #Minimize command prompt automatically
                 print('Logining In...')
-                ctypes.windll.user32.ShowWindow( ctypes.windll.kernel32.GetConsoleWindow(), 6 )
+                ctypes.windll.user32.ShowWindow( ctypes.windll.kernel32.GetConsoleWindow(), 6 )"""
         # ###############################################
     # ###############################################
     # Add mouse events to the window

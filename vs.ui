@@ -510,7 +510,7 @@ QPushButton:hover {
 /*background-color: rgb(43, 43, 43);*/</string>
        </property>
        <property name="currentIndex">
-        <number>0</number>
+        <number>4</number>
        </property>
        <widget class="QWidget" name="loadingPage">
         <widget class="roundProgressBar" name="loadingBar" native="true">
