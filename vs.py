@@ -259,7 +259,6 @@ class MainAppWindow(QMainWindow):
 
     #Generating based on Artist
     def getArtistText(self):
-        print("button clicked")
         artist1_out = self.ui.artist1_txtbox.text()
         artist2_out = self.ui.artist2_txtbox.text()
         artist3_out = self.ui.artist3_txtbox.text()
@@ -285,7 +284,6 @@ class MainAppWindow(QMainWindow):
             tracks = spotify.artist_top_tracks(artist.id, market = 'US')
             uris = [track.uri for track in tracks]
             spotify.playlist_add(playlist.id, uris = uris)
-            print("Your playlist url is" + playlist.uri)
 
     #Generating based on genre
     def genGenre(self):
