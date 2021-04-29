@@ -510,20 +510,9 @@ QPushButton:hover {
 /*background-color: rgb(43, 43, 43);*/</string>
        </property>
        <property name="currentIndex">
-        <number>4</number>
+        <number>1</number>
        </property>
-       <widget class="QWidget" name="loadingPage">
-        <widget class="roundProgressBar" name="loadingBar" native="true">
-         <property name="geometry">
-          <rect>
-           <x>490</x>
-           <y>110</y>
-           <width>221</width>
-           <height>211</height>
-          </rect>
-         </property>
-        </widget>
-       </widget>
+       <widget class="QWidget" name="loadingPage"/>
        <widget class="QWidget" name="homePage">
         <widget class="QFrame" name="buttonFrame">
          <property name="geometry">
@@ -2943,14 +2932,6 @@ font-style: italic;</string>
    <zorder>footerFrame</zorder>
   </widget>
  </widget>
- <customwidgets>
-  <customwidget>
-   <class>roundProgressBar</class>
-   <extends>QWidget</extends>
-   <header>PySide2extn.RoundProgressBar.h</header>
-   <container>1</container>
-  </customwidget>
- </customwidgets>
  <resources>
   <include location="vs_app.qrc"/>
  </resources>

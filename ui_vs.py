@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'vsZUfRVp.ui'
+## Form generated from reading UI file 'vssdstks.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -11,8 +11,6 @@
 from PySide2.QtCore import *
 from PySide2.QtGui import *
 from PySide2.QtWidgets import *
-
-from PySide2extn.RoundProgressBar import roundProgressBar
 
 import vs_app_rc
 
@@ -250,9 +248,6 @@ class Ui_VSMain(object):
 "/*background-color: rgb(43, 43, 43);*/")
         self.loadingPage = QWidget()
         self.loadingPage.setObjectName(u"loadingPage")
-        self.loadingBar = roundProgressBar(self.loadingPage)
-        self.loadingBar.setObjectName(u"loadingBar")
-        self.loadingBar.setGeometry(QRect(490, 110, 221, 211))
         self.stackedWidget.addWidget(self.loadingPage)
         self.homePage = QWidget()
         self.homePage.setObjectName(u"homePage")
@@ -1302,7 +1297,7 @@ class Ui_VSMain(object):
 
         self.retranslateUi(VSMain)
 
-        self.stackedWidget.setCurrentIndex(0)
+        self.stackedWidget.setCurrentIndex(1)
 
 
         QMetaObject.connectSlotsByName(VSMain)
