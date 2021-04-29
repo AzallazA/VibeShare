@@ -32,24 +32,24 @@ from flask import Flask
 WINDOW_SIZE = 0
 counter = 0
 
-#client_id = 'f0feb7039cfc44789f7b83631dc79825'
-#client_secret = '573953b4699945d0bae0eed31478aa0a'
+# Client info and redirect and scope info as needed
 client_id = 'b74cf8069d564daaa6bcc7eb21e80c52'
 client_secret = '217c6d35964545128c1efc70908ebfbc'
 redirect_uri = 'https://vibeshareapp.com/login.html'
-
-# Client info and redirect and scope info as needed
 scopes = tk.scope.every
+
+
 
 #The following lines get the user_token by opening the browser and prompting login
 cred = RefreshingCredentials(client_id, client_secret, redirect_uri)
 auth = UserAuth(cred, scope=scopes)
-
 webbrowser.open(auth.url)
 redirected = input('Please paste redirect URL here: ') #stores the redirect URL
 user_token = auth.request_token(url = redirected) #gets the token from the URL
 
-#user_token = tk.prompt_for_user_token(client_id, client_secret, 'http://localhost:4555/', scopes)
+#creates the spotify object and gets the user
+spotify = tk.Spotify(user_token)
+user = spotify.current_user()
 
 # Main window class
 class MainAppWindow(QMainWindow):
@@ -64,12 +64,7 @@ class MainAppWindow(QMainWindow):
         # Set main background to transparent
         self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
 
-        #SPOTIFY
-        #creates the spotify object
-        spotify = tk.Spotify(user_token)
-
         #Get's user credentials and adds logs them in
-        user = spotify.current_user()
         user_id = user.id
         userName = user.display_name
         #print(userName)
@@ -263,8 +258,7 @@ class MainAppWindow(QMainWindow):
             }""")
 
     #Generating based on Artist
-    def getArtistText(self, spotify):
-        spotify = self.spotify
+    def getArtistText(self):
         print("button clicked")
         artist1_out = self.ui.artist1_txtbox.text()
         artist2_out = self.ui.artist2_txtbox.text()
@@ -282,7 +276,7 @@ class MainAppWindow(QMainWindow):
         while("" in artist_list):
             artist_list.remove("")
 
-        playlist = spotify.playlist_create(user_id, name = "VibeShare Playlist",
+        playlist = spotify.playlist_create(user.id, name = "VibeShare Playlist",
             public = True, description = "Made with VibeShare")
 
         for artist_out in artist_list:
