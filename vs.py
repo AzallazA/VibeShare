@@ -1,4 +1,7 @@
 import sys, os, platform, requests, datetime, base64
+import ctypes
+
+from secrets import *
 
 from splash_screen import *
 from ui_vs import *
@@ -15,6 +18,7 @@ from PySide2.QtGui import *
 from PySide2.QtWidgets import *
 
 from PyQt5.QtGui import QMovie
+import webbrowser
 
 #from vs_auth import *
 
@@ -22,51 +26,46 @@ import tekore as tk
 from tekore import UserAuth, RefreshingCredentials, RefreshingToken
 from spotipy.oauth2 import SpotifyClientCredentials
 from flask import Flask
-"""https://accounts.spotify.com/en/authorize?client_id=f0feb7039cfc44789f7b83631dc79825&redirect_uri=http:%2F%2Flocalhost:4555%2F&response_type=code
+"""https://accounts.spotify.com/en/authorize?client_id=f0feb7039cfc44789f7b83631dc79825&redirect_uri=https:%2F%2Fvibeshareapp.com%2Flogin.html&response_type=token
 &scope=playlist-modify-private%20playlist-modify-public%20playlist-read-collaborative%20playlist-read-private%20ugc-image-upload%20user-follow-modify%20user-follow-read%20user-library-modify%20user-library-read%20user-modify-playback-state%20user-read-currently-playing%20user-read-email%20user-read-playback-position%20user-read-playback-state%20user-read-private%20user-read-recently-played%20user-top-read&state=dc9DNnpSuyUYtmBrBX-ZMuBhYt3G6UPoErA81JebNBM&show_dialog=true"""
 #Globals
 WINDOW_SIZE = 0
 counter = 0
+loadingBarValue = 0
 
-client_id = 'f0feb7039cfc44789f7b83631dc79825'
-client_secret = '573953b4699945d0bae0eed31478aa0a'
+#client_id = 'f0feb7039cfc44789f7b83631dc79825'
+#client_secret = '573953b4699945d0bae0eed31478aa0a'
+client_id = 'b74cf8069d564daaa6bcc7eb21e80c52'
+client_secret = '217c6d35964545128c1efc70908ebfbc'
 redirect_uri = 'https://vibeshareapp.com/login.html'
+
+# Client info and redirect and scope info as needed
 scopes = tk.scope.every
 
+#The following lines get the user_token by opening the browser and prompting login
 cred = RefreshingCredentials(client_id, client_secret, redirect_uri)
 auth = UserAuth(cred, scope=scopes)
 
+webbrowser.open(auth.url)
+redirected = input('Please paste redirect URL here: ') #stores the redirect URL
+user_token = auth.request_token(url = redirected) #gets the token from the URL
 
-class authWindow(QMainWindow):
-    def __init__(self):
-        QMainWindow.__init__(self)
+#user_token = tk.prompt_for_user_token(client_id, client_secret, 'http://localhost:4555/', scopes)
 
-        self.web = QWebEngineView()
-        self.web.resize(800, 700)
-        self.web.load(QUrl(auth.url))
-        self.web.show()
+#creates the spotify object
+spotify = tk.Spotify(user_token)
 
-        #cred = RefreshingCredentials(client_id, client_secret, redirect_uri)
-        #auth = UserAuth(cred, scope=scopes)
-        #link = accessCodeTxtBox.text()
-        #user_token = auth.request_token(.strip())
+#Get's user credentials and adds logs them in
+user = spotify.current_user()
+user_id = user.id
+userName = user.display_name
 
+
+#print(userName)
 
 # Main window class
 class MainAppWindow(QMainWindow):
-
     def __init__(self):
-        # Retreive Spotfy client and make spotify object
-        """        spotify = tk.Spotify(app_token)
-        #Get's user credentials and adds logs them in
-        user_token = tk.prompt_for_user_token(client_id, client_secret, redirect_uri, scopes)
-        spotify.token = user_token
-
-        #Current user stuff
-        user = spotify.current_user()
-        user_id = user.id
-        userName = user.display_name"""
-
         QMainWindow.__init__(self)
         self.ui = Ui_VSMain()
         self.ui.setupUi(self)
@@ -86,7 +85,26 @@ class MainAppWindow(QMainWindow):
         # Appy shadow to central widget
         self.ui.centralwidget.setGraphicsEffect(self.shadow)
 
-        # Button click events to our top bar buttons
+        self.ui.stackedWidget.setCurrentWidget(self.ui.homePage)
+
+        #SPOTIFY USER
+        #Set Profile Picture on Profile Page
+        image = QImage()
+        if image:
+            image.loadFromData(requests.get(user.images[0].url).content)
+            pixmap = QPixmap(image)
+            pixmap = pixmap.scaled(QSize(181, 171))
+            self.ui.profilePicBox.setPixmap(pixmap)
+        else:
+            self.ui.profilePicBox.setPixmap("Media/icons/profileDefault_borderless.png")
+
+        self.ui.headerProfileName.setText(userName)
+        self.ui.name_txtbox.setText(userName)
+        self.ui.sub_txtbox.setText(user_id)
+        self.ui.headerProfileName.setText(user.display_name)
+        self.ui.name_txtbox.setText(user.display_name)
+        self.ui.sub_txtbox.setText(user.id)
+        self.ui.headerProfileName.setPlainText(userName)
 
         #Minimize window
         self.ui.minimizeButton.clicked.connect(lambda: self.showMinimized())
@@ -99,16 +117,8 @@ class MainAppWindow(QMainWindow):
         #self.ui.restoreButton.clicked.connect(lambda: self.restore_or_maximize_window())
         # ###############################################
         self.show()
-
         #Stacked QtWidgets
         #self.ui.stackedWidget.setCurrentWidget(self.ui.homePage)
-        self.ui.stackedWidget.setCurrentWidget(self.ui.loginPage)
-
-        self.ui.spotifyLoginButton.clicked.connect(self.authWindow)
-
-        self.ui.accessCodeButton.clicked.connect(self.getAccessCode)
-        self.ui.accessCodeButton.clicked.connect(lambda: self.ui.stackedWidget.
-            setCurrentWidget(self.ui.homePage))
 
         #Stacked Widget buttons (Navigation)
         #HOME PAGE
@@ -139,21 +149,17 @@ class MainAppWindow(QMainWindow):
         self.ui.aboutButton.clicked.connect(lambda: self.ui.stackedWidget.
             setCurrentWidget(self.ui.aboutPage))
 
-        #CREATE ARTIST PAGE
+        #GENERATE
         #Generate Artist Playlist
         self.ui.genArtistButton.clicked.connect(self.getArtistText)
 
         #Generate Reccomendations Button Clicked
+        self.ui.genArtistButton.clicked.connect(lambda: self.ui.stackedWidget.
+            setCurrentWidget(self.ui.recommendLoadingPage))
         self.ui.recommendButton.clicked.connect(self.genRecommendations)
 
-        self.ui.genGenreButton.clicked.connect(self.genGenre)
+        #self.ui.genGenreButton.clicked.connect(self.genGenre)
         #self.ui.genMoodButton.clicked.connect(self.genMood)
-
-        #CREATE LOADING PAGE
-        self.ui.genArtistButton.clicked.connect(lambda: self.ui.stackedWidget.
-            setCurrentWidget(self.ui.createArtistLoadingPage))
-        self.ui.recommendButton.clicked.connect(lambda: self.ui.stackedWidget.
-            setCurrentWidget(self.ui.recommendLoadingPage))
 
         #Home buttons
         self.ui.homeButton_create.clicked.connect(lambda: self.ui.stackedWidget.
@@ -178,6 +184,7 @@ class MainAppWindow(QMainWindow):
         self.ui.homeButton_about.clicked.connect(lambda: self.ui.stackedWidget.
             setCurrentWidget(self.ui.settingsPage))
 
+        #self.ui.stackedWidget.setCurrentWidget(self.ui.homePage)
         # ###############################################
         # Move window on mouse drag event on the tittle bar
         # ###############################################
@@ -205,15 +212,19 @@ class MainAppWindow(QMainWindow):
         # ###############################################
         # Show window
         self.show()
+        if self:
+            if spotify == spotify:
+                #Minimize command prompt automatically
+                print('Logining In...')
+                ctypes.windll.user32.ShowWindow( ctypes.windll.kernel32.GetConsoleWindow(), 6 )
         # ###############################################
     # ###############################################
     # Add mouse events to the window
     # ###############################################
 
     def getAccessCode(self):
-        redirected = self.ui.accessCodeTxtBox.toPlainText().strip()
-        user_token = auth.request_token(url = redirected)
-        print(user_token)
+        redirected = self.ui.accessCodeTxtBox.toPlainText()
+        print(redirected)
 
     #Dark Mode
     def darkMode(self):
@@ -251,7 +262,8 @@ class MainAppWindow(QMainWindow):
             }""")
 
     #Generating based on Artist
-    def getArtistText(self):
+    def getArtistText(self, spotify):
+        spotify = self.spotify
         print("button clicked")
         artist1_out = self.ui.artist1_txtbox.text()
         artist2_out = self.ui.artist2_txtbox.text()

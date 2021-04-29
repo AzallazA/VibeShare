@@ -512,98 +512,15 @@ QPushButton:hover {
        <property name="currentIndex">
         <number>0</number>
        </property>
-       <widget class="QWidget" name="loginPage">
-        <widget class="QLabel" name="accessCodeLabel">
+       <widget class="QWidget" name="loadingPage">
+        <widget class="roundProgressBar" name="loadingBar" native="true">
          <property name="geometry">
           <rect>
-           <x>290</x>
-           <y>120</y>
-           <width>301</width>
-           <height>16</height>
+           <x>490</x>
+           <y>110</y>
+           <width>221</width>
+           <height>211</height>
           </rect>
-         </property>
-         <property name="font">
-          <font>
-           <family>Humnst777 Blk BT</family>
-           <pointsize>12</pointsize>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">color: rgb(255, 255, 255);</string>
-         </property>
-         <property name="text">
-          <string>Please Paste your Secure Link Here:</string>
-         </property>
-        </widget>
-        <widget class="QPushButton" name="accessCodeButton">
-         <property name="geometry">
-          <rect>
-           <x>760</x>
-           <y>380</y>
-           <width>151</width>
-           <height>31</height>
-          </rect>
-         </property>
-         <property name="font">
-          <font>
-           <family>Humnst777 BT</family>
-           <pointsize>10</pointsize>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">QPushButton{
-	background-color: rgb(255, 255, 255);
-	border-style: none;
-	border-radius: 10px;
-}
-
-QPushButton:hover{
-	background-color: rgb(248, 231, 28);
-	border-style: none;
-	border-radius: 10px;
-	font-weight: bold;
-}</string>
-         </property>
-         <property name="text">
-          <string>Login</string>
-         </property>
-        </widget>
-        <widget class="QPushButton" name="spotifyLoginButton">
-         <property name="geometry">
-          <rect>
-           <x>550</x>
-           <y>60</y>
-           <width>121</width>
-           <height>23</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">background-color: rgb(255, 255, 255);</string>
-         </property>
-         <property name="text">
-          <string>Login With Spotify</string>
-         </property>
-        </widget>
-        <widget class="QTextEdit" name="accessCodeTxtBox">
-         <property name="geometry">
-          <rect>
-           <x>290</x>
-           <y>150</y>
-           <width>621</width>
-           <height>221</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">background-color: rgba(255, 255, 255, 0.5);
-border-radius: 10px;
-border-style: none;
-color: white;
-font-size: 12pt;
-height: 30px;
-resize: none;
-outline: none;
-overflow: auto;
-word-wrap: break-word;</string>
          </property>
         </widget>
        </widget>
@@ -3026,6 +2943,14 @@ font-style: italic;</string>
    <zorder>footerFrame</zorder>
   </widget>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>roundProgressBar</class>
+   <extends>QWidget</extends>
+   <header>PySide2extn.RoundProgressBar.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <resources>
   <include location="vs_app.qrc"/>
  </resources>
