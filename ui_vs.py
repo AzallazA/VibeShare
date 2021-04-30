@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'vssdstks.ui'
+## Form generated from reading UI file 'vsIQwUbj.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -59,7 +59,7 @@ class Ui_VSMain(object):
         self.headerFrame.setFrameShadow(QFrame.Raised)
         self.vsLogo = QLabel(self.headerFrame)
         self.vsLogo.setObjectName(u"vsLogo")
-        self.vsLogo.setGeometry(QRect(470, 0, 241, 51))
+        self.vsLogo.setGeometry(QRect(460, 0, 241, 51))
         sizePolicy.setHeightForWidth(self.vsLogo.sizePolicy().hasHeightForWidth())
         self.vsLogo.setSizePolicy(sizePolicy)
         self.vsLogo.setStyleSheet(u"QLabel{\n"
@@ -70,7 +70,7 @@ class Ui_VSMain(object):
         self.vsLogo.setScaledContents(True)
         self.descLabel = QLabel(self.headerFrame)
         self.descLabel.setObjectName(u"descLabel")
-        self.descLabel.setGeometry(QRect(550, 40, 191, 31))
+        self.descLabel.setGeometry(QRect(540, 40, 191, 31))
         sizePolicy.setHeightForWidth(self.descLabel.sizePolicy().hasHeightForWidth())
         self.descLabel.setSizePolicy(sizePolicy)
         font = QFont()
@@ -217,7 +217,7 @@ class Ui_VSMain(object):
         self.footerFrame.setFrameShadow(QFrame.Raised)
         self.spotifyLabel = QLabel(self.footerFrame)
         self.spotifyLabel.setObjectName(u"spotifyLabel")
-        self.spotifyLabel.setGeometry(QRect(550, 0, 121, 41))
+        self.spotifyLabel.setGeometry(QRect(-10, 0, 1211, 41))
         sizePolicy.setHeightForWidth(self.spotifyLabel.sizePolicy().hasHeightForWidth())
         self.spotifyLabel.setSizePolicy(sizePolicy)
         self.spotifyLabel.setStyleSheet(u"QLabel{\n"
@@ -526,7 +526,7 @@ class Ui_VSMain(object):
         self.createArtistPage.setObjectName(u"createArtistPage")
         self.buttonFrame_3 = QFrame(self.createArtistPage)
         self.buttonFrame_3.setObjectName(u"buttonFrame_3")
-        self.buttonFrame_3.setGeometry(QRect(480, 10, 251, 131))
+        self.buttonFrame_3.setGeometry(QRect(460, 10, 251, 131))
         self.buttonFrame_3.setStyleSheet(u"QFrame{\n"
 "	background-color: rgba(255, 255, 255, 0);\n"
 "}")
@@ -556,7 +556,7 @@ class Ui_VSMain(object):
         self.keyLabel1.setStyleSheet(u"color: rgb(248, 231, 28);")
         self.artistTxtBoxes = QFrame(self.createArtistPage)
         self.artistTxtBoxes.setObjectName(u"artistTxtBoxes")
-        self.artistTxtBoxes.setGeometry(QRect(430, 130, 351, 281))
+        self.artistTxtBoxes.setGeometry(QRect(410, 130, 351, 281))
         self.artistTxtBoxes.setFrameShape(QFrame.StyledPanel)
         self.artistTxtBoxes.setFrameShadow(QFrame.Raised)
         self.verticalLayout = QVBoxLayout(self.artistTxtBoxes)
@@ -618,7 +618,7 @@ class Ui_VSMain(object):
 
         self.artist1Label = QLabel(self.createArtistPage)
         self.artist1Label.setObjectName(u"artist1Label")
-        self.artist1Label.setGeometry(QRect(370, 150, 61, 41))
+        self.artist1Label.setGeometry(QRect(350, 150, 61, 41))
         font6 = QFont()
         font6.setFamily(u"Humnst777 Blk BT")
         font6.setPointSize(12)
@@ -626,22 +626,22 @@ class Ui_VSMain(object):
         self.artist1Label.setStyleSheet(u"color: rgb(255, 255, 255);")
         self.artist2Label = QLabel(self.createArtistPage)
         self.artist2Label.setObjectName(u"artist2Label")
-        self.artist2Label.setGeometry(QRect(370, 200, 61, 41))
+        self.artist2Label.setGeometry(QRect(350, 200, 61, 41))
         self.artist2Label.setFont(font6)
         self.artist2Label.setStyleSheet(u"color: rgb(255, 255, 255);")
         self.artist3Label = QLabel(self.createArtistPage)
         self.artist3Label.setObjectName(u"artist3Label")
-        self.artist3Label.setGeometry(QRect(370, 250, 61, 41))
+        self.artist3Label.setGeometry(QRect(350, 250, 61, 41))
         self.artist3Label.setFont(font6)
         self.artist3Label.setStyleSheet(u"color: rgb(255, 255, 255);")
         self.artist4Label = QLabel(self.createArtistPage)
         self.artist4Label.setObjectName(u"artist4Label")
-        self.artist4Label.setGeometry(QRect(370, 300, 61, 41))
+        self.artist4Label.setGeometry(QRect(350, 300, 61, 41))
         self.artist4Label.setFont(font6)
         self.artist4Label.setStyleSheet(u"color: rgb(255, 255, 255);")
         self.artist5Label = QLabel(self.createArtistPage)
         self.artist5Label.setObjectName(u"artist5Label")
-        self.artist5Label.setGeometry(QRect(370, 350, 61, 41))
+        self.artist5Label.setGeometry(QRect(350, 350, 61, 41))
         self.artist5Label.setFont(font6)
         self.artist5Label.setStyleSheet(u"color: rgb(255, 255, 255);")
         self.homeButtonFrame_2 = QFrame(self.createArtistPage)
@@ -666,7 +666,7 @@ class Ui_VSMain(object):
 "}")
         self.genArtistButton = QPushButton(self.createArtistPage)
         self.genArtistButton.setObjectName(u"genArtistButton")
-        self.genArtistButton.setGeometry(QRect(530, 420, 151, 31))
+        self.genArtistButton.setGeometry(QRect(510, 420, 151, 31))
         font7 = QFont()
         font7.setFamily(u"Humnst777 BT")
         font7.setPointSize(10)
@@ -772,19 +772,9 @@ class Ui_VSMain(object):
         self.stackedWidget.addWidget(self.recommendLoadingPage)
         self.createGenrePage = QWidget()
         self.createGenrePage.setObjectName(u"createGenrePage")
-        self.genreLabel5 = QLabel(self.createGenrePage)
-        self.genreLabel5.setObjectName(u"genreLabel5")
-        self.genreLabel5.setGeometry(QRect(360, 350, 71, 41))
-        self.genreLabel5.setFont(font6)
-        self.genreLabel5.setStyleSheet(u"color: rgb(255, 255, 255);")
-        self.genreLabel2 = QLabel(self.createGenrePage)
-        self.genreLabel2.setObjectName(u"genreLabel2")
-        self.genreLabel2.setGeometry(QRect(360, 200, 71, 41))
-        self.genreLabel2.setFont(font6)
-        self.genreLabel2.setStyleSheet(u"color: rgb(255, 255, 255);")
         self.buttonFrame_4 = QFrame(self.createGenrePage)
         self.buttonFrame_4.setObjectName(u"buttonFrame_4")
-        self.buttonFrame_4.setGeometry(QRect(480, 10, 251, 131))
+        self.buttonFrame_4.setGeometry(QRect(460, 50, 251, 131))
         self.buttonFrame_4.setStyleSheet(u"QFrame{\n"
 "	background-color: rgba(255, 255, 255, 0);\n"
 "}")
@@ -809,19 +799,9 @@ class Ui_VSMain(object):
         self.keyLabel2.setGeometry(QRect(30, 110, 181, 21))
         self.keyLabel2.setFont(font5)
         self.keyLabel2.setStyleSheet(u"color: rgb(248, 231, 28);")
-        self.genreLabel3 = QLabel(self.createGenrePage)
-        self.genreLabel3.setObjectName(u"genreLabel3")
-        self.genreLabel3.setGeometry(QRect(360, 250, 71, 41))
-        self.genreLabel3.setFont(font6)
-        self.genreLabel3.setStyleSheet(u"color: rgb(255, 255, 255);")
-        self.genreLabel4 = QLabel(self.createGenrePage)
-        self.genreLabel4.setObjectName(u"genreLabel4")
-        self.genreLabel4.setGeometry(QRect(360, 300, 71, 41))
-        self.genreLabel4.setFont(font6)
-        self.genreLabel4.setStyleSheet(u"color: rgb(255, 255, 255);")
         self.genGenreButton = QPushButton(self.createGenrePage)
         self.genGenreButton.setObjectName(u"genGenreButton")
-        self.genGenreButton.setGeometry(QRect(530, 420, 151, 31))
+        self.genGenreButton.setGeometry(QRect(510, 270, 151, 31))
         self.genGenreButton.setFont(font7)
         self.genGenreButton.setStyleSheet(u"QPushButton{\n"
 "	background-color: rgb(255, 255, 255);\n"
@@ -830,77 +810,34 @@ class Ui_VSMain(object):
 "}\n"
 "\n"
 "QPushButton:hover{\n"
-"	background-color: rgba(255, 255, 255, 0.6);\n"
+"	background-color: rgb(248, 231, 28);\n"
 "	border-style: none;\n"
 "	border-radius: 10px;\n"
+"	font-weight: bold;\n"
 "}")
         self.artistTxtBoxes_2 = QFrame(self.createGenrePage)
         self.artistTxtBoxes_2.setObjectName(u"artistTxtBoxes_2")
-        self.artistTxtBoxes_2.setGeometry(QRect(430, 140, 351, 271))
+        self.artistTxtBoxes_2.setGeometry(QRect(410, 200, 351, 51))
         self.artistTxtBoxes_2.setFrameShape(QFrame.StyledPanel)
         self.artistTxtBoxes_2.setFrameShadow(QFrame.Raised)
         self.verticalLayout_2 = QVBoxLayout(self.artistTxtBoxes_2)
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
-        self.genre1_txtbox = QLineEdit(self.artistTxtBoxes_2)
-        self.genre1_txtbox.setObjectName(u"genre1_txtbox")
-        self.genre1_txtbox.setStyleSheet(u"background-color: rgba(255, 255, 255, 0.5);\n"
+        self.genre_txtbox = QLineEdit(self.artistTxtBoxes_2)
+        self.genre_txtbox.setObjectName(u"genre_txtbox")
+        self.genre_txtbox.setStyleSheet(u"background-color: rgba(255, 255, 255, 0.5);\n"
 "border-radius: 10px;\n"
 "border-style: none;\n"
 "color: white;\n"
 "font-size: 12pt;\n"
 "height: 30px;")
 
-        self.verticalLayout_2.addWidget(self.genre1_txtbox)
+        self.verticalLayout_2.addWidget(self.genre_txtbox)
 
-        self.genre2_txtbox = QLineEdit(self.artistTxtBoxes_2)
-        self.genre2_txtbox.setObjectName(u"genre2_txtbox")
-        self.genre2_txtbox.setStyleSheet(u"background-color: rgba(255, 255, 255, 0.5);\n"
-"border-radius: 10px;\n"
-"border-style: none;\n"
-"color: white;\n"
-"font-size: 12pt;\n"
-"height: 30px;")
-
-        self.verticalLayout_2.addWidget(self.genre2_txtbox)
-
-        self.genre3_txtbox = QLineEdit(self.artistTxtBoxes_2)
-        self.genre3_txtbox.setObjectName(u"genre3_txtbox")
-        self.genre3_txtbox.setStyleSheet(u"background-color: rgba(255, 255, 255, 0.5);\n"
-"border-radius: 10px;\n"
-"border-style: none;\n"
-"color: white;\n"
-"font-size: 12pt;\n"
-"height: 30px;")
-
-        self.verticalLayout_2.addWidget(self.genre3_txtbox)
-
-        self.genre4_txtbox = QLineEdit(self.artistTxtBoxes_2)
-        self.genre4_txtbox.setObjectName(u"genre4_txtbox")
-        self.genre4_txtbox.setStyleSheet(u"background-color: rgba(255, 255, 255, 0.5);\n"
-"border-radius: 10px;\n"
-"border-style: none;\n"
-"color: white;\n"
-"font-size: 12pt;\n"
-"height: 30px;")
-
-        self.verticalLayout_2.addWidget(self.genre4_txtbox)
-
-        self.genre5_txtbox = QLineEdit(self.artistTxtBoxes_2)
-        self.genre5_txtbox.setObjectName(u"genre5_txtbox")
-        self.genre5_txtbox.setStyleSheet(u"background-color: rgba(255, 255, 255, 0.5);\n"
-"border-radius: 10px;\n"
-"border-style: none;\n"
-"color: white;\n"
-"font-size: 12pt;\n"
-"height: 30px;")
-
-        self.verticalLayout_2.addWidget(self.genre5_txtbox)
-
-        self.genreLabel1 = QLabel(self.createGenrePage)
-        self.genreLabel1.setObjectName(u"genreLabel1")
-        self.genreLabel1.setGeometry(QRect(360, 150, 71, 41))
-        self.genreLabel1.setFont(font6)
-        self.genreLabel1.setStyleSheet(u"color: rgb(255, 255, 255);")
+        self.genreLabel = QLabel(self.createGenrePage)
+        self.genreLabel.setObjectName(u"genreLabel")
+        self.genreLabel.setGeometry(QRect(360, 200, 51, 41))
+        self.genreLabel.setFont(font6)
+        self.genreLabel.setStyleSheet(u"color: rgb(255, 255, 255);")
         self.homeButtonFrame_5 = QFrame(self.createGenrePage)
         self.homeButtonFrame_5.setObjectName(u"homeButtonFrame_5")
         self.homeButtonFrame_5.setGeometry(QRect(10, 0, 51, 51))
@@ -946,7 +883,7 @@ class Ui_VSMain(object):
 "}")
         self.buttonFrame_5 = QFrame(self.createMoodPage)
         self.buttonFrame_5.setObjectName(u"buttonFrame_5")
-        self.buttonFrame_5.setGeometry(QRect(480, 10, 251, 131))
+        self.buttonFrame_5.setGeometry(QRect(460, 10, 241, 131))
         self.buttonFrame_5.setStyleSheet(u"QFrame{\n"
 "	background-color: rgba(255, 255, 255, 0);\n"
 "}")
@@ -973,7 +910,7 @@ class Ui_VSMain(object):
         self.keyLabel2_2.setStyleSheet(u"color: rgb(248, 231, 28);")
         self.genMoodButton = QPushButton(self.createMoodPage)
         self.genMoodButton.setObjectName(u"genMoodButton")
-        self.genMoodButton.setGeometry(QRect(520, 420, 151, 31))
+        self.genMoodButton.setGeometry(QRect(510, 430, 151, 31))
         self.genMoodButton.setFont(font7)
         self.genMoodButton.setStyleSheet(u"QPushButton{\n"
 "	background-color: rgb(255, 255, 255);\n"
@@ -982,13 +919,71 @@ class Ui_VSMain(object):
 "}\n"
 "\n"
 "QPushButton:hover{\n"
-"	background-color: rgba(255, 255, 255, 0.6);\n"
+"	background-color: rgb(248, 231, 28);\n"
 "	border-style: none;\n"
 "	border-radius: 10px;\n"
+"	font-weight: bold;\n"
 "}")
-        self.dial = QDial(self.createMoodPage)
-        self.dial.setObjectName(u"dial")
-        self.dial.setGeometry(QRect(380, 130, 431, 291))
+        self.moodDial = QDial(self.createMoodPage)
+        self.moodDial.setObjectName(u"moodDial")
+        self.moodDial.setGeometry(QRect(400, 170, 361, 231))
+        self.moodDial.setStyleSheet(u"QDial {\n"
+"	background-color: rgb(255, 255, 255);\n"
+"}")
+        self.moodDial.setNotchesVisible(True)
+        self.moodDialLabel = QLabel(self.createMoodPage)
+        self.moodDialLabel.setObjectName(u"moodDialLabel")
+        self.moodDialLabel.setGeometry(QRect(540, 240, 81, 61))
+        font9 = QFont()
+        font9.setPointSize(12)
+        font9.setBold(True)
+        font9.setWeight(75)
+        self.moodDialLabel.setFont(font9)
+        self.moodDialLabel.setStyleSheet(u"QLabel {\n"
+"	color: white;\n"
+"	font-weight: bold;\n"
+"}")
+        self.moodDialLabel.setAlignment(Qt.AlignCenter)
+        self.happyLabel = QLabel(self.createMoodPage)
+        self.happyLabel.setObjectName(u"happyLabel")
+        self.happyLabel.setGeometry(QRect(410, 320, 81, 41))
+        font10 = QFont()
+        font10.setFamily(u"Humnst777 BT")
+        font10.setPointSize(12)
+        font10.setBold(True)
+        font10.setItalic(False)
+        font10.setUnderline(False)
+        font10.setWeight(75)
+        font10.setStrikeOut(False)
+        self.happyLabel.setFont(font10)
+        self.happyLabel.setStyleSheet(u"color: rgb(255, 255, 255);")
+        self.happyLabel.setAlignment(Qt.AlignCenter)
+        self.neutralLabel = QLabel(self.createMoodPage)
+        self.neutralLabel.setObjectName(u"neutralLabel")
+        self.neutralLabel.setGeometry(QRect(410, 200, 81, 41))
+        self.neutralLabel.setFont(font10)
+        self.neutralLabel.setStyleSheet(u"color: rgb(255, 255, 255);")
+        self.neutralLabel.setAlignment(Qt.AlignCenter)
+        self.sadLabel = QLabel(self.createMoodPage)
+        self.sadLabel.setObjectName(u"sadLabel")
+        self.sadLabel.setGeometry(QRect(670, 200, 81, 41))
+        self.sadLabel.setFont(font10)
+        self.sadLabel.setStyleSheet(u"color: rgb(255, 255, 255);")
+        self.sadLabel.setAlignment(Qt.AlignCenter)
+        self.happyLabel_2 = QLabel(self.createMoodPage)
+        self.happyLabel_2.setObjectName(u"happyLabel_2")
+        self.happyLabel_2.setGeometry(QRect(670, 320, 81, 41))
+        self.happyLabel_2.setFont(font10)
+        self.happyLabel_2.setStyleSheet(u"color: rgb(255, 255, 255);")
+        self.happyLabel_2.setAlignment(Qt.AlignCenter)
+        self.currentMoodLabel = QLabel(self.createMoodPage)
+        self.currentMoodLabel.setObjectName(u"currentMoodLabel")
+        self.currentMoodLabel.setGeometry(QRect(550, 300, 61, 31))
+        font11 = QFont()
+        font11.setFamily(u"Humnst777 BT")
+        self.currentMoodLabel.setFont(font11)
+        self.currentMoodLabel.setStyleSheet(u"color: rgb(46, 124, 255);")
+        self.currentMoodLabel.setAlignment(Qt.AlignCenter)
         self.stackedWidget.addWidget(self.createMoodPage)
         self.profilePage = QWidget()
         self.profilePage.setObjectName(u"profilePage")
@@ -1014,7 +1009,7 @@ class Ui_VSMain(object):
 "}")
         self.mainProfileFrame = QFrame(self.profilePage)
         self.mainProfileFrame.setObjectName(u"mainProfileFrame")
-        self.mainProfileFrame.setGeometry(QRect(300, 90, 581, 211))
+        self.mainProfileFrame.setGeometry(QRect(290, 90, 581, 211))
         self.mainProfileFrame.setStyleSheet(u"background-color: rgba(255, 255, 255, 0.5);\n"
 "border-style: none;\n"
 "border-radius: 10px;")
@@ -1035,16 +1030,16 @@ class Ui_VSMain(object):
         self.nameLabel = QLabel(self.infoFrame)
         self.nameLabel.setObjectName(u"nameLabel")
         self.nameLabel.setGeometry(QRect(20, 20, 51, 41))
-        font9 = QFont()
-        font9.setFamily(u"Humanst521 BT")
-        font9.setPointSize(14)
-        self.nameLabel.setFont(font9)
+        font12 = QFont()
+        font12.setFamily(u"Humanst521 BT")
+        font12.setPointSize(14)
+        self.nameLabel.setFont(font12)
         self.nameLabel.setStyleSheet(u"color: rgb(255, 255, 255);\n"
 "background-color: rgba(255, 255, 255, 0);")
         self.subscriptLabel = QLabel(self.infoFrame)
         self.subscriptLabel.setObjectName(u"subscriptLabel")
         self.subscriptLabel.setGeometry(QRect(20, 90, 81, 41))
-        self.subscriptLabel.setFont(font9)
+        self.subscriptLabel.setFont(font12)
         self.subscriptLabel.setStyleSheet(u"color: rgb(255, 255, 255);\n"
 "background-color: rgba(255, 255, 255, 0);")
         self.name_txtbox = QTextEdit(self.infoFrame)
@@ -1053,7 +1048,7 @@ class Ui_VSMain(object):
         self.name_txtbox.setStyleSheet(u"background-color: rgba(255, 255, 255, 0.5);\n"
 "border-radius: 10px;\n"
 "border-style: none;\n"
-"color: black;\n"
+"color: rgb(255, 255, 255);\n"
 "font-size: 12pt;\n"
 "height: 30px;")
         self.sub_txtbox = QTextEdit(self.infoFrame)
@@ -1062,12 +1057,12 @@ class Ui_VSMain(object):
         self.sub_txtbox.setStyleSheet(u"background-color: rgba(255, 255, 255, 0.5);\n"
 "border-radius: 10px;\n"
 "border-style: none;\n"
-"color: black;\n"
+"color: rgb(255, 255, 255);\n"
 "font-size: 12pt;\n"
 "height: 30px;")
         self.signoutButton = QPushButton(self.profilePage)
         self.signoutButton.setObjectName(u"signoutButton")
-        self.signoutButton.setGeometry(QRect(520, 340, 151, 31))
+        self.signoutButton.setGeometry(QRect(510, 340, 151, 31))
         self.signoutButton.setFont(font7)
         self.signoutButton.setStyleSheet(u"QPushButton{\n"
 "	background-color: rgb(255, 255, 255);\n"
@@ -1211,7 +1206,7 @@ class Ui_VSMain(object):
 "}")
         self.frame_4 = QFrame(self.aboutPage)
         self.frame_4.setObjectName(u"frame_4")
-        self.frame_4.setGeometry(QRect(440, 80, 311, 321))
+        self.frame_4.setGeometry(QRect(430, 80, 311, 321))
         self.frame_4.setStyleSheet(u"background-color: rgba(255, 255, 255, 0.5);\n"
 "border-style: none;\n"
 "border-radius: 10px;")
@@ -1220,26 +1215,26 @@ class Ui_VSMain(object):
         self.label_3 = QLabel(self.frame_4)
         self.label_3.setObjectName(u"label_3")
         self.label_3.setGeometry(QRect(20, 50, 141, 31))
-        self.label_3.setFont(font9)
+        self.label_3.setFont(font12)
         self.label_3.setStyleSheet(u"background-color: rgba(255, 255, 255, 0);")
         self.label_4 = QLabel(self.frame_4)
         self.label_4.setObjectName(u"label_4")
         self.label_4.setGeometry(QRect(20, 80, 181, 31))
-        self.label_4.setFont(font9)
+        self.label_4.setFont(font12)
         self.label_4.setStyleSheet(u"background-color: rgba(255, 255, 255, 0);")
         self.label_5 = QLabel(self.frame_4)
         self.label_5.setObjectName(u"label_5")
         self.label_5.setGeometry(QRect(200, 60, 91, 21))
-        font10 = QFont()
-        font10.setFamily(u"Humanst521 BT")
-        font10.setPointSize(12)
-        self.label_5.setFont(font10)
+        font13 = QFont()
+        font13.setFamily(u"Humanst521 BT")
+        font13.setPointSize(12)
+        self.label_5.setFont(font13)
         self.label_5.setStyleSheet(u"color: white;\n"
 "background-color: rgb(74, 74, 74);")
         self.label_6 = QLabel(self.frame_4)
         self.label_6.setObjectName(u"label_6")
         self.label_6.setGeometry(QRect(200, 90, 91, 21))
-        self.label_6.setFont(font10)
+        self.label_6.setFont(font13)
         self.label_6.setStyleSheet(u"color: white;\n"
 "background-color: rgb(74, 74, 74);")
         self.label_7 = QLabel(self.frame_4)
@@ -1297,7 +1292,7 @@ class Ui_VSMain(object):
 
         self.retranslateUi(VSMain)
 
-        self.stackedWidget.setCurrentIndex(1)
+        self.stackedWidget.setCurrentIndex(8)
 
 
         QMetaObject.connectSlotsByName(VSMain)
@@ -1350,21 +1345,23 @@ class Ui_VSMain(object):
         self.label_17.setText(QCoreApplication.translate("VSMain", u"Your new playlist is ready!", None))
         self.label_18.setText(QCoreApplication.translate("VSMain", u"Look for the \"VibeShare Playlist\" on your Spotify app", None))
         self.label_19.setText(QCoreApplication.translate("VSMain", u"Look for the \"VibeShare Recommendations\" on your Spotify app", None))
-        self.genreLabel5.setText(QCoreApplication.translate("VSMain", u"Genre 5", None))
-        self.genreLabel2.setText(QCoreApplication.translate("VSMain", u"Genre 2", None))
         self.basedOnGenreLabel2.setText(QCoreApplication.translate("VSMain", u"Based On Genre", None))
         self.basedOnGenreLabel.setText("")
         self.keyLabel2.setText(QCoreApplication.translate("VSMain", u"*Input at least one genre", None))
-        self.genreLabel3.setText(QCoreApplication.translate("VSMain", u"Genre 3", None))
-        self.genreLabel4.setText(QCoreApplication.translate("VSMain", u"Genre 4", None))
         self.genGenreButton.setText(QCoreApplication.translate("VSMain", u"Generate", None))
-        self.genreLabel1.setText(QCoreApplication.translate("VSMain", u"Genre 1", None))
+        self.genreLabel.setText(QCoreApplication.translate("VSMain", u"Genre", None))
         self.homeButton_bog.setText("")
         self.homeButton_bom.setText("")
         self.basedOnGenreLabel2_2.setText(QCoreApplication.translate("VSMain", u"Based On Mood", None))
         self.basedOnGenreLabel_2.setText("")
         self.keyLabel2_2.setText(QCoreApplication.translate("VSMain", u"*Select a mood to generate from", None))
         self.genMoodButton.setText(QCoreApplication.translate("VSMain", u"Generate", None))
+        self.moodDialLabel.setText("")
+        self.happyLabel.setText(QCoreApplication.translate("VSMain", u"Bliss", None))
+        self.neutralLabel.setText(QCoreApplication.translate("VSMain", u"Neutral", None))
+        self.sadLabel.setText(QCoreApplication.translate("VSMain", u"Mourn", None))
+        self.happyLabel_2.setText(QCoreApplication.translate("VSMain", u"Rage", None))
+        self.currentMoodLabel.setText("")
         self.homeButton_profile.setText("")
         self.profilePicBox.setText("")
         self.nameLabel.setText(QCoreApplication.translate("VSMain", u"Name: ", None))
@@ -1391,3 +1388,4 @@ class Ui_VSMain(object):
         self.label_15.setText(QCoreApplication.translate("VSMain", u"playlists based on specified Artists, Genres, and Moods!", None))
         self.label_16.setText(QCoreApplication.translate("VSMain", u"(Functionality made possible through Spotify API)", None))
     # retranslateUi
+

@@ -108,7 +108,7 @@ body, html {
     <widget class="QLabel" name="vsLogo">
      <property name="geometry">
       <rect>
-       <x>470</x>
+       <x>460</x>
        <y>0</y>
        <width>241</width>
        <height>51</height>
@@ -137,7 +137,7 @@ body, html {
     <widget class="QLabel" name="descLabel">
      <property name="geometry">
       <rect>
-       <x>550</x>
+       <x>540</x>
        <y>40</y>
        <width>191</width>
        <height>31</height>
@@ -427,9 +427,9 @@ QPushButton:hover {
     <widget class="QLabel" name="spotifyLabel">
      <property name="geometry">
       <rect>
-       <x>550</x>
+       <x>-10</x>
        <y>0</y>
-       <width>121</width>
+       <width>1211</width>
        <height>41</height>
       </rect>
      </property>
@@ -510,7 +510,7 @@ QPushButton:hover {
 /*background-color: rgb(43, 43, 43);*/</string>
        </property>
        <property name="currentIndex">
-        <number>1</number>
+        <number>8</number>
        </property>
        <widget class="QWidget" name="loadingPage"/>
        <widget class="QWidget" name="homePage">
@@ -1042,7 +1042,7 @@ QPushButton:hover{
         <widget class="QFrame" name="buttonFrame_3">
          <property name="geometry">
           <rect>
-           <x>480</x>
+           <x>460</x>
            <y>10</y>
            <width>251</width>
            <height>131</height>
@@ -1130,7 +1130,7 @@ background-color: rgba(255, 255, 255, 0);</string>
         <widget class="QFrame" name="artistTxtBoxes">
          <property name="geometry">
           <rect>
-           <x>430</x>
+           <x>410</x>
            <y>130</y>
            <width>351</width>
            <height>281</height>
@@ -1208,7 +1208,7 @@ height: 30px;</string>
         <widget class="QLabel" name="artist1Label">
          <property name="geometry">
           <rect>
-           <x>370</x>
+           <x>350</x>
            <y>150</y>
            <width>61</width>
            <height>41</height>
@@ -1230,7 +1230,7 @@ height: 30px;</string>
         <widget class="QLabel" name="artist2Label">
          <property name="geometry">
           <rect>
-           <x>370</x>
+           <x>350</x>
            <y>200</y>
            <width>61</width>
            <height>41</height>
@@ -1252,7 +1252,7 @@ height: 30px;</string>
         <widget class="QLabel" name="artist3Label">
          <property name="geometry">
           <rect>
-           <x>370</x>
+           <x>350</x>
            <y>250</y>
            <width>61</width>
            <height>41</height>
@@ -1274,7 +1274,7 @@ height: 30px;</string>
         <widget class="QLabel" name="artist4Label">
          <property name="geometry">
           <rect>
-           <x>370</x>
+           <x>350</x>
            <y>300</y>
            <width>61</width>
            <height>41</height>
@@ -1296,7 +1296,7 @@ height: 30px;</string>
         <widget class="QLabel" name="artist5Label">
          <property name="geometry">
           <rect>
-           <x>370</x>
+           <x>350</x>
            <y>350</y>
            <width>61</width>
            <height>41</height>
@@ -1363,7 +1363,7 @@ QPushButton:hover{
         <widget class="QPushButton" name="genArtistButton">
          <property name="geometry">
           <rect>
-           <x>530</x>
+           <x>510</x>
            <y>420</y>
            <width>151</width>
            <height>31</height>
@@ -1637,55 +1637,11 @@ QPushButton:hover{
         </widget>
        </widget>
        <widget class="QWidget" name="createGenrePage">
-        <widget class="QLabel" name="genreLabel5">
-         <property name="geometry">
-          <rect>
-           <x>360</x>
-           <y>350</y>
-           <width>71</width>
-           <height>41</height>
-          </rect>
-         </property>
-         <property name="font">
-          <font>
-           <family>Humnst777 Blk BT</family>
-           <pointsize>12</pointsize>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">color: rgb(255, 255, 255);</string>
-         </property>
-         <property name="text">
-          <string>Genre 5</string>
-         </property>
-        </widget>
-        <widget class="QLabel" name="genreLabel2">
-         <property name="geometry">
-          <rect>
-           <x>360</x>
-           <y>200</y>
-           <width>71</width>
-           <height>41</height>
-          </rect>
-         </property>
-         <property name="font">
-          <font>
-           <family>Humnst777 Blk BT</family>
-           <pointsize>12</pointsize>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">color: rgb(255, 255, 255);</string>
-         </property>
-         <property name="text">
-          <string>Genre 2</string>
-         </property>
-        </widget>
         <widget class="QFrame" name="buttonFrame_4">
          <property name="geometry">
           <rect>
-           <x>480</x>
-           <y>10</y>
+           <x>460</x>
+           <y>50</y>
            <width>251</width>
            <height>131</height>
           </rect>
@@ -1769,55 +1725,11 @@ background-color: rgba(255, 255, 255, 0);</string>
           </property>
          </widget>
         </widget>
-        <widget class="QLabel" name="genreLabel3">
-         <property name="geometry">
-          <rect>
-           <x>360</x>
-           <y>250</y>
-           <width>71</width>
-           <height>41</height>
-          </rect>
-         </property>
-         <property name="font">
-          <font>
-           <family>Humnst777 Blk BT</family>
-           <pointsize>12</pointsize>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">color: rgb(255, 255, 255);</string>
-         </property>
-         <property name="text">
-          <string>Genre 3</string>
-         </property>
-        </widget>
-        <widget class="QLabel" name="genreLabel4">
-         <property name="geometry">
-          <rect>
-           <x>360</x>
-           <y>300</y>
-           <width>71</width>
-           <height>41</height>
-          </rect>
-         </property>
-         <property name="font">
-          <font>
-           <family>Humnst777 Blk BT</family>
-           <pointsize>12</pointsize>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">color: rgb(255, 255, 255);</string>
-         </property>
-         <property name="text">
-          <string>Genre 4</string>
-         </property>
-        </widget>
         <widget class="QPushButton" name="genGenreButton">
          <property name="geometry">
           <rect>
-           <x>530</x>
-           <y>420</y>
+           <x>510</x>
+           <y>270</y>
            <width>151</width>
            <height>31</height>
           </rect>
@@ -1836,9 +1748,10 @@ background-color: rgba(255, 255, 255, 0);</string>
 }
 
 QPushButton:hover{
-	background-color: rgba(255, 255, 255, 0.6);
+	background-color: rgb(248, 231, 28);
 	border-style: none;
 	border-radius: 10px;
+	font-weight: bold;
 }</string>
          </property>
          <property name="text">
@@ -1848,10 +1761,10 @@ QPushButton:hover{
         <widget class="QFrame" name="artistTxtBoxes_2">
          <property name="geometry">
           <rect>
-           <x>430</x>
-           <y>140</y>
+           <x>410</x>
+           <y>200</y>
            <width>351</width>
-           <height>271</height>
+           <height>51</height>
           </rect>
          </property>
          <property name="frameShape">
@@ -1862,55 +1775,7 @@ QPushButton:hover{
          </property>
          <layout class="QVBoxLayout" name="verticalLayout_2">
           <item>
-           <widget class="QLineEdit" name="genre1_txtbox">
-            <property name="styleSheet">
-             <string notr="true">background-color: rgba(255, 255, 255, 0.5);
-border-radius: 10px;
-border-style: none;
-color: white;
-font-size: 12pt;
-height: 30px;</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QLineEdit" name="genre2_txtbox">
-            <property name="styleSheet">
-             <string notr="true">background-color: rgba(255, 255, 255, 0.5);
-border-radius: 10px;
-border-style: none;
-color: white;
-font-size: 12pt;
-height: 30px;</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QLineEdit" name="genre3_txtbox">
-            <property name="styleSheet">
-             <string notr="true">background-color: rgba(255, 255, 255, 0.5);
-border-radius: 10px;
-border-style: none;
-color: white;
-font-size: 12pt;
-height: 30px;</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QLineEdit" name="genre4_txtbox">
-            <property name="styleSheet">
-             <string notr="true">background-color: rgba(255, 255, 255, 0.5);
-border-radius: 10px;
-border-style: none;
-color: white;
-font-size: 12pt;
-height: 30px;</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QLineEdit" name="genre5_txtbox">
+           <widget class="QLineEdit" name="genre_txtbox">
             <property name="styleSheet">
              <string notr="true">background-color: rgba(255, 255, 255, 0.5);
 border-radius: 10px;
@@ -1923,12 +1788,12 @@ height: 30px;</string>
           </item>
          </layout>
         </widget>
-        <widget class="QLabel" name="genreLabel1">
+        <widget class="QLabel" name="genreLabel">
          <property name="geometry">
           <rect>
            <x>360</x>
-           <y>150</y>
-           <width>71</width>
+           <y>200</y>
+           <width>51</width>
            <height>41</height>
           </rect>
          </property>
@@ -1942,7 +1807,7 @@ height: 30px;</string>
           <string notr="true">color: rgb(255, 255, 255);</string>
          </property>
          <property name="text">
-          <string>Genre 1</string>
+          <string>Genre</string>
          </property>
         </widget>
         <widget class="QFrame" name="homeButtonFrame_5">
@@ -2040,9 +1905,9 @@ QPushButton:hover{
         <widget class="QFrame" name="buttonFrame_5">
          <property name="geometry">
           <rect>
-           <x>480</x>
+           <x>460</x>
            <y>10</y>
-           <width>251</width>
+           <width>241</width>
            <height>131</height>
           </rect>
          </property>
@@ -2128,8 +1993,8 @@ background-color: rgba(255, 255, 255, 0);</string>
         <widget class="QPushButton" name="genMoodButton">
          <property name="geometry">
           <rect>
-           <x>520</x>
-           <y>420</y>
+           <x>510</x>
+           <y>430</y>
            <width>151</width>
            <height>31</height>
           </rect>
@@ -2148,23 +2013,205 @@ background-color: rgba(255, 255, 255, 0);</string>
 }
 
 QPushButton:hover{
-	background-color: rgba(255, 255, 255, 0.6);
+	background-color: rgb(248, 231, 28);
 	border-style: none;
 	border-radius: 10px;
+	font-weight: bold;
 }</string>
          </property>
          <property name="text">
           <string>Generate</string>
          </property>
         </widget>
-        <widget class="QDial" name="dial">
+        <widget class="QDial" name="moodDial">
          <property name="geometry">
           <rect>
-           <x>380</x>
-           <y>130</y>
-           <width>431</width>
-           <height>291</height>
+           <x>400</x>
+           <y>170</y>
+           <width>361</width>
+           <height>231</height>
           </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QDial {
+	background-color: rgb(255, 255, 255);
+}</string>
+         </property>
+         <property name="notchesVisible">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QLabel" name="moodDialLabel">
+         <property name="geometry">
+          <rect>
+           <x>540</x>
+           <y>240</y>
+           <width>81</width>
+           <height>61</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLabel {
+	color: white;
+	font-weight: bold;
+}</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="happyLabel">
+         <property name="geometry">
+          <rect>
+           <x>410</x>
+           <y>320</y>
+           <width>81</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Humnst777 BT</family>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <italic>false</italic>
+           <bold>true</bold>
+           <underline>false</underline>
+           <strikeout>false</strikeout>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string>Bliss</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="neutralLabel">
+         <property name="geometry">
+          <rect>
+           <x>410</x>
+           <y>200</y>
+           <width>81</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Humnst777 BT</family>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <italic>false</italic>
+           <bold>true</bold>
+           <underline>false</underline>
+           <strikeout>false</strikeout>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string>Neutral</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="sadLabel">
+         <property name="geometry">
+          <rect>
+           <x>670</x>
+           <y>200</y>
+           <width>81</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Humnst777 BT</family>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <italic>false</italic>
+           <bold>true</bold>
+           <underline>false</underline>
+           <strikeout>false</strikeout>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string>Mourn</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="happyLabel_2">
+         <property name="geometry">
+          <rect>
+           <x>670</x>
+           <y>320</y>
+           <width>81</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Humnst777 BT</family>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <italic>false</italic>
+           <bold>true</bold>
+           <underline>false</underline>
+           <strikeout>false</strikeout>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string>Rage</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="currentMoodLabel">
+         <property name="geometry">
+          <rect>
+           <x>550</x>
+           <y>300</y>
+           <width>61</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Humnst777 BT</family>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(46, 124, 255);</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
          </property>
         </widget>
        </widget>
@@ -2217,7 +2264,7 @@ QPushButton:hover{
         <widget class="QFrame" name="mainProfileFrame">
          <property name="geometry">
           <rect>
-           <x>300</x>
+           <x>290</x>
            <y>90</y>
            <width>581</width>
            <height>211</height>
@@ -2329,7 +2376,7 @@ background-color: rgba(255, 255, 255, 0);</string>
             <string notr="true">background-color: rgba(255, 255, 255, 0.5);
 border-radius: 10px;
 border-style: none;
-color: black;
+color: rgb(255, 255, 255);
 font-size: 12pt;
 height: 30px;</string>
            </property>
@@ -2347,7 +2394,7 @@ height: 30px;</string>
             <string notr="true">background-color: rgba(255, 255, 255, 0.5);
 border-radius: 10px;
 border-style: none;
-color: black;
+color: rgb(255, 255, 255);
 font-size: 12pt;
 height: 30px;</string>
            </property>
@@ -2357,7 +2404,7 @@ height: 30px;</string>
         <widget class="QPushButton" name="signoutButton">
          <property name="geometry">
           <rect>
-           <x>520</x>
+           <x>510</x>
            <y>340</y>
            <width>151</width>
            <height>31</height>
@@ -2650,7 +2697,7 @@ QPushButton:hover{
         <widget class="QFrame" name="frame_4">
          <property name="geometry">
           <rect>
-           <x>440</x>
+           <x>430</x>
            <y>80</y>
            <width>311</width>
            <height>321</height>

@@ -89,7 +89,7 @@ class MainAppWindow(QMainWindow):
             pixmap = pixmap.scaled(QSize(181, 171))
             self.ui.profilePicBox.setPixmap(pixmap)
         else:
-            self.ui.profilePicBox.setPixmap("Media/icons/profileDefault_borderless.png")
+            self.ui.profilePicBox.setPixmap("Media/icons/default.png")
 
         self.ui.headerProfileName.setText(userName)
         self.ui.name_txtbox.setText(userName)
@@ -181,9 +181,16 @@ class MainAppWindow(QMainWindow):
             setCurrentWidget(self.ui.settingsPage))
 
         #self.ui.stackedWidget.setCurrentWidget(self.ui.homePage)
+
+        #Mood dial
+        self.ui.moodDialLabel.setPixmap('Media/icons/happy.png')
+        self.ui.currentMoodLabel.setText('Blissful')
+        self.ui.moodDial.valueChanged.connect(self.dial_changed)
+
         # ###############################################
         # Move window on mouse drag event on the tittle bar
         # ###############################################
+
         def moveWindow(e):
             # Detect if the window is  normal size
             # ###############################################
@@ -217,6 +224,25 @@ class MainAppWindow(QMainWindow):
     # ###############################################
     # Add mouse events to the window
     # ###############################################
+
+    #Mood dial value
+    def dial_changed(self):
+        getVal = self.ui.moodDial.value()
+        #self.ui.valueLabel.setText(str(getVal))
+        #self.ui.moodDialLabel.setText(str(getVal))
+        if getVal >= 0 and getVal <= 19:
+            self.ui.currentMoodLabel.setText('Blissful')
+            self.ui.moodDialLabel.setPixmap('Media/icons/happy.png')
+        elif getVal >= 20 and getVal <= 49:
+            self.ui.currentMoodLabel.setText('Neutral')
+            self.ui.moodDialLabel.setPixmap('Media/icons/meh.png')
+        elif getVal >= 50 and getVal <= 79:
+            self.ui.currentMoodLabel.setText('Mournful')
+            self.ui.moodDialLabel.setPixmap('Media/icons/sad.png')
+        elif getVal >= 80 and getVal <= 99:
+            self.ui.currentMoodLabel.setText('Rageful')
+            self.ui.moodDialLabel.setPixmap('Media/icons/angry.png')
+
 
     def getAccessCode(self):
         redirected = self.ui.accessCodeTxtBox.toPlainText()
