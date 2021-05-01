@@ -1,7 +1,10 @@
 import sys, os, platform, requests, datetime, base64
-import ctypes
+import ctypes, subprocess
 
 from secrets import *
+from bs4 import BeautifulSoup
+import requests, lxml, html5lib
+import re, random
 
 from splash_screen import *
 from ui_vs import *
@@ -37,8 +40,6 @@ client_id = 'b74cf8069d564daaa6bcc7eb21e80c52'
 client_secret = '217c6d35964545128c1efc70908ebfbc'
 redirect_uri = 'https://vibeshareapp.com/login.html'
 scopes = tk.scope.every
-
-
 
 #The following lines get the user_token by opening the browser and prompting login
 cred = RefreshingCredentials(client_id, client_secret, redirect_uri)
@@ -154,7 +155,9 @@ class MainAppWindow(QMainWindow):
             setCurrentWidget(self.ui.recommendLoadingPage))
         self.ui.recommendButton.clicked.connect(self.genRecommendations)
 
-        #self.ui.genGenreButton.clicked.connect(self.genGenre)
+        self.ui.genGenreButton.clicked.connect(lambda: self.ui.stackedWidget.
+            setCurrentWidget(self.ui.genreLoadingPage))
+        self.ui.genGenreButton.clicked.connect(self.genGenre)
         #self.ui.genMoodButton.clicked.connect(self.genMood)
 
         #Home buttons
@@ -173,6 +176,8 @@ class MainAppWindow(QMainWindow):
         self.ui.homeButton_calp.clicked.connect(lambda: self.ui.stackedWidget.
             setCurrentWidget(self.ui.homePage))
         self.ui.homeButton_rlp.clicked.connect(lambda: self.ui.stackedWidget.
+            setCurrentWidget(self.ui.homePage))
+        self.ui.homeButton_glp.clicked.connect(lambda: self.ui.stackedWidget.
             setCurrentWidget(self.ui.homePage))
 
         self.ui.homeButton_about.clicked.connect(lambda: self.ui.stackedWidget.
@@ -243,6 +248,8 @@ class MainAppWindow(QMainWindow):
             self.ui.currentMoodLabel.setText('Rageful')
             self.ui.moodDialLabel.setPixmap('Media/icons/angry.png')
 
+    def openSpotify(self):
+        return#webbrowser.open_new('')
 
     def getAccessCode(self):
         redirected = self.ui.accessCodeTxtBox.toPlainText()
@@ -301,19 +308,52 @@ class MainAppWindow(QMainWindow):
         while("" in artist_list):
             artist_list.remove("")
 
-        playlist = spotify.playlist_create(user.id, name = "VibeShare Playlist",
-            public = True, description = "Made with VibeShare")
+        playlist = spotify.playlist_create(user.id, name = "VibeShare Artist Playlist",
+            public = True, description = "Made with VibeShare. Based on your preferred artists!")
 
         for artist_out in artist_list:
             artists, = spotify.search(artist_out, types=('artist',), limit = 1)
             artist = artists.items[0]
             tracks = spotify.artist_top_tracks(artist.id, market = 'US')
             uris = [track.uri for track in tracks]
-            spotify.playlist_add(playlist.id, uris = uris)
+            artistPlaylist = spotify.playlist_add(playlist.id, uris = uris)
+        self.ui.artistLinkTxtbox.setText('spotify:playlist:' + str(artistPlaylist))
+        webbrowser.open_new(str('spotify:playlist:' + str(artistPlaylist)))
+        self.ui.artist1_txtbox.clear()
+        self.ui.artist2_txtbox.clear()
+        self.ui.artist3_txtbox.clear()
+        self.ui.artist4_txtbox.clear()
+        self.ui.artist5_txtbox.clear()
 
     #Generating based on genre
     def genGenre(self):
-        print("button clicked")
+        genre_out = self.ui.genre_txtbox.text()
+        genre = genre_out.replace(' ', '+')
+        source = requests.get("https://everynoise.com/research.cgi?mode=genre&name=" + genre).text
+        soup = BeautifulSoup(source, 'lxml')
+        links = soup.find_all('div', class_='artistname')
+        artists_list = []
+        for class_tag in soup.find_all('div', class_='artistname'):
+            a_tag = class_tag.find('a')
+            for name in a_tag:
+                artists_list.append(name.string)
+
+        random_artists = random.sample(artists_list, 30)
+
+        playlist = spotify.playlist_create(user.id, name = "VibeShare Genre Playlist",
+            public = True, description = "Made with VibeShare. Based on your preferred genre!")
+
+        uris = []
+        for art in random_artists:
+            artists, = spotify.search(art, types=('artist',), limit = 1)
+            artist = artists.items[0]
+            tracks = spotify.artist_top_tracks(artist.id, market = 'US')
+            uris.append(tracks[0].uri)
+        spotify.playlist_add(playlist.id, uris = uris)
+        #print("Your playlist url is " + playlist.uri)
+        self.ui.genreLinkTxtbox.setText(str(playlist.uri))
+        webbrowser.open_new(str(playlist.uri))
+        self.ui.genre_txtbox.clear()
 
     #Generating based on mood
     def genMood(self):
@@ -333,6 +373,8 @@ class MainAppWindow(QMainWindow):
         )
         uris = [t.uri for t in recommendations]
         spotify.playlist_add(playlist.id, uris=uris)
+        self.ui.recommendtLinkTxtbox.setText('spotify:playlist:' + str(playlist.id))
+        webbrowser.open_new(str('spotify:playlist:' + str(playlist.id)))
 
     def mousePressEvent(self, event):
         # ###############################################
