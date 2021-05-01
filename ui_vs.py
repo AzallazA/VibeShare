@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'vsIixvaS.ui'
+## Form generated from reading UI file 'vsrkuDQC.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -1040,7 +1040,7 @@ class Ui_VSMain(object):
         self.buttonFrame_5.setFrameShadow(QFrame.Raised)
         self.basedOnGenreLabel2_2 = QLabel(self.buttonFrame_5)
         self.basedOnGenreLabel2_2.setObjectName(u"basedOnGenreLabel2_2")
-        self.basedOnGenreLabel2_2.setGeometry(QRect(70, 80, 108, 20))
+        self.basedOnGenreLabel2_2.setGeometry(QRect(70, 70, 108, 20))
         self.basedOnGenreLabel2_2.setFont(font4)
         self.basedOnGenreLabel2_2.setStyleSheet(u"QLabel{\n"
 "	color: white;\n"
@@ -1049,17 +1049,17 @@ class Ui_VSMain(object):
         self.basedOnGenreLabel2_2.setAlignment(Qt.AlignCenter)
         self.basedOnGenreLabel_2 = QLabel(self.buttonFrame_5)
         self.basedOnGenreLabel_2.setObjectName(u"basedOnGenreLabel_2")
-        self.basedOnGenreLabel_2.setGeometry(QRect(10, 10, 221, 71))
+        self.basedOnGenreLabel_2.setGeometry(QRect(10, 0, 221, 71))
         self.basedOnGenreLabel_2.setStyleSheet(u"image: url(:/icons/Media/icons/mood.png);\n"
 "background-color: rgba(255, 255, 255, 0);")
         self.keyLabel2_2 = QLabel(self.buttonFrame_5)
         self.keyLabel2_2.setObjectName(u"keyLabel2_2")
-        self.keyLabel2_2.setGeometry(QRect(0, 110, 241, 21))
+        self.keyLabel2_2.setGeometry(QRect(0, 100, 241, 21))
         self.keyLabel2_2.setFont(font5)
         self.keyLabel2_2.setStyleSheet(u"color: rgb(248, 231, 28);")
         self.genMoodButton = QPushButton(self.createMoodPage)
         self.genMoodButton.setObjectName(u"genMoodButton")
-        self.genMoodButton.setGeometry(QRect(510, 430, 151, 31))
+        self.genMoodButton.setGeometry(QRect(500, 440, 161, 31))
         self.genMoodButton.setFont(font7)
         self.genMoodButton.setStyleSheet(u"QPushButton{\n"
 "	background-color: rgb(255, 255, 255);\n"
@@ -1075,14 +1075,14 @@ class Ui_VSMain(object):
 "}")
         self.moodDial = QDial(self.createMoodPage)
         self.moodDial.setObjectName(u"moodDial")
-        self.moodDial.setGeometry(QRect(400, 170, 361, 231))
+        self.moodDial.setGeometry(QRect(400, 140, 361, 231))
         self.moodDial.setStyleSheet(u"QDial {\n"
 "	background-color: rgb(255, 255, 255);\n"
 "}")
         self.moodDial.setNotchesVisible(True)
         self.moodDialLabel = QLabel(self.createMoodPage)
         self.moodDialLabel.setObjectName(u"moodDialLabel")
-        self.moodDialLabel.setGeometry(QRect(540, 240, 81, 61))
+        self.moodDialLabel.setGeometry(QRect(540, 210, 81, 61))
         font10 = QFont()
         font10.setPointSize(12)
         font10.setBold(True)
@@ -1095,7 +1095,7 @@ class Ui_VSMain(object):
         self.moodDialLabel.setAlignment(Qt.AlignCenter)
         self.happyLabel = QLabel(self.createMoodPage)
         self.happyLabel.setObjectName(u"happyLabel")
-        self.happyLabel.setGeometry(QRect(410, 320, 81, 41))
+        self.happyLabel.setGeometry(QRect(410, 290, 81, 41))
         font11 = QFont()
         font11.setFamily(u"Humnst777 BT")
         font11.setPointSize(12)
@@ -1109,37 +1109,131 @@ class Ui_VSMain(object):
         self.happyLabel.setAlignment(Qt.AlignCenter)
         self.neutralLabel = QLabel(self.createMoodPage)
         self.neutralLabel.setObjectName(u"neutralLabel")
-        self.neutralLabel.setGeometry(QRect(410, 200, 81, 41))
+        self.neutralLabel.setGeometry(QRect(410, 170, 81, 41))
         self.neutralLabel.setFont(font11)
         self.neutralLabel.setStyleSheet(u"color: rgb(255, 255, 255);")
         self.neutralLabel.setAlignment(Qt.AlignCenter)
         self.sadLabel = QLabel(self.createMoodPage)
         self.sadLabel.setObjectName(u"sadLabel")
-        self.sadLabel.setGeometry(QRect(670, 200, 81, 41))
+        self.sadLabel.setGeometry(QRect(670, 170, 81, 41))
         self.sadLabel.setFont(font11)
         self.sadLabel.setStyleSheet(u"color: rgb(255, 255, 255);")
         self.sadLabel.setAlignment(Qt.AlignCenter)
         self.happyLabel_2 = QLabel(self.createMoodPage)
         self.happyLabel_2.setObjectName(u"happyLabel_2")
-        self.happyLabel_2.setGeometry(QRect(670, 320, 81, 41))
+        self.happyLabel_2.setGeometry(QRect(670, 290, 81, 41))
         self.happyLabel_2.setFont(font11)
         self.happyLabel_2.setStyleSheet(u"color: rgb(255, 255, 255);")
         self.happyLabel_2.setAlignment(Qt.AlignCenter)
         self.currentMoodLabel = QLabel(self.createMoodPage)
         self.currentMoodLabel.setObjectName(u"currentMoodLabel")
-        self.currentMoodLabel.setGeometry(QRect(550, 300, 61, 31))
+        self.currentMoodLabel.setGeometry(QRect(550, 270, 61, 31))
         font12 = QFont()
         font12.setFamily(u"Humnst777 BT")
         self.currentMoodLabel.setFont(font12)
         self.currentMoodLabel.setStyleSheet(u"color: rgb(46, 124, 255);")
         self.currentMoodLabel.setAlignment(Qt.AlignCenter)
+        self.moodGenreTxtbox = QLineEdit(self.createMoodPage)
+        self.moodGenreTxtbox.setObjectName(u"moodGenreTxtbox")
+        self.moodGenreTxtbox.setGeometry(QRect(490, 390, 181, 30))
+        self.moodGenreTxtbox.setStyleSheet(u"background-color: rgba(255, 255, 255, 0.5);\n"
+"border-radius: 10px;\n"
+"border-style: none;\n"
+"color: white;\n"
+"font-size: 12pt;\n"
+"height: 30px;")
+        self.label_36 = QLabel(self.createMoodPage)
+        self.label_36.setObjectName(u"label_36")
+        self.label_36.setGeometry(QRect(480, 360, 191, 31))
+        self.label_36.setFont(font7)
+        self.label_36.setStyleSheet(u"color: white;")
+        self.genreLabel_3 = QLabel(self.createMoodPage)
+        self.genreLabel_3.setObjectName(u"genreLabel_3")
+        self.genreLabel_3.setGeometry(QRect(430, 380, 51, 41))
+        self.genreLabel_3.setFont(font6)
+        self.genreLabel_3.setStyleSheet(u"color: rgb(255, 255, 255);")
         self.label_32 = QLabel(self.createMoodPage)
         self.label_32.setObjectName(u"label_32")
-        self.label_32.setGeometry(QRect(480, 480, 211, 21))
+        self.label_32.setGeometry(QRect(470, 480, 221, 21))
         self.label_32.setFont(font8)
         self.label_32.setStyleSheet(u"color: rgb(255, 255, 255);")
         self.label_32.setAlignment(Qt.AlignCenter)
         self.stackedWidget.addWidget(self.createMoodPage)
+        self.moodLoadingPage = QWidget()
+        self.moodLoadingPage.setObjectName(u"moodLoadingPage")
+        self.buttonFrame_7 = QFrame(self.moodLoadingPage)
+        self.buttonFrame_7.setObjectName(u"buttonFrame_7")
+        self.buttonFrame_7.setGeometry(QRect(430, -10, 241, 131))
+        self.buttonFrame_7.setStyleSheet(u"QFrame{\n"
+"	background-color: rgba(255, 255, 255, 0);\n"
+"}")
+        self.buttonFrame_7.setFrameShape(QFrame.StyledPanel)
+        self.buttonFrame_7.setFrameShadow(QFrame.Raised)
+        self.homeButtonFrame_16 = QFrame(self.moodLoadingPage)
+        self.homeButtonFrame_16.setObjectName(u"homeButtonFrame_16")
+        self.homeButtonFrame_16.setGeometry(QRect(10, 0, 51, 51))
+        self.homeButtonFrame_16.setStyleSheet(u"background-color: rgba(255, 255, 255, 0);")
+        self.homeButtonFrame_16.setFrameShape(QFrame.StyledPanel)
+        self.homeButtonFrame_16.setFrameShadow(QFrame.Raised)
+        self.homeButton_mlp = QPushButton(self.homeButtonFrame_16)
+        self.homeButton_mlp.setObjectName(u"homeButton_mlp")
+        self.homeButton_mlp.setGeometry(QRect(10, 10, 31, 31))
+        self.homeButton_mlp.setStyleSheet(u"QPushButton{\n"
+"	image: url(:/icons/Media/icons/home_btn.png);\n"
+"	background-color: rgba(255, 255, 255, 0);\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"	image: url(:/icons/Media/icons/home_btn.png);\n"
+"	background-color: rgba(255, 255, 255, 0);\n"
+"	border-style: none;\n"
+"	border-radius: 40px;\n"
+"}")
+        self.label_33 = QLabel(self.moodLoadingPage)
+        self.label_33.setObjectName(u"label_33")
+        self.label_33.setGeometry(QRect(540, 240, 101, 21))
+        self.label_33.setFont(font7)
+        self.label_33.setStyleSheet(u"color: white;")
+        self.frame_7 = QFrame(self.moodLoadingPage)
+        self.frame_7.setObjectName(u"frame_7")
+        self.frame_7.setGeometry(QRect(200, 120, 331, 271))
+        self.frame_7.setStyleSheet(u"image: url(:/images/Media/vpLocation_5.png);")
+        self.frame_7.setFrameShape(QFrame.StyledPanel)
+        self.frame_7.setFrameShadow(QFrame.Raised)
+        self.label_34 = QLabel(self.moodLoadingPage)
+        self.label_34.setObjectName(u"label_34")
+        self.label_34.setGeometry(QRect(540, 150, 381, 31))
+        self.label_34.setFont(font5)
+        self.label_34.setStyleSheet(u"color: rgb(255, 255, 255);")
+        self.label_35 = QLabel(self.moodLoadingPage)
+        self.label_35.setObjectName(u"label_35")
+        self.label_35.setGeometry(QRect(460, 20, 251, 31))
+        self.label_35.setFont(font9)
+        self.label_35.setStyleSheet(u"color: rgb(248, 231, 28);")
+        self.moodLinkTxtbox = QTextEdit(self.moodLoadingPage)
+        self.moodLinkTxtbox.setObjectName(u"moodLinkTxtbox")
+        self.moodLinkTxtbox.setGeometry(QRect(540, 270, 391, 81))
+        self.moodLinkTxtbox.setStyleSheet(u"background-color: rgba(255, 255, 255, 0.5);\n"
+"border-radius: 10px;\n"
+"border-style: none;\n"
+"color: black;\n"
+"font-size: 12pt;\n"
+"height: 30px;")
+        self.label_37 = QLabel(self.moodLoadingPage)
+        self.label_37.setObjectName(u"label_37")
+        self.label_37.setGeometry(QRect(210, 90, 751, 331))
+        self.label_37.setStyleSheet(u"background-color: rgba(0, 0, 0, 0.2);\n"
+"border-style: none;\n"
+"border-radius: 10px;")
+        self.stackedWidget.addWidget(self.moodLoadingPage)
+        self.label_37.raise_()
+        self.buttonFrame_7.raise_()
+        self.homeButtonFrame_16.raise_()
+        self.label_33.raise_()
+        self.frame_7.raise_()
+        self.label_34.raise_()
+        self.label_35.raise_()
+        self.moodLinkTxtbox.raise_()
         self.profilePage = QWidget()
         self.profilePage.setObjectName(u"profilePage")
         self.homeButtonFrame_3 = QFrame(self.profilePage)
@@ -1438,7 +1532,7 @@ class Ui_VSMain(object):
 "font-style: italic;")
         self.stackedWidget.addWidget(self.aboutPage)
 
-        self.gridLayout_3.addWidget(self.stackedWidget, 0, 0, 1, 1)
+        self.gridLayout_3.addWidget(self.stackedWidget, 0, 1, 1, 1)
 
         VSMain.setCentralWidget(self.centralwidget)
         self.bodyFrame.raise_()
@@ -1447,7 +1541,7 @@ class Ui_VSMain(object):
 
         self.retranslateUi(VSMain)
 
-        self.stackedWidget.setCurrentIndex(7)
+        self.stackedWidget.setCurrentIndex(8)
 
 
         QMetaObject.connectSlotsByName(VSMain)
@@ -1530,7 +1624,14 @@ class Ui_VSMain(object):
         self.sadLabel.setText(QCoreApplication.translate("VSMain", u"Mourn", None))
         self.happyLabel_2.setText(QCoreApplication.translate("VSMain", u"Rage", None))
         self.currentMoodLabel.setText("")
+        self.label_36.setText(QCoreApplication.translate("VSMain", u"(Optional) Add a specific genre", None))
+        self.genreLabel_3.setText(QCoreApplication.translate("VSMain", u"Genre", None))
         self.label_32.setText(QCoreApplication.translate("VSMain", u"Note: This may take a moment...", None))
+        self.homeButton_mlp.setText("")
+        self.label_33.setText(QCoreApplication.translate("VSMain", u"Your playlist link:", None))
+        self.label_34.setText(QCoreApplication.translate("VSMain", u"Your suggest playlist is on Spotify", None))
+        self.label_35.setText(QCoreApplication.translate("VSMain", u"Your new playlist is ready!", None))
+        self.label_37.setText("")
         self.homeButton_profile.setText("")
         self.profilePicBox.setText("")
         self.nameLabel.setText(QCoreApplication.translate("VSMain", u"Name: ", None))
@@ -1544,8 +1645,8 @@ class Ui_VSMain(object):
         self.homeButton_about.setText("")
         self.label_3.setText(QCoreApplication.translate("VSMain", u"Software Version: ", None))
         self.label_4.setText(QCoreApplication.translate("VSMain", u"Software Release Date:", None))
-        self.label_5.setText(QCoreApplication.translate("VSMain", u"  v1.0_04_16", None))
-        self.label_6.setText(QCoreApplication.translate("VSMain", u"  04/16/2021", None))
+        self.label_5.setText(QCoreApplication.translate("VSMain", u"  v1.3_05_01", None))
+        self.label_6.setText(QCoreApplication.translate("VSMain", u"  05/01/2021", None))
         self.label_7.setText(QCoreApplication.translate("VSMain", u"Created by Team Big Pecs:", None))
         self.label_8.setText(QCoreApplication.translate("VSMain", u"Zach Johnson, Azal Abduh, Gameil Alsaidi,", None))
         self.label_9.setText(QCoreApplication.translate("VSMain", u"Tin Pham, & Kalia Jeffries", None))

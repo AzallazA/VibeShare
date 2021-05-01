@@ -155,10 +155,15 @@ class MainAppWindow(QMainWindow):
             setCurrentWidget(self.ui.recommendLoadingPage))
         self.ui.recommendButton.clicked.connect(self.genRecommendations)
 
+        #Generate Genre
         self.ui.genGenreButton.clicked.connect(lambda: self.ui.stackedWidget.
             setCurrentWidget(self.ui.genreLoadingPage))
         self.ui.genGenreButton.clicked.connect(self.genGenre)
-        #self.ui.genMoodButton.clicked.connect(self.genMood)
+
+        #Generate Mood
+        self.ui.genMoodButton.clicked.connect(lambda: self.ui.stackedWidget.
+            setCurrentWidget(self.ui.moodLoadingPage))
+        self.ui.genMoodButton.clicked.connect(self.genMood)
 
         #Home buttons
         self.ui.homeButton_create.clicked.connect(lambda: self.ui.stackedWidget.
@@ -178,6 +183,8 @@ class MainAppWindow(QMainWindow):
         self.ui.homeButton_rlp.clicked.connect(lambda: self.ui.stackedWidget.
             setCurrentWidget(self.ui.homePage))
         self.ui.homeButton_glp.clicked.connect(lambda: self.ui.stackedWidget.
+            setCurrentWidget(self.ui.homePage))
+        self.ui.homeButton_mlp.clicked.connect(lambda: self.ui.stackedWidget.
             setCurrentWidget(self.ui.homePage))
 
         self.ui.homeButton_about.clicked.connect(lambda: self.ui.stackedWidget.
@@ -248,12 +255,12 @@ class MainAppWindow(QMainWindow):
             self.ui.currentMoodLabel.setText('Rageful')
             self.ui.moodDialLabel.setPixmap('Media/icons/angry.png')
 
-    def openSpotify(self):
+    """def openSpotify(self):
         return#webbrowser.open_new('')
 
     def getAccessCode(self):
         redirected = self.ui.accessCodeTxtBox.toPlainText()
-        print(redirected)
+        print(redirected)"""
 
     #Dark Mode
     def darkMode(self):
@@ -358,6 +365,33 @@ class MainAppWindow(QMainWindow):
     #Generating based on mood
     def genMood(self):
         print("button clicked")
+        getVal = self.ui.moodDial.value()
+        search_emotion = ""
+        #Bliss
+        if getVal >= 0 and getVal <= 19:
+            search_emotion = "happy"
+        #Neutral
+        elif getVal >= 20 and getVal <= 49:
+            search_emotion = "popular"
+        #Mourn
+        elif getVal >= 50 and getVal <= 79:
+            search_emotion = "sad"
+        #Rage
+        elif getVal >= 80 and getVal <= 99:
+            search_emotion = "angry"
+
+        genre = self.ui.moodGenreTxtbox.text()
+        if genre == "":
+            search = search_emotion
+        else:
+            search = search_emotion + " " + genre
+        print(search)
+
+        artists, = spotify.search(search, types=('playlist',))
+        artist = artists.items[0]
+        #print(artist.uri)
+        self.ui.moodLinkTxtbox.setText(str(artist.uri))
+        webbrowser.open_new(str(artist.uri))
 
     #Generating based on recommendations
     def genRecommendations(self):
