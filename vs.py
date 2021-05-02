@@ -68,7 +68,6 @@ class MainAppWindow(QMainWindow):
         #Get's user credentials and adds logs them in
         user_id = user.id
         userName = user.display_name
-        #print(userName)
 
         # Apply shadow effect
         self.shadow = QGraphicsDropShadowEffect(self)
@@ -113,12 +112,11 @@ class MainAppWindow(QMainWindow):
         #self.ui.restoreButton.clicked.connect(lambda: self.restore_or_maximize_window())
         # ###############################################
         self.show()
-        #Stacked QtWidgets
-        #self.ui.stackedWidget.setCurrentWidget(self.ui.homePage)
+        # Stacked QtWidgets
 
-        #Stacked Widget buttons (Navigation)
-        #HOME PAGE
-        #Create Button
+        # Stacked Widget buttons (Navigation)
+        # HOME PAGE
+        # Create Button
         self.ui.createButton.clicked.connect(lambda: self.ui.stackedWidget.
             setCurrentWidget(self.ui.createPage))
         #Profile Button
@@ -136,38 +134,37 @@ class MainAppWindow(QMainWindow):
         self.ui.createMoodButton.clicked.connect(lambda: self.ui.stackedWidget.
             setCurrentWidget(self.ui.createMoodPage))
 
-        #SETTINGS PAGE
-        #self.ui.darkModeButton.clicked.connect(self.darkMode)
+        # SETTINGS PAGE
         self.ui.darkModeButton.setCheckable(True)
         self.ui.darkModeButton.clicked.connect(self.darkMode)
 
-        #ABOUT PAGE
+        # ABOUT PAGE
         self.ui.aboutButton.clicked.connect(lambda: self.ui.stackedWidget.
             setCurrentWidget(self.ui.aboutPage))
 
-        #GENERATE
-        #Generate Artist Playlist
+        # GENERATE
+        # Generate Artist Playlist
         self.ui.genArtistButton.clicked.connect(lambda: self.ui.stackedWidget.
             setCurrentWidget(self.ui.createArtistLoadingPage))
         self.ui.genArtistButton.clicked.connect(self.getArtistText)
 
 
-        #Generate Reccomendations Button Clicked
+        # Generate Reccomendations Button Clicked
         self.ui.recommendButton.clicked.connect(lambda: self.ui.stackedWidget.
             setCurrentWidget(self.ui.recommendLoadingPage))
         self.ui.recommendButton.clicked.connect(self.genRecommendations)
 
-        #Generate Genre
+        # Generate Genre
         self.ui.genGenreButton.clicked.connect(lambda: self.ui.stackedWidget.
             setCurrentWidget(self.ui.genreLoadingPage))
         self.ui.genGenreButton.clicked.connect(self.genGenre)
 
-        #Generate Mood
+        # Generate Mood
         self.ui.genMoodButton.clicked.connect(lambda: self.ui.stackedWidget.
             setCurrentWidget(self.ui.moodLoadingPage))
         self.ui.genMoodButton.clicked.connect(self.genMood)
 
-        #Home buttons
+        # Home buttons
         self.ui.homeButton_create.clicked.connect(lambda: self.ui.stackedWidget.
             setCurrentWidget(self.ui.homePage))
         self.ui.homeButton_profile.clicked.connect(lambda: self.ui.stackedWidget.
@@ -194,9 +191,7 @@ class MainAppWindow(QMainWindow):
         self.ui.homeButton_about.clicked.connect(lambda: self.ui.stackedWidget.
             setCurrentWidget(self.ui.settingsPage))
 
-        #self.ui.stackedWidget.setCurrentWidget(self.ui.homePage)
-
-        #Mood dial
+        # Mood dial
         self.ui.moodDialLabel.setPixmap('Media/icons/happy.png')
         self.ui.currentMoodLabel.setText('Blissful')
         self.ui.moodDial.valueChanged.connect(self.dial_changed)
@@ -208,19 +203,19 @@ class MainAppWindow(QMainWindow):
         def moveWindow(e):
             # Detect if the window is  normal size
             # ###############################################
-            if self.isMaximized() == False: #Not maximized
+            if self.isMaximized() == False: # Not maximized
                 # Move window only when window is normal size
                 # ###############################################
-                #if left mouse button is clicked (Only accept left mouse button clicks)
+                # if left mouse button is clicked (Only accept left mouse button clicks)
                 if e.buttons() == Qt.LeftButton:
-                    #Move window
+                    # Move window
                     self.move(self.pos() + e.globalPos() - self.clickPosition)
                     self.clickPosition = e.globalPos()
                     e.accept()
             # ###############################################
 
-        #Window Size Grip
-        #QSizeGrip(self.ui.sizeGrip)
+        # Window Size Grip
+        # QSizeGrip(self.ui.sizeGrip)
 
         # ###############################################
         # Add click event/Mouse move event/drag event to the top header to move the window
@@ -239,7 +234,7 @@ class MainAppWindow(QMainWindow):
     # Add mouse events to the window
     # ###############################################
 
-    #Mood dial value
+    # Mood dial value
     def dial_changed(self):
         getVal = self.ui.moodDial.value()
         #self.ui.valueLabel.setText(str(getVal))
@@ -257,14 +252,7 @@ class MainAppWindow(QMainWindow):
             self.ui.currentMoodLabel.setText('Rageful')
             self.ui.moodDialLabel.setPixmap('Media/icons/angry.png')
 
-    """def openSpotify(self):
-        return#webbrowser.open_new('')
-
-    def getAccessCode(self):
-        redirected = self.ui.accessCodeTxtBox.toPlainText()
-        print(redirected)"""
-
-    #Dark Mode
+    # Dark Mode
     def darkMode(self):
         if self.ui.darkModeButton.isChecked():
             self.ui.centralwidget.setStyleSheet("""
@@ -299,7 +287,7 @@ class MainAppWindow(QMainWindow):
                 stop:1 rgba(0, 170, 255, 255));
             }""")
 
-    #Generating based on Artist
+    # Generating based on Artist
     def getArtistText(self):
         artist1_out = self.ui.artist1_txtbox.text()
         artist2_out = self.ui.artist2_txtbox.text()
@@ -330,7 +318,7 @@ class MainAppWindow(QMainWindow):
         self.ui.artist4_txtbox.clear()
         self.ui.artist5_txtbox.clear()
 
-    #Generating based on genre
+    # Generating based on genre
     def genGenre(self):
         genre_out = self.ui.genre_txtbox.text()
         genre = genre_out.replace(' ', '+')
@@ -360,20 +348,20 @@ class MainAppWindow(QMainWindow):
         webbrowser.open_new(str(playlist.uri))
         self.ui.genre_txtbox.clear()
 
-    #Generating based on mood
+    # Generating based on mood
     def genMood(self):
         getVal = self.ui.moodDial.value()
         search_emotion = ""
-        #Bliss
+        # Bliss
         if getVal >= 0 and getVal <= 19:
             search_emotion = "happy"
-        #Neutral
+        # Neutral
         elif getVal >= 20 and getVal <= 49:
             search_emotion = "popular"
-        #Mourn
+        # Mourn
         elif getVal >= 50 and getVal <= 79:
             search_emotion = "sad"
-        #Rage
+        # Rage
         elif getVal >= 80 and getVal <= 99:
             search_emotion = "angry"
 
@@ -382,7 +370,6 @@ class MainAppWindow(QMainWindow):
             search = search_emotion
         else:
             search = search_emotion + " " + genre
-        print(search)
 
         moodPlaylist = spotify.playlist_create(user.id, name = "VibeShare Mood Playlist",
             public = True, description = "Made with VibeShare. Based on your provided mood!")
@@ -400,7 +387,7 @@ class MainAppWindow(QMainWindow):
         self.ui.moodLinkTxtbox.setText(str(moodPlaylist.uri))
         webbrowser.open_new(str(moodPlaylist.uri))
 
-    #Generating based on recommendations
+    # Generating based on recommendations
     def genRecommendations(self):
         top_tracks = spotify.current_user_top_tracks(limit=5).items
         top_track_ids = [t.id for t in top_tracks]
