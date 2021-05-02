@@ -384,11 +384,11 @@ class MainAppWindow(QMainWindow):
             search = search_emotion + " " + genre
         print(search)
 
-        artists, = spotify.search(search, types=('playlist',))
-        artist = artists.items[0]
+        playlists, = spotify.search(search, types=('playlist',))
+        playlist = playlists.items[0]
         #print(artist.uri)
-        self.ui.moodLinkTxtbox.setText(str(artist.uri))
-        webbrowser.open_new(str(artist.uri))
+        self.ui.moodLinkTxtbox.setText(str(playlist.uri))
+        webbrowser.open_new(str(playlist.uri))
 
     #Generating based on recommendations
     def genRecommendations(self):
