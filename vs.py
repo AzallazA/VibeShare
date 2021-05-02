@@ -319,10 +319,10 @@ class MainAppWindow(QMainWindow):
             artist = artists.items[0]
             tracks = spotify.artist_top_tracks(artist.id, market = 'from_token')
             uris = [track.uri for track in tracks]
-            artistPlaylist = spotify.playlist_add(playlist.id, uris = uris)
+            spotify.playlist_add(playlist.id, uris = uris)
 
-        self.ui.artistLinkTxtbox.setText('spotify:playlist:' + str(artistPlaylist))
-        webbrowser.open_new(str('spotify:playlist:' + str(artistPlaylist)))
+        self.ui.artistLinkTxtbox.setText('spotify:playlist:' + str(playlist))
+        webbrowser.open_new(str('spotify:playlist:' + str(playlist)))
 
         self.ui.artist1_txtbox.clear()
         self.ui.artist2_txtbox.clear()
@@ -384,11 +384,21 @@ class MainAppWindow(QMainWindow):
             search = search_emotion + " " + genre
         print(search)
 
+        moodPlaylist = spotify.playlist_create(user.id, name = "VibeShare Mood Playlist",
+            public = True, description = "Made with VibeShare. Based on your provided mood!")
+
+        tracks = []
+        addTrack = []
+
         playlists, = spotify.search(search, types=('playlist',))
         playlist = playlists.items[0]
-        #print(artist.uri)
-        self.ui.moodLinkTxtbox.setText(str(playlist.uri))
-        webbrowser.open_new(str(playlist.uri))
+        tracks = spotify.playlist_items(playlist.id).items
+        for track in tracks:
+            addTrack.append(track.track)
+        uris = [track.uri for track in addTrack]
+        spotify.playlist_add(moodPlaylist.id, uris = uris)
+        self.ui.moodLinkTxtbox.setText(str(moodPlaylist.uri))
+        webbrowser.open_new(str(moodPlaylist.uri))
 
     #Generating based on recommendations
     def genRecommendations(self):
