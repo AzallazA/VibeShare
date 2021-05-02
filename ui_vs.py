@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'vsrkuDQC.ui'
+## Form generated from reading UI file 'vsepCKmo.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -182,7 +182,7 @@ class Ui_VSMain(object):
 "height: 30px;")
         self.headerProfileIcon = QLabel(self.headerFrame)
         self.headerProfileIcon.setObjectName(u"headerProfileIcon")
-        self.headerProfileIcon.setGeometry(QRect(10, 10, 31, 31))
+        self.headerProfileIcon.setGeometry(QRect(20, 10, 31, 31))
         self.headerProfileIcon.setStyleSheet(u"background-color: rgba(255, 255, 255, 0);\n"
 "image: url(:/icons/Media/icons/cil-user.png);")
         self.headerSignoutButton = QPushButton(self.headerFrame)
@@ -699,7 +699,7 @@ class Ui_VSMain(object):
         self.frame_2 = QFrame(self.createArtistLoadingPage)
         self.frame_2.setObjectName(u"frame_2")
         self.frame_2.setGeometry(QRect(200, 120, 331, 271))
-        self.frame_2.setStyleSheet(u"image: url(:/images/Media/vpLocation_5.png);")
+        self.frame_2.setStyleSheet(u"image: url(:/images/Media/vpArtist_location.png);")
         self.frame_2.setFrameShape(QFrame.StyledPanel)
         self.frame_2.setFrameShadow(QFrame.Raised)
         self.label = QLabel(self.createArtistLoadingPage)
@@ -804,7 +804,7 @@ class Ui_VSMain(object):
         self.frame_5 = QFrame(self.recommendLoadingPage)
         self.frame_5.setObjectName(u"frame_5")
         self.frame_5.setGeometry(QRect(200, 120, 331, 271))
-        self.frame_5.setStyleSheet(u"image: url(:/images/Media/vpLocation_5.png);")
+        self.frame_5.setStyleSheet(u"image: url(:/images/Media/vpRecommendations_location.png);")
         self.frame_5.setFrameShape(QFrame.StyledPanel)
         self.frame_5.setFrameShadow(QFrame.Raised)
         self.label_22 = QLabel(self.recommendLoadingPage)
@@ -885,7 +885,7 @@ class Ui_VSMain(object):
         self.frame_6 = QFrame(self.genreLoadingPage)
         self.frame_6.setObjectName(u"frame_6")
         self.frame_6.setGeometry(QRect(200, 120, 331, 271))
-        self.frame_6.setStyleSheet(u"image: url(:/images/Media/vpLocation_5.png);")
+        self.frame_6.setStyleSheet(u"image: url(:/images/Media/vpGenre_location.png);")
         self.frame_6.setFrameShape(QFrame.StyledPanel)
         self.frame_6.setFrameShadow(QFrame.Raised)
         self.label_18 = QLabel(self.genreLoadingPage)
@@ -1197,7 +1197,7 @@ class Ui_VSMain(object):
         self.frame_7 = QFrame(self.moodLoadingPage)
         self.frame_7.setObjectName(u"frame_7")
         self.frame_7.setGeometry(QRect(200, 120, 331, 271))
-        self.frame_7.setStyleSheet(u"image: url(:/images/Media/vpLocation_5.png);")
+        self.frame_7.setStyleSheet(u"image: url(:/images/Media/vpMood_location.png);")
         self.frame_7.setFrameShape(QFrame.StyledPanel)
         self.frame_7.setFrameShadow(QFrame.Raised)
         self.label_34 = QLabel(self.moodLoadingPage)
@@ -1225,6 +1225,11 @@ class Ui_VSMain(object):
         self.label_37.setStyleSheet(u"background-color: rgba(0, 0, 0, 0.2);\n"
 "border-style: none;\n"
 "border-radius: 10px;")
+        self.label_38 = QLabel(self.moodLoadingPage)
+        self.label_38.setObjectName(u"label_38")
+        self.label_38.setGeometry(QRect(540, 170, 381, 31))
+        self.label_38.setFont(font5)
+        self.label_38.setStyleSheet(u"color: rgb(255, 255, 255);")
         self.stackedWidget.addWidget(self.moodLoadingPage)
         self.label_37.raise_()
         self.buttonFrame_7.raise_()
@@ -1234,6 +1239,7 @@ class Ui_VSMain(object):
         self.label_34.raise_()
         self.label_35.raise_()
         self.moodLinkTxtbox.raise_()
+        self.label_38.raise_()
         self.profilePage = QWidget()
         self.profilePage.setObjectName(u"profilePage")
         self.homeButtonFrame_3 = QFrame(self.profilePage)
@@ -1541,7 +1547,7 @@ class Ui_VSMain(object):
 
         self.retranslateUi(VSMain)
 
-        self.stackedWidget.setCurrentIndex(8)
+        self.stackedWidget.setCurrentIndex(9)
 
 
         QMetaObject.connectSlotsByName(VSMain)
@@ -1629,9 +1635,10 @@ class Ui_VSMain(object):
         self.label_32.setText(QCoreApplication.translate("VSMain", u"Note: This may take a moment...", None))
         self.homeButton_mlp.setText("")
         self.label_33.setText(QCoreApplication.translate("VSMain", u"Your playlist link:", None))
-        self.label_34.setText(QCoreApplication.translate("VSMain", u"Your suggest playlist is on Spotify", None))
+        self.label_34.setText(QCoreApplication.translate("VSMain", u"Look for the \"VibeShare Mood Playlist\" on your", None))
         self.label_35.setText(QCoreApplication.translate("VSMain", u"Your new playlist is ready!", None))
         self.label_37.setText("")
+        self.label_38.setText(QCoreApplication.translate("VSMain", u"Spotify app", None))
         self.homeButton_profile.setText("")
         self.profilePicBox.setText("")
         self.nameLabel.setText(QCoreApplication.translate("VSMain", u"Name: ", None))

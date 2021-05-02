@@ -229,11 +229,11 @@ class MainAppWindow(QMainWindow):
         # ###############################################
         # Show window
         self.show()
-        """if self:
+        if self:
             if spotify == spotify:
                 #Minimize command prompt automatically
                 print('Logining In...')
-                ctypes.windll.user32.ShowWindow( ctypes.windll.kernel32.GetConsoleWindow(), 6 )"""
+                ctypes.windll.user32.ShowWindow( ctypes.windll.kernel32.GetConsoleWindow(), 6 )
         # ###############################################
     # ###############################################
     # Add mouse events to the window
@@ -256,13 +256,6 @@ class MainAppWindow(QMainWindow):
         elif getVal >= 80 and getVal <= 99:
             self.ui.currentMoodLabel.setText('Rageful')
             self.ui.moodDialLabel.setPixmap('Media/icons/angry.png')
-
-    """def openSpotify(self):
-        return#webbrowser.open_new('')
-
-    def getAccessCode(self):
-        redirected = self.ui.accessCodeTxtBox.toPlainText()
-        print(redirected)"""
 
     #Dark Mode
     def darkMode(self):
