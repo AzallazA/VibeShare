@@ -83,14 +83,16 @@ class MainAppWindow(QMainWindow):
 
         #SPOTIFY USER
         #Set Profile Picture on Profile Page
-        image = QImage()
-        if image:
-            image.loadFromData(requests.get(user.images[0].url).content)
-            pixmap = QPixmap(image)
-            pixmap = pixmap.scaled(QSize(181, 171))
-            self.ui.profilePicBox.setPixmap(pixmap)
-        else:
+        amountOfImages = len(user.images)
+        if amountOfImages == 0:
             self.ui.profilePicBox.setPixmap("Media/icons/default.png")
+        else:
+            image_url = user.images[0].url
+            image = QImage()
+            image.loadFromData(requests.get(image_url).content)
+            pixmap = QPixmap(image)
+            pixmap = pixmap.scaled(181, 171)
+            self.ui.profilePicBox.setPixmap(pixmap)
 
         self.ui.headerProfileName.setText(userName)
         self.ui.name_txtbox.setText(userName)
@@ -305,12 +307,6 @@ class MainAppWindow(QMainWindow):
         artist4_out = self.ui.artist4_txtbox.text()
         artist5_out = self.ui.artist5_txtbox.text()
 
-        if artist1_out == "":
-            print("This field cannot be blank")
-        else:
-            print(artist1_out + ", " + artist2_out + ", " +
-                artist3_out + ", " + artist4_out + ", " + artist5_out)
-
         artist_list = [artist1_out, artist2_out, artist3_out, artist4_out, artist5_out]
         while("" in artist_list):
             artist_list.remove("")
@@ -321,11 +317,13 @@ class MainAppWindow(QMainWindow):
         for artist_out in artist_list:
             artists, = spotify.search(artist_out, types=('artist',), limit = 1)
             artist = artists.items[0]
-            tracks = spotify.artist_top_tracks(artist.id, market = 'US')
+            tracks = spotify.artist_top_tracks(artist.id, market = 'from_token')
             uris = [track.uri for track in tracks]
             artistPlaylist = spotify.playlist_add(playlist.id, uris = uris)
+
         self.ui.artistLinkTxtbox.setText('spotify:playlist:' + str(artistPlaylist))
         webbrowser.open_new(str('spotify:playlist:' + str(artistPlaylist)))
+
         self.ui.artist1_txtbox.clear()
         self.ui.artist2_txtbox.clear()
         self.ui.artist3_txtbox.clear()
@@ -354,17 +352,16 @@ class MainAppWindow(QMainWindow):
         for art in random_artists:
             artists, = spotify.search(art, types=('artist',), limit = 1)
             artist = artists.items[0]
-            tracks = spotify.artist_top_tracks(artist.id, market = 'US')
+            tracks = spotify.artist_top_tracks(artist.id, market = 'from_token')
             uris.append(tracks[0].uri)
         spotify.playlist_add(playlist.id, uris = uris)
-        #print("Your playlist url is " + playlist.uri)
+
         self.ui.genreLinkTxtbox.setText(str(playlist.uri))
         webbrowser.open_new(str(playlist.uri))
         self.ui.genre_txtbox.clear()
 
     #Generating based on mood
     def genMood(self):
-        print("button clicked")
         getVal = self.ui.moodDial.value()
         search_emotion = ""
         #Bliss
@@ -402,11 +399,12 @@ class MainAppWindow(QMainWindow):
         playlist = spotify.playlist_create(
             user.id,
             'VibeShare Recommendations',
-            public=False,
+            public=True,
             description='Recommendations based on your top tracks <3'
         )
         uris = [t.uri for t in recommendations]
         spotify.playlist_add(playlist.id, uris=uris)
+
         self.ui.recommendtLinkTxtbox.setText('spotify:playlist:' + str(playlist.id))
         webbrowser.open_new(str('spotify:playlist:' + str(playlist.id)))
 
