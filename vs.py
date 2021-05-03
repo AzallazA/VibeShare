@@ -306,14 +306,16 @@ class MainAppWindow(QMainWindow):
         playlist = spotify.playlist_create(user.id, name = "VibeShare Artist Playlist",
             public = True, description = "Made with VibeShare. Based on your preferred artists!")
 
+        uris = []
         for artist_out in artist_list:
             artists, = spotify.search(artist_out, types=('artist',), limit = 1)
             if len(artists.items) == 0:
                 continue
             artist = artists.items[0]
             tracks = spotify.artist_top_tracks(artist.id, market = 'from_token')
-            uris = [track.uri for track in tracks]
-            spotify.playlist_add(playlist.id, uris = uris)
+            for track in tracks:
+                uris.append(track.uri)
+        spotify.playlist_add(playlist.id, uris = uris)
 
         self.ui.artistLinkTxtbox.setText(str(playlist.uri))
         webbrowser.open_new(str(playlist.uri))
