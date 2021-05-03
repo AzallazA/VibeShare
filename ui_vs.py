@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'vsovWFQQ.ui'
+## Form generated from reading UI file 'vsZMOrPp.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -760,7 +760,7 @@ class Ui_VSMain(object):
         self.label_43.setAlignment(Qt.AlignCenter)
         self.label_44 = QLabel(self.createArtistPage)
         self.label_44.setObjectName(u"label_44")
-        self.label_44.setGeometry(QRect(210, 90, 761, 381))
+        self.label_44.setGeometry(QRect(210, 90, 761, 401))
         self.label_44.setStyleSheet(u"background-color: rgba(0, 0, 0, 0.2);\n"
 "border-style: none;\n"
 "border-radius: 10px;")
@@ -770,7 +770,7 @@ class Ui_VSMain(object):
         self.artistPlaylistName.setStyleSheet(u"background-color: rgba(255, 255, 255, 0.5);\n"
 "border-radius: 10px;\n"
 "border-style: none;\n"
-"color: white;\n"
+"color: rgb(144, 19, 254);\n"
 "font-size: 12pt;\n"
 "height: 30px;")
         self.stackedWidget.addWidget(self.createArtistPage)
@@ -1165,7 +1165,7 @@ class Ui_VSMain(object):
         self.genrePlaylistName.setStyleSheet(u"background-color: rgba(255, 255, 255, 0.5);\n"
 "border-radius: 10px;\n"
 "border-style: none;\n"
-"color: white;\n"
+"color: rgb(144, 19, 254);\n"
 "font-size: 12pt;\n"
 "height: 30px;")
         self.stackedWidget.addWidget(self.createGenrePage)
@@ -1351,7 +1351,7 @@ class Ui_VSMain(object):
         self.moodPlaylistName.setStyleSheet(u"background-color: rgba(255, 255, 255, 0.5);\n"
 "border-radius: 10px;\n"
 "border-style: none;\n"
-"color: white;\n"
+"color: rgb(144, 19, 254);\n"
 "font-size: 12pt;\n"
 "height: 30px;")
         self.frame_8 = QFrame(self.createMoodPage)
@@ -1788,7 +1788,7 @@ class Ui_VSMain(object):
 
         self.retranslateUi(VSMain)
 
-        self.stackedWidget.setCurrentIndex(2)
+        self.stackedWidget.setCurrentIndex(8)
 
 
         QMetaObject.connectSlotsByName(VSMain)
@@ -1836,6 +1836,7 @@ class Ui_VSMain(object):
         self.label_30.setText(QCoreApplication.translate("VSMain", u"Note: This may take a moment...", None))
         self.label_43.setText(QCoreApplication.translate("VSMain", u"Name Your Playlist:", None))
         self.label_44.setText("")
+        self.artistPlaylistName.setText("")
         self.label.setText(QCoreApplication.translate("VSMain", u"Your new playlist is ready!", None))
         self.label_2.setText(QCoreApplication.translate("VSMain", u"Look for the \"VibeShare Artist Playlist\" on your", None))
         self.homeButton_calp.setText("")

@@ -324,7 +324,11 @@ class MainAppWindow(QMainWindow):
         while("" in artist_list):
             artist_list.remove("")
 
-        playlist = spotify.playlist_create(user.id, name = "VibeShare Artist Playlist",
+        if self.ui.artistPlaylistName.text() == "":
+            pname = "VibeShare Artist Playlist"
+        else:
+            pname = self.ui.artistPlaylistName.text()
+        playlist = spotify.playlist_create(user.id, name = pname,
             public = True, description = "Made with VibeShare. Based on your preferred artists!")
 
         uris = []
@@ -348,6 +352,7 @@ class MainAppWindow(QMainWindow):
         self.ui.artist3_txtbox.clear()
         self.ui.artist4_txtbox.clear()
         self.ui.artist5_txtbox.clear()
+        self.ui.artistPlaylistName.clear()
 
     # Generating based on genre
     def genGenre(self):
@@ -364,7 +369,11 @@ class MainAppWindow(QMainWindow):
 
         random_artists = random.sample(artists_list, 30)
 
-        playlist = spotify.playlist_create(user.id, name = "VibeShare Genre Playlist",
+        if self.ui.genrePlaylistName.text() == "":
+            pname = "VibeShare Genre Playlist"
+        else:
+            pname = self.ui.genrePlaylistName.text()
+        playlist = spotify.playlist_create(user.id, name = pname,
             public = True, description = "Made with VibeShare. Based on your preferred genre!")
 
         uris = []
@@ -382,6 +391,7 @@ class MainAppWindow(QMainWindow):
         self.ui.genreLinkTxtbox.setText(str(playlist.uri))
         webbrowser.open_new(str(playlist.uri))
         self.ui.genre_txtbox.clear()
+        self.ui.genrePlaylistName.clear()
 
     # Generating based on mood
     def genMood(self):
@@ -406,7 +416,11 @@ class MainAppWindow(QMainWindow):
         else:
             search = search_emotion + " " + genre
 
-        moodPlaylist = spotify.playlist_create(user.id, name = "VibeShare Mood Playlist",
+        if self.ui.moodPlaylistName.text() == "":
+            pname = "VibeShare Mood Playlist"
+        else:
+            pname = self.ui.moodPlaylistName.text()
+        moodPlaylist = spotify.playlist_create(user.id, name = pname,
             public = True, description = "Made with VibeShare. Based on your provided mood!")
 
         tracks = []
@@ -422,6 +436,9 @@ class MainAppWindow(QMainWindow):
         spotify.playlist_add(moodPlaylist.id, uris = checkedUris)
         self.ui.moodLinkTxtbox.setText(str(moodPlaylist.uri))
         webbrowser.open_new(str(moodPlaylist.uri))
+
+        self.ui.moodGenreTxtbox.clear()
+        self.ui.moodPlaylistName.clear()
 
     # Generating based on recommendations
     def genRecommendations(self):

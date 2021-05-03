@@ -516,7 +516,7 @@ QPushButton:hover {
 /*background-color: rgb(43, 43, 43);*/</string>
        </property>
        <property name="currentIndex">
-        <number>2</number>
+        <number>8</number>
        </property>
        <widget class="QWidget" name="loadingPage"/>
        <widget class="QWidget" name="homePage">
@@ -1505,7 +1505,7 @@ height: 30px;</string>
            <x>210</x>
            <y>90</y>
            <width>761</width>
-           <height>381</height>
+           <height>401</height>
           </rect>
          </property>
          <property name="styleSheet">
@@ -1530,9 +1530,12 @@ border-radius: 10px;</string>
           <string notr="true">background-color: rgba(255, 255, 255, 0.5);
 border-radius: 10px;
 border-style: none;
-color: white;
+color: rgb(144, 19, 254);
 font-size: 12pt;
 height: 30px;</string>
+         </property>
+         <property name="text">
+          <string/>
          </property>
         </widget>
         <zorder>label_44</zorder>
@@ -2515,7 +2518,7 @@ border-radius: 10px;</string>
           <string notr="true">background-color: rgba(255, 255, 255, 0.5);
 border-radius: 10px;
 border-style: none;
-color: white;
+color: rgb(144, 19, 254);
 font-size: 12pt;
 height: 30px;</string>
          </property>
@@ -3020,7 +3023,7 @@ border-radius: 10px;</string>
           <string notr="true">background-color: rgba(255, 255, 255, 0.5);
 border-radius: 10px;
 border-style: none;
-color: white;
+color: rgb(144, 19, 254);
 font-size: 12pt;
 height: 30px;</string>
          </property>
