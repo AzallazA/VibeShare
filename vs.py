@@ -303,6 +303,7 @@ class MainAppWindow(QMainWindow):
             public = True, description = "Made with VibeShare. Based on your preferred artists!")
 
         uris = []
+        checkedUris = []
         for artist_out in artist_list:
             artists, = spotify.search(artist_out, types=('artist',), limit = 1)
             if len(artists.items) == 0:
@@ -311,7 +312,8 @@ class MainAppWindow(QMainWindow):
             tracks = spotify.artist_top_tracks(artist.id, market = 'from_token')
             for track in tracks:
                 uris.append(track.uri)
-        spotify.playlist_add(playlist.id, uris = uris)
+        [checkedUris.append(x) for x in uris if x not in checkedUris]
+        spotify.playlist_add(playlist.id, uris = checkedUris)
 
         self.ui.artistLinkTxtbox.setText(str(playlist.uri))
         webbrowser.open_new(str(playlist.uri))
@@ -341,6 +343,7 @@ class MainAppWindow(QMainWindow):
             public = True, description = "Made with VibeShare. Based on your preferred genre!")
 
         uris = []
+        checkedUris = []
         for art in random_artists:
             artists, = spotify.search(art, types=('artist',), limit = 1)
             if len(artists.items) == 0:
@@ -348,6 +351,7 @@ class MainAppWindow(QMainWindow):
             artist = artists.items[0]
             tracks = spotify.artist_top_tracks(artist.id, market = 'from_token')
             uris.append(tracks[0].uri)
+        [checkedUris.append(x) for x in uris if x not in checkedUris]
         spotify.playlist_add(playlist.id, uris = uris)
 
         self.ui.genreLinkTxtbox.setText(str(playlist.uri))
@@ -382,13 +386,14 @@ class MainAppWindow(QMainWindow):
 
         tracks = []
         addTrack = []
-
+        checkedUris = []
         playlists, = spotify.search(search, types=('playlist',))
         playlist = playlists.items[0]
         tracks = spotify.playlist_items(playlist.id).items
         for track in tracks:
             addTrack.append(track.track)
         uris = [track.uri for track in addTrack]
+        [checkedUris.append(x) for x in uris if x not in checkedUris]
         spotify.playlist_add(moodPlaylist.id, uris = uris)
         self.ui.moodLinkTxtbox.setText(str(moodPlaylist.uri))
         webbrowser.open_new(str(moodPlaylist.uri))
