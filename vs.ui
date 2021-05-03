@@ -516,7 +516,7 @@ QPushButton:hover {
 /*background-color: rgb(43, 43, 43);*/</string>
        </property>
        <property name="currentIndex">
-        <number>4</number>
+        <number>2</number>
        </property>
        <widget class="QWidget" name="loadingPage"/>
        <widget class="QWidget" name="homePage">
@@ -1503,7 +1503,7 @@ height: 30px;</string>
          <property name="geometry">
           <rect>
            <x>210</x>
-           <y>100</y>
+           <y>90</y>
            <width>761</width>
            <height>381</height>
           </rect>

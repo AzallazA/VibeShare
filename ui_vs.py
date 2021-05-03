@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'vsLJsuXr.ui'
+## Form generated from reading UI file 'vsovWFQQ.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -760,7 +760,7 @@ class Ui_VSMain(object):
         self.label_43.setAlignment(Qt.AlignCenter)
         self.label_44 = QLabel(self.createArtistPage)
         self.label_44.setObjectName(u"label_44")
-        self.label_44.setGeometry(QRect(210, 100, 761, 381))
+        self.label_44.setGeometry(QRect(210, 90, 761, 381))
         self.label_44.setStyleSheet(u"background-color: rgba(0, 0, 0, 0.2);\n"
 "border-style: none;\n"
 "border-radius: 10px;")
@@ -1788,7 +1788,7 @@ class Ui_VSMain(object):
 
         self.retranslateUi(VSMain)
 
-        self.stackedWidget.setCurrentIndex(4)
+        self.stackedWidget.setCurrentIndex(2)
 
 
         QMetaObject.connectSlotsByName(VSMain)
