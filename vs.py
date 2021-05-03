@@ -192,7 +192,12 @@ class MainAppWindow(QMainWindow):
             setCurrentWidget(self.ui.settingsPage))
 
         # Mood dial
-        self.ui.moodDialLabel.setPixmap('Media/icons/happy.png')
+        #self.ui.moodDialLabel.setPixmap('Media/icons/happy.png')
+        self.ui.moodDialLabel.setStyleSheet(u"QLabel {\n"
+        "	color: white;\n"
+        "	font-weight: bold;\n"
+        "	image: url(Media/icons/happy.png);\n"
+        "}")
         self.ui.currentMoodLabel.setText('Blissful')
         self.ui.moodDial.valueChanged.connect(self.dial_changed)
 
@@ -241,22 +246,38 @@ class MainAppWindow(QMainWindow):
         #self.ui.moodDialLabel.setText(str(getVal))
         if getVal >= 0 and getVal <= 19:
             self.ui.currentMoodLabel.setText('Blissful')
-            self.ui.moodDialLabel.setPixmap('Media/icons/happy.png')
+            self.ui.moodDialLabel.setStyleSheet(u"QLabel {\n"
+            "	color: white;\n"
+            "	font-weight: bold;\n"
+            "	image: url(Media/icons/happy.png);\n"
+            "}")
+            #self.ui.moodDialLabel.setPixmap('Media/icons/happy.png')
         elif getVal >= 20 and getVal <= 49:
             self.ui.currentMoodLabel.setText('Neutral')
-            self.ui.moodDialLabel.setPixmap('Media/icons/meh.png')
+            self.ui.moodDialLabel.setStyleSheet(u"QLabel {\n"
+            "	color: white;\n"
+            "	font-weight: bold;\n"
+            "	image: url(Media/icons/meh.png);\n"
+            "}")
+            #self.ui.moodDialLabel.setPixmap('Media/icons/meh.png')
         elif getVal >= 50 and getVal <= 79:
             self.ui.currentMoodLabel.setText('Mournful')
-            self.ui.moodDialLabel.setPixmap('Media/icons/sad.png')
+            self.ui.moodDialLabel.setStyleSheet(u"QLabel {\n"
+            "	color: white;\n"
+            "	font-weight: bold;\n"
+            "	image: url(Media/icons/sad.png);\n"
+            "}")
+            #self.ui.moodDialLabel.setPixmap('Media/icons/sad.png')
         elif getVal >= 80 and getVal <= 99:
             self.ui.currentMoodLabel.setText('Rageful')
-            self.ui.moodDialLabel.setPixmap('Media/icons/angry.png')
+            self.ui.moodDialLabel.setStyleSheet(u"QLabel {\n"
+            "	color: white;\n"
+            "	font-weight: bold;\n"
+            "	image: url(Media/icons/angry.png);\n"
+            "}")
+            #self.ui.moodDialLabel.setPixmap('Media/icons/angry.png')
 
-<<<<<<< HEAD
     #Dark Mode
-=======
-    # Dark Mode
->>>>>>> ecbe3186367c99c6117d64463b405eab49c022a8
     def darkMode(self):
         if self.ui.darkModeButton.isChecked():
             self.ui.centralwidget.setStyleSheet("""

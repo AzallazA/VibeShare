@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'vsepCKmo.ui'
+## Form generated from reading UI file 'vsBCpAAH.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -271,11 +271,15 @@ class Ui_VSMain(object):
         self.createButton.setStyleSheet(u"QPushButton{\n"
 "	image: url(:/icons/Media/icons/create.png);\n"
 "	background-color: rgba(255, 255, 255, 0);\n"
+"    border: none;\n"
+"    outline: none;\n"
 "}\n"
 "\n"
 "QPushButton:hover{\n"
 "	image: url(:/icons/Media/icons/create.png);\n"
 "	background-color: rgba(255, 255, 255, 0.4);\n"
+"	 border: none;\n"
+"    outline: none;\n"
 "	border-style: none;\n"
 "	border-radius: 40px;\n"
 "}")
@@ -290,12 +294,16 @@ class Ui_VSMain(object):
         self.profileButton.setStyleSheet(u"QPushButton{\n"
 "	image: url(:/icons/Media/icons/profile.png);\n"
 "	background-color: rgba(255, 255, 255, 0);\n"
+"    border: none;\n"
+"    outline: none;\n"
 "}\n"
 "\n"
 "QPushButton:hover{\n"
 "	image: url(:/icons/Media/icons/profile.png);\n"
 "	background-color: rgba(255, 255, 255, 0.4);\n"
 "	border-style: none;\n"
+"    border: none;\n"
+"    outline: none;\n"
 "	border-radius: 40px;\n"
 "}\n"
 "")
@@ -310,12 +318,16 @@ class Ui_VSMain(object):
         self.settingsButton.setStyleSheet(u"QPushButton{\n"
 "	image: url(:/icons/Media/icons/settings.png);\n"
 "	background-color: rgba(255, 255, 255, 0);\n"
+"    border: none;\n"
+"    outline: none;\n"
 "}\n"
 "\n"
 "QPushButton:hover{\n"
 "	image: url(:/icons/Media/icons/settings.png);\n"
 "	background-color: rgba(255, 255, 255, 0.4);\n"
 "	border-style: none;\n"
+"    border: none;\n"
+"    outline: none;\n"
 "	border-radius: 40px;\n"
 "}\n"
 "")
@@ -381,12 +393,16 @@ class Ui_VSMain(object):
         self.homeButton_create.setStyleSheet(u"QPushButton{\n"
 "	image: url(:/icons/Media/icons/goback.png);\n"
 "	background-color: rgba(255, 255, 255, 0);\n"
+"    border: none;\n"
+"    outline: none;\n"
 "}\n"
 "\n"
 "QPushButton:hover{\n"
 "	image: url(:/icons/Media/icons/goback.png);\n"
 "	background-color: rgba(255, 255, 255, 0);\n"
 "	border-style: none;\n"
+"    border: none;\n"
+"    outline: none;\n"
 "	border-radius: 40px;\n"
 "}")
         self.buttonFrame_2 = QFrame(self.createPage)
@@ -407,12 +423,16 @@ class Ui_VSMain(object):
         self.createMoodButton.setStyleSheet(u"QPushButton{\n"
 "	image: url(:/icons/Media/icons/mood.png);\n"
 "	background-color: rgba(255, 255, 255, 0);\n"
+"    border: none;\n"
+"    outline: none;\n"
 "}\n"
 "\n"
 "QPushButton:hover{\n"
 "	image: url(:/icons/Media/icons/mood.png);\n"
 "	background-color: rgba(255, 255, 255, 0.4);\n"
 "	border-style: none;\n"
+"    border: none;\n"
+"    outline: none;\n"
 "	border-radius: 40px;\n"
 "}\n"
 "")
@@ -427,12 +447,16 @@ class Ui_VSMain(object):
         self.createGenreButton.setStyleSheet(u"QPushButton{\n"
 "	image: url(:/icons/Media/icons/createGenre.png);\n"
 "	background-color: rgba(255, 255, 255, 0);\n"
+"    border: none;\n"
+"    outline: none;\n"
 "}\n"
 "\n"
 "QPushButton:hover{\n"
 "	image: url(:/icons/Media/icons/createGenre.png);\n"
 "	background-color: rgba(255, 255, 255, 0.4);\n"
 "	border-style: none;\n"
+"    border: none;\n"
+"    outline: none;\n"
 "	border-radius: 40px;\n"
 "}\n"
 "")
@@ -447,12 +471,16 @@ class Ui_VSMain(object):
         self.createArtistButton.setStyleSheet(u"QPushButton{\n"
 "	image: url(:/icons/Media/icons/createArtist.png);\n"
 "	background-color: rgba(255, 255, 255, 0);\n"
+"    border: none;\n"
+"    outline: none;\n"
 "}\n"
 "\n"
 "QPushButton:hover{\n"
 "	image: url(:/icons/Media/icons/createArtist.png);\n"
 "	background-color: rgba(255, 255, 255, 0.4);\n"
 "	border-style: none;\n"
+"    border: none;\n"
+"    outline: none;\n"
 "	border-radius: 40px;\n"
 "}")
 
@@ -656,12 +684,16 @@ class Ui_VSMain(object):
         self.homeButton_boa.setStyleSheet(u"QPushButton{\n"
 "	image: url(:/icons/Media/icons/goback.png);\n"
 "	background-color: rgba(255, 255, 255, 0);\n"
+"    border: none;\n"
+"    outline: none;\n"
 "}\n"
 "\n"
 "QPushButton:hover{\n"
 "	image: url(:/icons/Media/icons/goback.png);\n"
 "	background-color: rgba(255, 255, 255, 0);\n"
 "	border-style: none;\n"
+"    border: none;\n"
+"    outline: none;\n"
 "	border-radius: 40px;\n"
 "}")
         self.genArtistButton = QPushButton(self.createArtistPage)
@@ -675,12 +707,16 @@ class Ui_VSMain(object):
 "	background-color: rgb(255, 255, 255);\n"
 "	border-style: none;\n"
 "	border-radius: 10px;\n"
+"    border: none;\n"
+"    outline: none;\n"
 "}\n"
 "\n"
 "QPushButton:hover{\n"
 "	background-color: rgb(248, 231, 28);\n"
 "	border-style: none;\n"
 "	border-radius: 10px;\n"
+"    border: none;\n"
+"    outline: none;\n"
 "	font-weight: bold;\n"
 "}")
         self.label_30 = QLabel(self.createArtistPage)
@@ -727,12 +763,16 @@ class Ui_VSMain(object):
         self.homeButton_calp.setStyleSheet(u"QPushButton{\n"
 "	image: url(:/icons/Media/icons/home_btn.png);\n"
 "	background-color: rgba(255, 255, 255, 0);\n"
+"    border: none;\n"
+"    outline: none;\n"
 "}\n"
 "\n"
 "QPushButton:hover{\n"
 "	image: url(:/icons/Media/icons/home_btn.png);\n"
 "	background-color: rgba(255, 255, 255, 0);\n"
 "	border-style: none;\n"
+"    border: none;\n"
+"    outline: none;\n"
 "	border-radius: 40px;\n"
 "}")
         self.artistLinkTxtbox = QTextEdit(self.createArtistLoadingPage)
@@ -783,12 +823,16 @@ class Ui_VSMain(object):
         self.homeButton_rlp.setStyleSheet(u"QPushButton{\n"
 "	image: url(:/icons/Media/icons/home_btn.png);\n"
 "	background-color: rgba(255, 255, 255, 0);\n"
+"    border: none;\n"
+"    outline: none;\n"
 "}\n"
 "\n"
 "QPushButton:hover{\n"
 "	image: url(:/icons/Media/icons/home_btn.png);\n"
 "	background-color: rgba(255, 255, 255, 0);\n"
 "	border-style: none;\n"
+"    border: none;\n"
+"    outline: none;\n"
 "	border-radius: 40px;\n"
 "}")
         self.label_17 = QLabel(self.recommendLoadingPage)
@@ -864,12 +908,16 @@ class Ui_VSMain(object):
         self.homeButton_glp.setStyleSheet(u"QPushButton{\n"
 "	image: url(:/icons/Media/icons/home_btn.png);\n"
 "	background-color: rgba(255, 255, 255, 0);\n"
+"    border: none;\n"
+"    outline: none;\n"
 "}\n"
 "\n"
 "QPushButton:hover{\n"
 "	image: url(:/icons/Media/icons/home_btn.png);\n"
 "	background-color: rgba(255, 255, 255, 0);\n"
 "	border-style: none;\n"
+"    border: none;\n"
+"    outline: none;\n"
 "	border-radius: 40px;\n"
 "}")
         self.label_26 = QLabel(self.genreLoadingPage)
@@ -950,12 +998,16 @@ class Ui_VSMain(object):
 "	background-color: rgb(255, 255, 255);\n"
 "	border-style: none;\n"
 "	border-radius: 10px;\n"
+"    border: none;\n"
+"    outline: none;\n"
 "}\n"
 "\n"
 "QPushButton:hover{\n"
 "	background-color: rgb(248, 231, 28);\n"
 "	border-style: none;\n"
 "	border-radius: 10px;\n"
+"    border: none;\n"
+"    outline: none;\n"
 "	font-weight: bold;\n"
 "}")
         self.artistTxtBoxes_2 = QFrame(self.createGenrePage)
@@ -993,12 +1045,16 @@ class Ui_VSMain(object):
         self.homeButton_bog.setStyleSheet(u"QPushButton{\n"
 "	image: url(:/icons/Media/icons/goback.png);\n"
 "	background-color: rgba(255, 255, 255, 0);\n"
+"    border: none;\n"
+"    outline: none;\n"
 "}\n"
 "\n"
 "QPushButton:hover{\n"
 "	image: url(:/icons/Media/icons/goback.png);\n"
 "	background-color: rgba(255, 255, 255, 0);\n"
 "	border-style: none;\n"
+"    border: none;\n"
+"    outline: none;\n"
 "	border-radius: 40px;\n"
 "}")
         self.label_31 = QLabel(self.createGenrePage)
@@ -1022,12 +1078,16 @@ class Ui_VSMain(object):
         self.homeButton_bom.setStyleSheet(u"QPushButton{\n"
 "	image: url(:/icons/Media/icons/goback.png);\n"
 "	background-color: rgba(255, 255, 255, 0);\n"
+"    border: none;\n"
+"    outline: none;\n"
 "}\n"
 "\n"
 "QPushButton:hover{\n"
 "	image: url(:/icons/Media/icons/goback.png);\n"
 "	background-color: rgba(255, 255, 255, 0);\n"
 "	border-style: none;\n"
+"    border: none;\n"
+"    outline: none;\n"
 "	border-radius: 40px;\n"
 "}")
         self.buttonFrame_5 = QFrame(self.createMoodPage)
@@ -1065,12 +1125,16 @@ class Ui_VSMain(object):
 "	background-color: rgb(255, 255, 255);\n"
 "	border-style: none;\n"
 "	border-radius: 10px;\n"
+"    border: none;\n"
+"    outline: none;\n"
 "}\n"
 "\n"
 "QPushButton:hover{\n"
 "	background-color: rgb(248, 231, 28);\n"
 "	border-style: none;\n"
 "	border-radius: 10px;\n"
+"    border: none;\n"
+"    outline: none;\n"
 "	font-weight: bold;\n"
 "}")
         self.moodDial = QDial(self.createMoodPage)
@@ -1091,6 +1155,7 @@ class Ui_VSMain(object):
         self.moodDialLabel.setStyleSheet(u"QLabel {\n"
 "	color: white;\n"
 "	font-weight: bold;\n"
+"	image: ;\n"
 "}")
         self.moodDialLabel.setAlignment(Qt.AlignCenter)
         self.happyLabel = QLabel(self.createMoodPage)
@@ -1181,12 +1246,16 @@ class Ui_VSMain(object):
         self.homeButton_mlp.setStyleSheet(u"QPushButton{\n"
 "	image: url(:/icons/Media/icons/home_btn.png);\n"
 "	background-color: rgba(255, 255, 255, 0);\n"
+"    border: none;\n"
+"    outline: none;\n"
 "}\n"
 "\n"
 "QPushButton:hover{\n"
 "	image: url(:/icons/Media/icons/home_btn.png);\n"
 "	background-color: rgba(255, 255, 255, 0);\n"
 "	border-style: none;\n"
+"    border: none;\n"
+"    outline: none;\n"
 "	border-radius: 40px;\n"
 "}")
         self.label_33 = QLabel(self.moodLoadingPage)
@@ -1254,12 +1323,16 @@ class Ui_VSMain(object):
         self.homeButton_profile.setStyleSheet(u"QPushButton{\n"
 "	image: url(:/icons/Media/icons/goback.png);\n"
 "	background-color: rgba(255, 255, 255, 0);\n"
+"    border: none;\n"
+"    outline: none;\n"
 "}\n"
 "\n"
 "QPushButton:hover{\n"
 "	image: url(:/icons/Media/icons/goback.png);\n"
 "	background-color: rgba(255, 255, 255, 0);\n"
 "	border-style: none;\n"
+"    border: none;\n"
+"    outline: none;\n"
 "	border-radius: 40px;\n"
 "}")
         self.mainProfileFrame = QFrame(self.profilePage)
@@ -1547,7 +1620,7 @@ class Ui_VSMain(object):
 
         self.retranslateUi(VSMain)
 
-        self.stackedWidget.setCurrentIndex(9)
+        self.stackedWidget.setCurrentIndex(8)
 
 
         QMetaObject.connectSlotsByName(VSMain)
