@@ -304,6 +304,8 @@ class MainAppWindow(QMainWindow):
 
         for artist_out in artist_list:
             artists, = spotify.search(artist_out, types=('artist',), limit = 1)
+            if len(artists.items) == 0:
+                continue
             artist = artists.items[0]
             tracks = spotify.artist_top_tracks(artist.id, market = 'from_token')
             uris = [track.uri for track in tracks]
