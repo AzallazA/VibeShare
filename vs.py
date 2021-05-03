@@ -224,11 +224,11 @@ class MainAppWindow(QMainWindow):
         # ###############################################
         # Show window
         self.show()
-        """if self:
+        if self:
             if spotify == spotify:
                 #Minimize command prompt automatically
                 print('Logining In...')
-                ctypes.windll.user32.ShowWindow( ctypes.windll.kernel32.GetConsoleWindow(), 6 )"""
+                ctypes.windll.user32.ShowWindow( ctypes.windll.kernel32.GetConsoleWindow(), 6 )
         # ###############################################
     # ###############################################
     # Add mouse events to the window
@@ -252,7 +252,11 @@ class MainAppWindow(QMainWindow):
             self.ui.currentMoodLabel.setText('Rageful')
             self.ui.moodDialLabel.setPixmap('Media/icons/angry.png')
 
+<<<<<<< HEAD
+    #Dark Mode
+=======
     # Dark Mode
+>>>>>>> ecbe3186367c99c6117d64463b405eab49c022a8
     def darkMode(self):
         if self.ui.darkModeButton.isChecked():
             self.ui.centralwidget.setStyleSheet("""

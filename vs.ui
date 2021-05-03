@@ -344,7 +344,7 @@ p, li { white-space: pre-wrap; }
     <widget class="QLabel" name="headerProfileIcon">
      <property name="geometry">
       <rect>
-       <x>10</x>
+       <x>20</x>
        <y>10</y>
        <width>31</width>
        <height>31</height>
@@ -510,7 +510,7 @@ QPushButton:hover {
 /*background-color: rgb(43, 43, 43);*/</string>
        </property>
        <property name="currentIndex">
-        <number>8</number>
+        <number>9</number>
        </property>
        <widget class="QWidget" name="loadingPage"/>
        <widget class="QWidget" name="homePage">
@@ -1431,7 +1431,7 @@ QPushButton:hover{
           </rect>
          </property>
          <property name="styleSheet">
-          <string notr="true">image: url(:/images/Media/vpLocation_5.png);</string>
+          <string notr="true">image: url(:/images/Media/vpArtist_location.png);</string>
          </property>
          <property name="frameShape">
           <enum>QFrame::StyledPanel</enum>
@@ -1718,7 +1718,7 @@ QPushButton:hover{
           </rect>
          </property>
          <property name="styleSheet">
-          <string notr="true">image: url(:/images/Media/vpLocation_5.png);</string>
+          <string notr="true">image: url(:/images/Media/vpRecommendations_location.png);</string>
          </property>
          <property name="frameShape">
           <enum>QFrame::StyledPanel</enum>
@@ -1934,7 +1934,7 @@ QPushButton:hover{
           </rect>
          </property>
          <property name="styleSheet">
-          <string notr="true">image: url(:/images/Media/vpLocation_5.png);</string>
+          <string notr="true">image: url(:/images/Media/vpGenre_location.png);</string>
          </property>
          <property name="frameShape">
           <enum>QFrame::StyledPanel</enum>
@@ -2806,7 +2806,7 @@ QPushButton:hover{
           </rect>
          </property>
          <property name="styleSheet">
-          <string notr="true">image: url(:/images/Media/vpLocation_5.png);</string>
+          <string notr="true">image: url(:/images/Media/vpMood_location.png);</string>
          </property>
          <property name="frameShape">
           <enum>QFrame::StyledPanel</enum>
@@ -2834,7 +2834,7 @@ QPushButton:hover{
           <string notr="true">color: rgb(255, 255, 255);</string>
          </property>
          <property name="text">
-          <string>Your suggest playlist is on Spotify</string>
+          <string>Look for the &quot;VibeShare Mood Playlist&quot; on your</string>
          </property>
         </widget>
         <widget class="QLabel" name="label_35">
@@ -2895,6 +2895,28 @@ border-radius: 10px;</string>
           <string/>
          </property>
         </widget>
+        <widget class="QLabel" name="label_38">
+         <property name="geometry">
+          <rect>
+           <x>540</x>
+           <y>170</y>
+           <width>381</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Humnst777 BT</family>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string>Spotify app</string>
+         </property>
+        </widget>
         <zorder>label_37</zorder>
         <zorder>buttonFrame_7</zorder>
         <zorder>homeButtonFrame_16</zorder>
@@ -2903,6 +2925,7 @@ border-radius: 10px;</string>
         <zorder>label_34</zorder>
         <zorder>label_35</zorder>
         <zorder>moodLinkTxtbox</zorder>
+        <zorder>label_38</zorder>
        </widget>
        <widget class="QWidget" name="profilePage">
         <widget class="QFrame" name="homeButtonFrame_3">

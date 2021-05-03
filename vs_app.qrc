@@ -1,6 +1,6 @@
 <RCC>
   <qresource prefix="icons">
-    <file>Media/icons/iconfinder_ic_account_box_48px_352000.png</file>
+    <file>Media/icons/cil-user.png</file>
     <file>Media/icons/recommend.png</file>
     <file>Media/icons/darkMode.png</file>
     <file>Media/icons/about.png</file>
@@ -9,205 +9,20 @@
     <file>Media/icons/createArtist.png</file>
     <file>Media/icons/createGenre.png</file>
     <file>Media/icons/mood.png</file>
-    <file>Media/icons/add-file.png</file>
-    <file>Media/icons/cil-3d.png</file>
-    <file>Media/icons/cil-4k.png</file>
-    <file>Media/icons/cil-airplay.png</file>
     <file>Media/icons/goback.png</file>
-    <file>Media/icons/cil-arrow-bottom.png</file>
-    <file>Media/icons/cil-arrow-circle-bottom.png</file>
-    <file>Media/icons/cil-arrow-circle-left.png</file>
-    <file>Media/icons/cil-arrow-circle-right.png</file>
-    <file>Media/icons/cil-arrow-circle-top.png</file>
-    <file>Media/icons/cil-arrow-left.png</file>
-    <file>Media/icons/cil-arrow-right.png</file>
-    <file>Media/icons/cil-arrow-top.png</file>
-    <file>Media/icons/cil-browser.png</file>
-    <file>Media/icons/cil-camera.png</file>
-    <file>Media/icons/cil-camera-roll.png</file>
-    <file>Media/icons/cil-chart-line.png</file>
-    <file>Media/icons/cil-check.png</file>
-    <file>Media/icons/cil-check-alt.png</file>
-    <file>Media/icons/cil-check-circle.png</file>
-    <file>Media/icons/cil-chevron-bottom.png</file>
-    <file>Media/icons/cil-chevron-circle-left-alt.png</file>
-    <file>Media/icons/cil-chevron-circle-right-alt.png</file>
-    <file>Media/icons/cil-chevron-circle-up-alt.png</file>
-    <file>Media/icons/cil-chevron-double-up-alt.png</file>
-    <file>Media/icons/cil-code.png</file>
-    <file>Media/icons/cil-comment-bubble.png</file>
-    <file>Media/icons/cil-comment-square.png</file>
-    <file>Media/icons/cil-copy.png</file>
-    <file>Media/icons/cil-credit-card.png</file>
-    <file>Media/icons/cil-cursor.png</file>
-    <file>Media/icons/cil-cursor-move.png</file>
-    <file>Media/icons/cil-description.png</file>
-    <file>Media/icons/cil-dialpad.png</file>
-    <file>Media/icons/cil-envelope-closed.png</file>
-    <file>Media/icons/cil-envelope-letter.png</file>
-    <file>Media/icons/cil-envelope-open.png</file>
-    <file>Media/icons/cil-equalizer.png</file>
-    <file>Media/icons/cil-exit-to-app.png</file>
-    <file>Media/icons/cil-exposure.png</file>
-    <file>Media/icons/cil-external-link.png</file>
-    <file>Media/icons/cil-file.png</file>
-    <file>Media/icons/cil-folder.png</file>
-    <file>Media/icons/cil-folder-open.png</file>
-    <file>Media/icons/cil-fullscreen.png</file>
-    <file>Media/icons/cil-fullscreen-exit.png</file>
-    <file>Media/icons/cil-gamepad.png</file>
-    <file>Media/icons/cil-hand-point-down.png</file>
-    <file>Media/icons/cil-hand-point-left.png</file>
-    <file>Media/icons/cil-hand-point-right.png</file>
-    <file>Media/icons/cil-hand-point-up.png</file>
-    <file>Media/icons/cil-headphones.png</file>
-    <file>Media/icons/cil-heart.png</file>
-    <file>Media/icons/cil-home.png</file>
-    <file>Media/icons/cil-https.png</file>
-    <file>Media/icons/cil-image1.png</file>
-    <file>Media/icons/cil-image-plus.png</file>
-    <file>Media/icons/cil-infinity.png</file>
-    <file>Media/icons/cil-input.png</file>
-    <file>Media/icons/cil-justify-center.png</file>
-    <file>Media/icons/cil-justify-left.png</file>
-    <file>Media/icons/cil-justify-right.png</file>
-    <file>Media/icons/cil-library.png</file>
-    <file>Media/icons/cil-library-add.png</file>
-    <file>Media/icons/cil-lightbulb.png</file>
-    <file>Media/icons/cil-link.png</file>
-    <file>Media/icons/cil-link-alt.png</file>
-    <file>Media/icons/cil-link-broken.png</file>
-    <file>Media/icons/cil-list.png</file>
-    <file>Media/icons/cil-location-pin.png</file>
-    <file>Media/icons/cil-lock-locked.png</file>
-    <file>Media/icons/cil-lock-unlocked.png</file>
-    <file>Media/icons/cil-loop.png</file>
-    <file>Media/icons/cil-loop-circular.png</file>
-    <file>Media/icons/cil-media-eject.png</file>
-    <file>Media/icons/cil-media-pause.png</file>
-    <file>Media/icons/cil-media-play.png</file>
-    <file>Media/icons/cil-media-record.png</file>
-    <file>Media/icons/cil-media-skip-backward.png</file>
-    <file>Media/icons/cil-media-skip-forward.png</file>
-    <file>Media/icons/cil-media-step-backward.png</file>
-    <file>Media/icons/cil-media-step-forward.png</file>
-    <file>Media/icons/cil-media-stop.png</file>
-    <file>Media/icons/cil-medical-cross.png</file>
-    <file>Media/icons/cil-meh.png</file>
-    <file>Media/icons/cil-menu.png</file>
-    <file>Media/icons/cil-microphone.png</file>
-    <file>Media/icons/cil-minus.png</file>
-    <file>Media/icons/cil-mobile.png</file>
-    <file>Media/icons/cil-mobile-landscape.png</file>
-    <file>Media/icons/cil-monitor.png</file>
-    <file>Media/icons/cil-mood-bad.png</file>
-    <file>Media/icons/cil-mood-good.png</file>
-    <file>Media/icons/cil-mood-very-bad.png</file>
-    <file>Media/icons/cil-mood-very-good.png</file>
-    <file>Media/icons/cil-moon.png</file>
-    <file>Media/icons/cil-mouse.png</file>
-    <file>Media/icons/cil-mouth-slash.png</file>
-    <file>Media/icons/cil-move.png</file>
-    <file>Media/icons/cil-movie.png</file>
-    <file>Media/icons/cil-mug-tea.png</file>
-    <file>Media/icons/cil-music-note.png</file>
-    <file>Media/icons/cil-newspaper.png</file>
-    <file>Media/icons/cil-notes.png</file>
-    <file>Media/icons/cil-object-ungroup.png</file>
-    <file>Media/icons/cil-options.png</file>
-    <file>Media/icons/cil-options-horizontal.png</file>
-    <file>Media/icons/cil-paint-bucket.png</file>
-    <file>Media/icons/cil-paperclip.png</file>
-    <file>Media/icons/cil-paper-plane.png</file>
-    <file>Media/icons/cil-pencil.png</file>
-    <file>Media/icons/cil-people.png</file>
-    <file>Media/icons/cil-pin.png</file>
-    <file>Media/icons/cil-plus.png</file>
-    <file>Media/icons/cil-power-standby.png</file>
-    <file>Media/icons/cil-print.png</file>
-    <file>Media/icons/cil-rain.png</file>
-    <file>Media/icons/cil-reload.png</file>
-    <file>Media/icons/cil-remove.png</file>
-    <file>Media/icons/cil-rss.png</file>
-    <file>Media/icons/cil-satelite.png</file>
-    <file>Media/icons/cil-save.png</file>
-    <file>Media/icons/cil-screen-desktop.png</file>
-    <file>Media/icons/cil-settings.png</file>
-    <file>Media/icons/cil-smile.png</file>
-    <file>Media/icons/cil-speech.png</file>
-    <file>Media/icons/cil-speedometer.png</file>
-    <file>Media/icons/cil-star.png</file>
-    <file>Media/icons/cil-swap-horizontal.png</file>
-    <file>Media/icons/cil-swap-vertical.png</file>
-    <file>Media/icons/cil-tag.png</file>
-    <file>Media/icons/cil-task.png</file>
-    <file>Media/icons/cil-terminal.png</file>
-    <file>Media/icons/cil-thumb-down.png</file>
-    <file>Media/icons/cil-thumb-up.png</file>
-    <file>Media/icons/cil-touch-app.png</file>
-    <file>Media/icons/cil-transfer.png</file>
-    <file>Media/icons/cil-trash.png</file>
-    <file>Media/icons/cil-truck.png</file>
-    <file>Media/icons/cil-user.png</file>
-    <file>Media/icons/cil-user-female.png</file>
-    <file>Media/icons/cil-user-follow.png</file>
-    <file>Media/icons/cil-user-unfollow.png</file>
-    <file>Media/icons/cil-vertical-align-bottom.png</file>
-    <file>Media/icons/cil-vertical-align-center.png</file>
-    <file>Media/icons/cil-vertical-align-top.png</file>
-    <file>Media/icons/cil-video.png</file>
-    <file>Media/icons/cil-view-column.png</file>
-    <file>Media/icons/cil-view-module.png</file>
-    <file>Media/icons/cil-view-quilt.png</file>
-    <file>Media/icons/cil-view-stream.png</file>
-    <file>Media/icons/cil-voice-over-record.png</file>
-    <file>Media/icons/cil-volume-high.png</file>
-    <file>Media/icons/cil-volume-low.png</file>
-    <file>Media/icons/cil-volume-off.png</file>
-    <file>Media/icons/cil-wallet.png</file>
-    <file>Media/icons/cil-wallpaper.png</file>
-    <file>Media/icons/cil-watch.png</file>
-    <file>Media/icons/cil-wifi-signal-0.png</file>
-    <file>Media/icons/cil-wifi-signal-1.png</file>
-    <file>Media/icons/cil-wifi-signal-off.png</file>
-    <file>Media/icons/cil-window-maximize.png</file>
-    <file>Media/icons/cil-window-minimize.png</file>
-    <file>Media/icons/cil-window-minimize_blk.png</file>
-    <file>Media/icons/cil-window-restore.png</file>
-    <file>Media/icons/cil-window-restore_blk.png</file>
-    <file>Media/icons/cil-x.png</file>
-    <file>Media/icons/cil-x_blk.png</file>
-    <file>Media/icons/cil-x-circle.png</file>
-    <file>Media/icons/cil-zoom-in.png</file>
-    <file>Media/icons/cil-zoom-out.png</file>
     <file>Media/icons/create.png</file>
-    <file>Media/icons/folder.png</file>
-    <file>Media/icons/folder_white.png</file>
-    <file>Media/icons/iconfinder_ic_account_box_48px_352000.png</file>
-    <file>Media/icons/iconfinder_ic_add_box_48px_3669477.png</file>
-    <file>Media/icons/iconfinder_ic_settings_applications_48px_3669249.png</file>
-    <file>Media/icons/iconfinder_sharing_678136.png</file>
-    <file>Media/icons/icons8-macos-close-90.png</file>
-    <file>Media/icons/icons8-macos-close-90_red.png</file>
     <file>Media/icons/icons8-macos-close-90_white.png</file>
-    <file>Media/icons/icons8-macos-maximize-90.png</file>
-    <file>Media/icons/icons8-macos-maximize-90_green.png</file>
     <file>Media/icons/icons8-macos-maximize-90_white.png</file>
-    <file>Media/icons/icons8-macos-minimize-90.png</file>
     <file>Media/icons/icons8-macos-minimize-90_white.png</file>
-    <file>Media/icons/icons8-macos-minimize-90_yellow.png</file>
-    <file>Media/icons/icons8-xbox-menu-100.png</file>
-    <file>Media/icons/icons8-xbox-menu-100_white.png</file>
-    <file>Media/icons/music-album.png</file>
-    <file>Media/icons/noun_add collection_3244737.png</file>
-    <file>Media/icons/noun_add collection_3244737_white.png</file>
     <file>Media/icons/profile.png</file>
     <file>Media/icons/settings.png</file>
     <file>Media/icons/share.png</file>
-    <file>Media/icons/share_white.png</file>
   </qresource>
   <qresource prefix="images">
-    <file>Media/vrpLocation.png</file>
+    <file>Media/vpMood_location.png</file>
+    <file>Media/vpGenre_location.png</file>
+    <file>Media/vpArtist_location.png</file>
+    <file>Media/vpRecommendations_location.png</file>
     <file>Media/vpLocation_1.png</file>
     <file>Media/vpLocation_2.png</file>
     <file>Media/vpLocation_3.png</file>
