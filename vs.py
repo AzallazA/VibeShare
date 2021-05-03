@@ -339,6 +339,8 @@ class MainAppWindow(QMainWindow):
         uris = []
         for art in random_artists:
             artists, = spotify.search(art, types=('artist',), limit = 1)
+            if len(artists.items) == 0:
+                continue
             artist = artists.items[0]
             tracks = spotify.artist_top_tracks(artist.id, market = 'from_token')
             uris.append(tracks[0].uri)
