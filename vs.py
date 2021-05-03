@@ -311,8 +311,8 @@ class MainAppWindow(QMainWindow):
             uris = [track.uri for track in tracks]
             spotify.playlist_add(playlist.id, uris = uris)
 
-        self.ui.artistLinkTxtbox.setText('spotify:playlist:' + str(playlist))
-        webbrowser.open_new(str('spotify:playlist:' + str(playlist)))
+        self.ui.artistLinkTxtbox.setText(str(playlist.uri))
+        webbrowser.open_new(str(playlist.uri))
 
         self.ui.artist1_txtbox.clear()
         self.ui.artist2_txtbox.clear()
@@ -406,8 +406,8 @@ class MainAppWindow(QMainWindow):
         uris = [t.uri for t in recommendations]
         spotify.playlist_add(playlist.id, uris=uris)
 
-        self.ui.recommendtLinkTxtbox.setText('spotify:playlist:' + str(playlist.id))
-        webbrowser.open_new(str('spotify:playlist:' + str(playlist.id)))
+        self.ui.recommendtLinkTxtbox.setText(str(playlist.uri))
+        webbrowser.open_new(str(playlist.uri))
 
     def mousePressEvent(self, event):
         # ###############################################
