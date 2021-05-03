@@ -45,7 +45,7 @@ scopes = tk.scope.every
 cred = RefreshingCredentials(client_id, client_secret, redirect_uri)
 auth = UserAuth(cred, scope=scopes)
 webbrowser.open(auth.url)
-redirected = input('Please paste redirect URL here: ') #stores the redirect URL
+redirected = input('To securely login... \nPlease paste your access link (and press Enter): ') #stores the redirect URL
 user_token = auth.request_token(url = redirected) #gets the token from the URL
 
 #creates the spotify object and gets the user
@@ -65,10 +65,6 @@ class MainAppWindow(QMainWindow):
         # Set main background to transparent
         self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
 
-        #Get's user credentials and adds logs them in
-        user_id = user.id
-        userName = user.display_name
-
         # Apply shadow effect
         self.shadow = QGraphicsDropShadowEffect(self)
         self.shadow.setBlurRadius(20)
@@ -82,6 +78,10 @@ class MainAppWindow(QMainWindow):
 
         #SPOTIFY USER
         #Set Profile Picture on Profile Page
+        #Get's user credentials and adds logs them in
+        user_id = user.id
+        userName = user.display_name
+
         amountOfImages = len(user.images)
         if amountOfImages == 0:
             self.ui.profilePicBox.setPixmap("Media/icons/default.png")
