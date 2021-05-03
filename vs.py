@@ -356,7 +356,7 @@ class MainAppWindow(QMainWindow):
             tracks = spotify.artist_top_tracks(artist.id, market = 'from_token')
             uris.append(tracks[0].uri)
         [checkedUris.append(x) for x in uris if x not in checkedUris]
-        spotify.playlist_add(playlist.id, uris = uris)
+        spotify.playlist_add(playlist.id, uris = checkedUris)
 
         self.ui.genreLinkTxtbox.setText(str(playlist.uri))
         webbrowser.open_new(str(playlist.uri))
@@ -398,7 +398,7 @@ class MainAppWindow(QMainWindow):
             addTrack.append(track.track)
         uris = [track.uri for track in addTrack]
         [checkedUris.append(x) for x in uris if x not in checkedUris]
-        spotify.playlist_add(moodPlaylist.id, uris = uris)
+        spotify.playlist_add(moodPlaylist.id, uris = checkedUris)
         self.ui.moodLinkTxtbox.setText(str(moodPlaylist.uri))
         webbrowser.open_new(str(moodPlaylist.uri))
 
